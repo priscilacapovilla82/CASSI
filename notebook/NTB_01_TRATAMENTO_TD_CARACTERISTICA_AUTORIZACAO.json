@@ -1,0 +1,1373 @@
+{
+	"name": "NTB_01_TRATAMENTO_TD_CARACTERISTICA_AUTORIZACAO",
+	"properties": {
+		"nbformat": 4,
+		"nbformat_minor": 2,
+		"bigDataPool": {
+			"referenceName": "synPoolSpark002",
+			"type": "BigDataPoolReference"
+		},
+		"sessionProperties": {
+			"driverMemory": "112g",
+			"driverCores": 16,
+			"executorMemory": "112g",
+			"executorCores": 16,
+			"numExecutors": 2,
+			"runAsWorkspaceSystemIdentity": false,
+			"conf": {
+				"spark.dynamicAllocation.enabled": "false",
+				"spark.dynamicAllocation.minExecutors": "2",
+				"spark.dynamicAllocation.maxExecutors": "2",
+				"spark.autotune.trackingId": "0c3a782c-4edd-416b-9f85-0b447b778bdb"
+			}
+		},
+		"metadata": {
+			"saveOutput": true,
+			"synapse_widget": {
+				"version": "0.1",
+				"state": {
+					"81ff4dbe-d6da-4a14-b4d2-2bbde0f34a04": {
+						"type": "Synapse.DataFrame",
+						"sync_state": {
+							"table": {
+								"rows": [
+									{
+										"0": "175.000000000000000000",
+										"1": "1.000000000000000000",
+										"2": "1.000000000000000000",
+										"3": "AMBULATORIAL",
+										"4": "1.000000000000000000",
+										"5": "1.000000000000000000",
+										"6": "ELETIVO",
+										"7": "1.000000000000000000",
+										"8": "1.000000000000000000",
+										"9": "REDE CREDENCIADA",
+										"10": "2.000000000000000000",
+										"11": "2.000000000000000000",
+										"12": "ACIDENTE DO TRABALHO",
+										"13": "10.000000000000000000",
+										"14": "8.000000000000000000",
+										"15": "UNIDADE",
+										"16": "2.000000000000000000",
+										"17": "2.000000000000000000",
+										"18": "CIRÚRGICO",
+										"19": "1.000000000000000000",
+										"20": "1.000000000000000000",
+										"21": "REPARADOR",
+										"22": "-2.000000000000000000",
+										"23": "-2.000000000000000000",
+										"24": "NÃO INFORMADO",
+										"25": "-2.000000000000000000",
+										"26": "-2.000000000000000000",
+										"27": "NÃO INFORMADO",
+										"28": "1.000000000000000000",
+										"29": "2014-08-25 11:20:56",
+										"31": "2014-08-25 11:20:56",
+										"33": "S",
+										"34": "11121021-2-2"
+									},
+									{
+										"0": "1055.000000000000000000",
+										"1": "1.000000000000000000",
+										"2": "1.000000000000000000",
+										"3": "AMBULATORIAL",
+										"4": "1.000000000000000000",
+										"5": "1.000000000000000000",
+										"6": "ELETIVO",
+										"7": "1.000000000000000000",
+										"8": "1.000000000000000000",
+										"9": "REDE CREDENCIADA",
+										"10": "12.000000000000000000",
+										"11": "11.000000000000000000",
+										"12": "LIMINAR JUDICIAL",
+										"13": "16.000000000000000000",
+										"14": "20.000000000000000000",
+										"15": "SEDE - DIVISÃO DE REGULAÇÃO",
+										"16": "2.000000000000000000",
+										"17": "2.000000000000000000",
+										"18": "CIRÚRGICO",
+										"19": "5.000000000000000000",
+										"20": "5.000000000000000000",
+										"21": "TERAPÊUTICO",
+										"22": "1.000000000000000000",
+										"23": "1.000000000000000000",
+										"24": "APARTAMENTO",
+										"25": "-2.000000000000000000",
+										"26": "-2.000000000000000000",
+										"27": "NÃO INFORMADO",
+										"28": "1.000000000000000000",
+										"29": "2014-08-25 11:20:59",
+										"30": "2015-10-03 19:15:05",
+										"31": "2014-08-25 11:20:59",
+										"33": "N",
+										"34": "1111216251-2"
+									},
+									{
+										"0": "1495.000000000000000000",
+										"1": "3.000000000000000000",
+										"2": "3.000000000000000000",
+										"3": "INTERNAÇÃO HOSPITALAR",
+										"4": "1.000000000000000000",
+										"5": "1.000000000000000000",
+										"6": "ELETIVO",
+										"7": "1.000000000000000000",
+										"8": "1.000000000000000000",
+										"9": "REDE CREDENCIADA",
+										"10": "4.000000000000000000",
+										"11": "4.000000000000000000",
+										"12": "PERIÓDICO",
+										"13": "19.000000000000000000",
+										"14": "10.000000000000000000",
+										"15": "TISS - INTERNAÇÃO",
+										"16": "1.000000000000000000",
+										"17": "1.000000000000000000",
+										"18": "CLÍNICO",
+										"19": "1.000000000000000000",
+										"20": "1.000000000000000000",
+										"21": "REPARADOR",
+										"22": "5.000000000000000000",
+										"23": "5.000000000000000000",
+										"24": "UTI ADULTO GERAL",
+										"25": "-2.000000000000000000",
+										"26": "-2.000000000000000000",
+										"27": "NÃO INFORMADO",
+										"28": "3.000000000000000000",
+										"29": "2017-03-06 00:00:13",
+										"31": "2017-03-06 00:00:13",
+										"33": "S",
+										"34": "311419115-2"
+									},
+									{
+										"0": "615.000000000000000000",
+										"1": "4.000000000000000000",
+										"2": "4.000000000000000000",
+										"3": "PSIQUIATRIA -HOSPITAL DIA",
+										"4": "2.000000000000000000",
+										"5": "2.000000000000000000",
+										"6": "URGÊNCIA",
+										"7": "1.000000000000000000",
+										"8": "1.000000000000000000",
+										"9": "REDE CREDENCIADA",
+										"10": "1.000000000000000000",
+										"11": "1.000000000000000000",
+										"12": "NORMAL",
+										"13": "12.000000000000000000",
+										"14": "5.000000000000000000",
+										"15": "INTERNAÇÃO",
+										"16": "6.000000000000000000",
+										"17": "6.000000000000000000",
+										"18": "PSIQUIÁTRICO",
+										"19": "1.000000000000000000",
+										"20": "1.000000000000000000",
+										"21": "REPARADOR",
+										"22": "1.000000000000000000",
+										"23": "1.000000000000000000",
+										"24": "APARTAMENTO",
+										"25": "-2.000000000000000000",
+										"26": "-2.000000000000000000",
+										"27": "NÃO INFORMADO",
+										"28": "4.000000000000000000",
+										"29": "2014-08-25 11:20:59",
+										"30": "2019-07-06 00:19:01",
+										"31": "2014-08-25 11:20:59",
+										"33": "N",
+										"34": "421112611-2"
+									},
+									{
+										"0": "1935.000000000000000000",
+										"1": "2.000000000000000000",
+										"2": "2.000000000000000000",
+										"3": "ATENDIMENTO DOMICILIAR",
+										"4": "2.000000000000000000",
+										"5": "2.000000000000000000",
+										"6": "URGÊNCIA",
+										"7": "1.000000000000000000",
+										"8": "1.000000000000000000",
+										"9": "REDE CREDENCIADA",
+										"10": "1.000000000000000000",
+										"11": "1.000000000000000000",
+										"12": "NORMAL",
+										"13": "10.000000000000000000",
+										"14": "8.000000000000000000",
+										"15": "UNIDADE",
+										"16": "1.000000000000000000",
+										"17": "1.000000000000000000",
+										"18": "CLÍNICO",
+										"19": "1.000000000000000000",
+										"20": "1.000000000000000000",
+										"21": "REPARADOR",
+										"22": "-2.000000000000000000",
+										"23": "-2.000000000000000000",
+										"24": "NÃO INFORMADO",
+										"25": "-2.000000000000000000",
+										"26": "-2.000000000000000000",
+										"27": "NÃO INFORMADO",
+										"28": "2.000000000000000000",
+										"29": "2019-07-06 00:19:02",
+										"31": "2014-08-25 11:20:56",
+										"33": "S",
+										"34": "22111011-2-2"
+									},
+									{
+										"0": "415.000000000000000000",
+										"1": "3.000000000000000000",
+										"2": "3.000000000000000000",
+										"3": "INTERNAÇÃO HOSPITALAR",
+										"4": "1.000000000000000000",
+										"5": "1.000000000000000000",
+										"6": "ELETIVO",
+										"7": "1.000000000000000000",
+										"8": "1.000000000000000000",
+										"9": "REDE CREDENCIADA",
+										"10": "1.000000000000000000",
+										"11": "1.000000000000000000",
+										"12": "NORMAL",
+										"13": "10.000000000000000000",
+										"14": "8.000000000000000000",
+										"15": "UNIDADE",
+										"16": "5.000000000000000000",
+										"17": "15.000000000000000000",
+										"18": "DEPENDÊNCIA QUÍMICA",
+										"19": "1.000000000000000000",
+										"20": "1.000000000000000000",
+										"21": "REPARADOR",
+										"22": "-2.000000000000000000",
+										"23": "-2.000000000000000000",
+										"24": "NÃO INFORMADO",
+										"25": "-2.000000000000000000",
+										"26": "-2.000000000000000000",
+										"27": "NÃO INFORMADO",
+										"28": "3.000000000000000000",
+										"29": "2014-08-25 11:20:56",
+										"31": "2014-08-25 11:20:56",
+										"33": "S",
+										"34": "31111051-2-2"
+									},
+									{
+										"0": "855.000000000000000000",
+										"1": "1.000000000000000000",
+										"2": "1.000000000000000000",
+										"3": "AMBULATORIAL",
+										"4": "4.000000000000000000",
+										"5": "3.000000000000000000",
+										"6": "EMERGÊNCIA",
+										"7": "1.000000000000000000",
+										"8": "1.000000000000000000",
+										"9": "REDE CREDENCIADA",
+										"10": "1.000000000000000000",
+										"11": "1.000000000000000000",
+										"12": "NORMAL",
+										"13": "2.000000000000000000",
+										"14": "4.000000000000000000",
+										"15": "REMOÇÃO",
+										"16": "1.000000000000000000",
+										"17": "1.000000000000000000",
+										"18": "CLÍNICO",
+										"19": "3.000000000000000000",
+										"20": "3.000000000000000000",
+										"21": "DIAGNÓSTICO",
+										"22": "-2.000000000000000000",
+										"23": "-2.000000000000000000",
+										"24": "NÃO INFORMADO",
+										"25": "-2.000000000000000000",
+										"26": "-2.000000000000000000",
+										"27": "NÃO INFORMADO",
+										"28": "1.000000000000000000",
+										"29": "2014-08-25 11:20:59",
+										"31": "2014-08-25 11:20:59",
+										"33": "S",
+										"34": "1411213-2-2"
+									},
+									{
+										"0": "1295.000000000000000000",
+										"1": "1.000000000000000000",
+										"2": "1.000000000000000000",
+										"3": "AMBULATORIAL",
+										"4": "1.000000000000000000",
+										"5": "1.000000000000000000",
+										"6": "ELETIVO",
+										"7": "2.000000000000000000",
+										"8": "2.000000000000000000",
+										"9": "LIVRE ESCOLHA",
+										"10": "12.000000000000000000",
+										"11": "11.000000000000000000",
+										"12": "LIMINAR JUDICIAL",
+										"13": "47.000000000000000000",
+										"14": "30.000000000000000000",
+										"15": "LIMINAR JUDICIAL",
+										"16": "2.000000000000000000",
+										"17": "2.000000000000000000",
+										"18": "CIRÚRGICO",
+										"19": "3.000000000000000000",
+										"20": "3.000000000000000000",
+										"21": "DIAGNÓSTICO",
+										"22": "-2.000000000000000000",
+										"23": "-2.000000000000000000",
+										"24": "NÃO INFORMADO",
+										"25": "-2.000000000000000000",
+										"26": "-2.000000000000000000",
+										"27": "NÃO INFORMADO",
+										"28": "1.000000000000000000",
+										"29": "2016-05-03 10:52:16",
+										"31": "2016-05-03 10:52:16",
+										"33": "S",
+										"34": "112124723-2-2"
+									},
+									{
+										"0": "1735.000000000000000000",
+										"1": "2.000000000000000000",
+										"2": "2.000000000000000000",
+										"3": "ATENDIMENTO DOMICILIAR",
+										"4": "1.000000000000000000",
+										"5": "1.000000000000000000",
+										"6": "ELETIVO",
+										"7": "2.000000000000000000",
+										"8": "2.000000000000000000",
+										"9": "LIVRE ESCOLHA",
+										"10": "1.000000000000000000",
+										"11": "1.000000000000000000",
+										"12": "NORMAL",
+										"13": "16.000000000000000000",
+										"14": "20.000000000000000000",
+										"15": "SEDE",
+										"16": "1.000000000000000000",
+										"17": "1.000000000000000000",
+										"18": "CLÍNICO",
+										"19": "5.000000000000000000",
+										"20": "5.000000000000000000",
+										"21": "TERAPÊUTICO",
+										"22": "-2.000000000000000000",
+										"23": "-2.000000000000000000",
+										"24": "NÃO INFORMADO",
+										"25": "-2.000000000000000000",
+										"26": "-2.000000000000000000",
+										"27": "NÃO INFORMADO",
+										"28": "2.000000000000000000",
+										"29": "2019-07-06 00:19:00",
+										"31": "2014-08-25 11:20:56",
+										"33": "S",
+										"34": "21211615-2-2"
+									},
+									{
+										"0": "55.000000000000000000",
+										"1": "3.000000000000000000",
+										"2": "3.000000000000000000",
+										"3": "INTERNAÇÃO HOSPITALAR",
+										"4": "1.000000000000000000",
+										"5": "1.000000000000000000",
+										"6": "ELETIVO",
+										"7": "1.000000000000000000",
+										"8": "1.000000000000000000",
+										"9": "REDE CREDENCIADA",
+										"10": "1.000000000000000000",
+										"11": "1.000000000000000000",
+										"12": "NORMAL",
+										"13": "19.000000000000000000",
+										"14": "10.000000000000000000",
+										"15": "TISS - INTERNAÇÃO",
+										"16": "6.000000000000000000",
+										"17": "6.000000000000000000",
+										"18": "PSIQUIÁTRICO",
+										"19": "1.000000000000000000",
+										"20": "1.000000000000000000",
+										"21": "REPARADOR",
+										"22": "-2.000000000000000000",
+										"23": "-2.000000000000000000",
+										"24": "NÃO INFORMADO",
+										"25": "-2.000000000000000000",
+										"26": "-2.000000000000000000",
+										"27": "NÃO INFORMADO",
+										"28": "3.000000000000000000",
+										"29": "2014-08-25 11:20:56",
+										"31": "2014-08-25 11:20:56",
+										"33": "S",
+										"34": "31111961-2-2"
+									}
+								],
+								"schema": [
+									{
+										"key": "0",
+										"name": "SK_TD_CARACTERISTICA_AUTORIZ",
+										"type": "decimal"
+									},
+									{
+										"key": "1",
+										"name": "CO_HD_REGIME_ATENDIMENTO",
+										"type": "decimal"
+									},
+									{
+										"key": "2",
+										"name": "CO_REGIME_ATENDIMENTO",
+										"type": "decimal"
+									},
+									{
+										"key": "3",
+										"name": "DS_REGIME_ATENDIMENTO",
+										"type": "string"
+									},
+									{
+										"key": "4",
+										"name": "CO_HD_CONDICAO_ATENDIMENTO",
+										"type": "decimal"
+									},
+									{
+										"key": "5",
+										"name": "CO_CONDICAO_ATENDIMENTO",
+										"type": "decimal"
+									},
+									{
+										"key": "6",
+										"name": "DS_CONDICAO_ATENDIMENTO",
+										"type": "string"
+									},
+									{
+										"key": "7",
+										"name": "CO_HD_LOCAL_ATENDIMENTO",
+										"type": "decimal"
+									},
+									{
+										"key": "8",
+										"name": "CO_LOCAL_ATENDIMENTO",
+										"type": "decimal"
+									},
+									{
+										"key": "9",
+										"name": "DS_LOCAL_ATENDIMENTO",
+										"type": "string"
+									},
+									{
+										"key": "10",
+										"name": "CO_HD_FINALIDADE_ATENDIMENTO",
+										"type": "decimal"
+									},
+									{
+										"key": "11",
+										"name": "CO_FINALIDADE_ATENDIMENTO",
+										"type": "decimal"
+									},
+									{
+										"key": "12",
+										"name": "DS_FINALIDADE_ATENDIMENTO",
+										"type": "string"
+									},
+									{
+										"key": "13",
+										"name": "CO_HD_TIPO_AUTORIZACAO",
+										"type": "decimal"
+									},
+									{
+										"key": "14",
+										"name": "CO_TIPO_AUTORIZACAO",
+										"type": "decimal"
+									},
+									{
+										"key": "15",
+										"name": "DS_TIPO_AUTORIZACAO",
+										"type": "string"
+									},
+									{
+										"key": "16",
+										"name": "CO_HD_TIPO_TRATAMENTO",
+										"type": "decimal"
+									},
+									{
+										"key": "17",
+										"name": "CO_TIPO_TRATAMENTO",
+										"type": "decimal"
+									},
+									{
+										"key": "18",
+										"name": "DS_TIPO_TRATAMENTO",
+										"type": "string"
+									},
+									{
+										"key": "19",
+										"name": "CO_HD_OBJETIVO_TRATAMENTO",
+										"type": "decimal"
+									},
+									{
+										"key": "20",
+										"name": "CO_OBJETIVO_TRATAMENTO",
+										"type": "decimal"
+									},
+									{
+										"key": "21",
+										"name": "DS_OBJETIVO_TRATAMENTO",
+										"type": "string"
+									},
+									{
+										"key": "22",
+										"name": "CO_HD_ACOMODACAO",
+										"type": "decimal"
+									},
+									{
+										"key": "23",
+										"name": "CO_ACOMODACAO",
+										"type": "decimal"
+									},
+									{
+										"key": "24",
+										"name": "DS_ACOMODACAO",
+										"type": "string"
+									},
+									{
+										"key": "25",
+										"name": "CO_HD_MOTIVO_ALTA",
+										"type": "decimal"
+									},
+									{
+										"key": "26",
+										"name": "CO_MOTIVO_ALTA",
+										"type": "decimal"
+									},
+									{
+										"key": "27",
+										"name": "DS_MOTIVO_ALTA",
+										"type": "string"
+									},
+									{
+										"key": "28",
+										"name": "PK_GRUPO",
+										"type": "decimal"
+									},
+									{
+										"key": "29",
+										"name": "DT_INICIO_VIGENCIA",
+										"type": "timestamp"
+									},
+									{
+										"key": "30",
+										"name": "DT_FIM_VIGENCIA",
+										"type": "timestamp"
+									},
+									{
+										"key": "31",
+										"name": "DT_INCLUSAO_REGISTRO",
+										"type": "timestamp"
+									},
+									{
+										"key": "32",
+										"name": "DT_ALTERACAO_REGISTRO",
+										"type": "timestamp"
+									},
+									{
+										"key": "33",
+										"name": "ST_REGISTRO_CORRENTE",
+										"type": "string"
+									},
+									{
+										"key": "34",
+										"name": "PK_GRUPO_HIERARQUIA",
+										"type": "string"
+									}
+								],
+								"truncated": false
+							},
+							"isSummary": false,
+							"language": "scala"
+						},
+						"persist_state": {
+							"view": {
+								"type": "details",
+								"chartOptions": {
+									"chartType": "bar",
+									"aggregationType": "sum",
+									"categoryFieldKeys": [
+										"1"
+									],
+									"seriesFieldKeys": [
+										"0"
+									],
+									"isStacked": false
+								}
+							}
+						}
+					},
+					"4ac4f9a2-59fa-4a5e-980c-759c4e742814": {
+						"type": "Synapse.DataFrame",
+						"sync_state": {
+							"table": {
+								"rows": [
+									{
+										"0": "174",
+										"1": "3",
+										"2": "3",
+										"3": "INTERNAÇÃO HOSPITALAR",
+										"4": "4",
+										"5": "3",
+										"6": "EMERGÊNCIA",
+										"7": "1",
+										"8": "1",
+										"9": "REDE CREDENCIADA",
+										"10": "1",
+										"11": "1",
+										"12": "NORMAL",
+										"13": "19",
+										"14": "10",
+										"15": "TISS - INTERNAÇÃO",
+										"16": "2",
+										"17": "2",
+										"18": "CIRÚRGICO",
+										"19": "1",
+										"20": "1",
+										"21": "REPARADOR",
+										"22": "1",
+										"23": "1",
+										"24": "APARTAMENTO",
+										"25": "-2",
+										"26": "-2",
+										"27": "NÃO INFORMADO",
+										"28": "3",
+										"29": "2014-08-25 11:20:56",
+										"31": "2014-08-25 11:20:56",
+										"33": "S",
+										"34": "341119211-2"
+									},
+									{
+										"0": "1054",
+										"1": "1",
+										"2": "1",
+										"3": "AMBULATORIAL",
+										"4": "1",
+										"5": "1",
+										"6": "ELETIVO",
+										"7": "1",
+										"8": "1",
+										"9": "REDE CREDENCIADA",
+										"10": "1",
+										"11": "1",
+										"12": "NORMAL",
+										"13": "67",
+										"14": "300",
+										"15": "ADMISSIONAL",
+										"16": "1",
+										"17": "1",
+										"18": "CLÍNICO",
+										"19": "3",
+										"20": "3",
+										"21": "DIAGNÓSTICO",
+										"22": "-2",
+										"23": "-2",
+										"24": "NÃO INFORMADO",
+										"25": "-2",
+										"26": "-2",
+										"27": "NÃO INFORMADO",
+										"28": "1",
+										"29": "2014-08-25 11:20:59",
+										"31": "2014-08-25 11:20:59",
+										"33": "S",
+										"34": "11116713-2-2"
+									},
+									{
+										"0": "1494",
+										"1": "3",
+										"2": "3",
+										"3": "INTERNAÇÃO HOSPITALAR",
+										"4": "1",
+										"5": "1",
+										"6": "ELETIVO",
+										"7": "1",
+										"8": "1",
+										"9": "REDE CREDENCIADA",
+										"10": "1",
+										"11": "1",
+										"12": "NORMAL",
+										"13": "20",
+										"14": "11",
+										"15": "TISS - SP/SADT",
+										"16": "1",
+										"17": "1",
+										"18": "CLÍNICO",
+										"19": "3",
+										"20": "3",
+										"21": "DIAGNÓSTICO",
+										"22": "7",
+										"23": "7",
+										"24": "UTI NEONATAL",
+										"25": "-2",
+										"26": "-2",
+										"27": "NÃO INFORMADO",
+										"28": "3",
+										"29": "2017-03-06 00:00:13",
+										"31": "2017-03-06 00:00:13",
+										"33": "S",
+										"34": "311120137-2"
+									},
+									{
+										"0": "614",
+										"1": "1",
+										"2": "1",
+										"3": "AMBULATORIAL",
+										"4": "1",
+										"5": "1",
+										"6": "ELETIVO",
+										"7": "1",
+										"8": "1",
+										"9": "REDE CREDENCIADA",
+										"10": "9",
+										"11": "9",
+										"12": "PERÍCIA",
+										"13": "20",
+										"14": "11",
+										"15": "TISS - SP/SADT",
+										"16": "2",
+										"17": "2",
+										"18": "CIRÚRGICO",
+										"19": "5",
+										"20": "5",
+										"21": "TERAPÊUTICO",
+										"22": "-2",
+										"23": "-2",
+										"24": "NÃO INFORMADO",
+										"25": "-2",
+										"26": "-2",
+										"27": "NÃO INFORMADO",
+										"28": "1",
+										"29": "2014-08-25 11:20:59",
+										"30": "2017-03-17 00:12:57",
+										"31": "2014-08-25 11:20:59",
+										"33": "N",
+										"34": "11192025-2-2"
+									},
+									{
+										"0": "1934",
+										"1": "4",
+										"2": "4",
+										"3": "INTERNAÇÃO PSIQUIÁTRICA",
+										"4": "1",
+										"5": "1",
+										"6": "ELETIVO",
+										"7": "1",
+										"8": "1",
+										"9": "REDE CREDENCIADA",
+										"10": "1",
+										"11": "1",
+										"12": "NORMAL",
+										"13": "19",
+										"14": "10",
+										"15": "TISS - INTERNAÇÃO",
+										"16": "1",
+										"17": "1",
+										"18": "CLÍNICO",
+										"19": "1",
+										"20": "1",
+										"21": "REPARADOR",
+										"22": "44",
+										"23": "44",
+										"24": "APARTAMENTO SIMPLES DE PSIQUIATRIA",
+										"25": "-2",
+										"26": "-2",
+										"27": "NÃO INFORMADO",
+										"28": "4",
+										"29": "2019-07-06 00:19:02",
+										"31": "2016-09-03 08:27:40",
+										"33": "S",
+										"34": "4111191144-2"
+									},
+									{
+										"0": "294",
+										"1": "1",
+										"2": "1",
+										"3": "AMBULATORIAL",
+										"4": "1",
+										"5": "1",
+										"6": "ELETIVO",
+										"7": "1",
+										"8": "1",
+										"9": "REDE CREDENCIADA",
+										"10": "1",
+										"11": "1",
+										"12": "NORMAL",
+										"13": "10",
+										"14": "8",
+										"15": "UNIDADE",
+										"16": "2",
+										"17": "2",
+										"18": "CIRÚRGICO",
+										"19": "1",
+										"20": "1",
+										"21": "REPARADOR",
+										"22": "1",
+										"23": "1",
+										"24": "APARTAMENTO",
+										"25": "-2",
+										"26": "-2",
+										"27": "NÃO INFORMADO",
+										"28": "1",
+										"29": "2014-08-25 11:20:56",
+										"31": "2014-08-25 11:20:56",
+										"33": "S",
+										"34": "111110211-2"
+									},
+									{
+										"0": "734",
+										"1": "1",
+										"2": "1",
+										"3": "AMBULATORIAL",
+										"4": "4",
+										"5": "3",
+										"6": "EMERGÊNCIA",
+										"7": "1",
+										"8": "1",
+										"9": "REDE CREDENCIADA",
+										"10": "1",
+										"11": "1",
+										"12": "NORMAL",
+										"13": "4",
+										"14": "1",
+										"15": "AMBULATORIAL",
+										"16": "2",
+										"17": "2",
+										"18": "CIRÚRGICO",
+										"19": "3",
+										"20": "3",
+										"21": "DIAGNÓSTICO",
+										"22": "-2",
+										"23": "-2",
+										"24": "NÃO INFORMADO",
+										"25": "-2",
+										"26": "-2",
+										"27": "NÃO INFORMADO",
+										"28": "1",
+										"29": "2014-08-25 11:20:59",
+										"31": "2014-08-25 11:20:59",
+										"33": "S",
+										"34": "1411423-2-2"
+									},
+									{
+										"0": "1174",
+										"1": "3",
+										"2": "3",
+										"3": "INTERNAÇÃO HOSPITALAR",
+										"4": "1",
+										"5": "1",
+										"6": "ELETIVO",
+										"7": "1",
+										"8": "1",
+										"9": "REDE CREDENCIADA",
+										"10": "1",
+										"11": "1",
+										"12": "NORMAL",
+										"13": "16",
+										"14": "20",
+										"15": "SEDE",
+										"16": "2",
+										"17": "2",
+										"18": "CIRÚRGICO",
+										"19": "1",
+										"20": "1",
+										"21": "REPARADOR",
+										"22": "1",
+										"23": "1",
+										"24": "APARTAMENTO",
+										"25": "-2",
+										"26": "-2",
+										"27": "NÃO INFORMADO",
+										"28": "3",
+										"29": "2015-10-03 19:15:03",
+										"31": "2014-08-25 11:20:56",
+										"33": "S",
+										"34": "311116211-2"
+									},
+									{
+										"0": "1614",
+										"1": "3",
+										"2": "3",
+										"3": "INTERNAÇÃO HOSPITALAR",
+										"4": "1",
+										"5": "1",
+										"6": "ELETIVO",
+										"7": "1",
+										"8": "1",
+										"9": "REDE CREDENCIADA",
+										"10": "1",
+										"11": "1",
+										"12": "NORMAL",
+										"13": "19",
+										"14": "10",
+										"15": "TISS - INTERNAÇÃO",
+										"16": "1",
+										"17": "1",
+										"18": "CLÍNICO",
+										"19": "1",
+										"20": "1",
+										"21": "REPARADOR",
+										"22": "13",
+										"23": "13",
+										"24": "HOSPITAL DIA",
+										"25": "-2",
+										"26": "-2",
+										"27": "NÃO INFORMADO",
+										"28": "3",
+										"29": "2018-10-03 14:08:28",
+										"31": "2018-10-03 14:08:28",
+										"33": "S",
+										"34": "3111191113-2"
+									},
+									{
+										"0": "2054",
+										"1": "4",
+										"2": "4",
+										"3": "INTERNAÇÃO PSIQUIÁTRICA",
+										"4": "1",
+										"5": "1",
+										"6": "ELETIVO",
+										"7": "1",
+										"8": "1",
+										"9": "REDE CREDENCIADA",
+										"10": "12",
+										"11": "11",
+										"12": "LIMINAR JUDICIAL",
+										"13": "68",
+										"14": "31",
+										"15": "LIMINAR JUDICIAL - INTERNAÇÃO",
+										"16": "-2",
+										"17": "-2",
+										"18": "NÃO INFORMADO",
+										"19": "-2",
+										"20": "-2",
+										"21": "NÃO INFORMADO",
+										"22": "43",
+										"23": "43",
+										"24": "APARTAMENTO STANDARD",
+										"25": "-2",
+										"26": "-2",
+										"27": "NÃO INFORMADO",
+										"28": "4",
+										"29": "2019-11-08 01:33:28",
+										"31": "2019-11-08 01:33:28",
+										"33": "S",
+										"34": "4111268-2-243-2"
+									}
+								],
+								"schema": [
+									{
+										"key": "0",
+										"name": "SK_TD_CARACTERISTICA_AUTORIZ",
+										"type": "int"
+									},
+									{
+										"key": "1",
+										"name": "CO_HD_REGIME_ATENDIMENTO",
+										"type": "int"
+									},
+									{
+										"key": "2",
+										"name": "CO_REGIME_ATENDIMENTO",
+										"type": "int"
+									},
+									{
+										"key": "3",
+										"name": "DS_REGIME_ATENDIMENTO",
+										"type": "string"
+									},
+									{
+										"key": "4",
+										"name": "CO_HD_CONDICAO_ATENDIMENTO",
+										"type": "int"
+									},
+									{
+										"key": "5",
+										"name": "CO_CONDICAO_ATENDIMENTO",
+										"type": "int"
+									},
+									{
+										"key": "6",
+										"name": "DS_CONDICAO_ATENDIMENTO",
+										"type": "string"
+									},
+									{
+										"key": "7",
+										"name": "CO_HD_LOCAL_ATENDIMENTO",
+										"type": "int"
+									},
+									{
+										"key": "8",
+										"name": "CO_LOCAL_ATENDIMENTO",
+										"type": "int"
+									},
+									{
+										"key": "9",
+										"name": "DS_LOCAL_ATENDIMENTO",
+										"type": "string"
+									},
+									{
+										"key": "10",
+										"name": "CO_HD_FINALIDADE_ATENDIMENTO",
+										"type": "int"
+									},
+									{
+										"key": "11",
+										"name": "CO_FINALIDADE_ATENDIMENTO",
+										"type": "int"
+									},
+									{
+										"key": "12",
+										"name": "DS_FINALIDADE_ATENDIMENTO",
+										"type": "string"
+									},
+									{
+										"key": "13",
+										"name": "CO_HD_TIPO_AUTORIZACAO",
+										"type": "int"
+									},
+									{
+										"key": "14",
+										"name": "CO_TIPO_AUTORIZACAO",
+										"type": "int"
+									},
+									{
+										"key": "15",
+										"name": "DS_TIPO_AUTORIZACAO",
+										"type": "string"
+									},
+									{
+										"key": "16",
+										"name": "CO_HD_TIPO_TRATAMENTO",
+										"type": "int"
+									},
+									{
+										"key": "17",
+										"name": "CO_TIPO_TRATAMENTO",
+										"type": "int"
+									},
+									{
+										"key": "18",
+										"name": "DS_TIPO_TRATAMENTO",
+										"type": "string"
+									},
+									{
+										"key": "19",
+										"name": "CO_HD_OBJETIVO_TRATAMENTO",
+										"type": "int"
+									},
+									{
+										"key": "20",
+										"name": "CO_OBJETIVO_TRATAMENTO",
+										"type": "int"
+									},
+									{
+										"key": "21",
+										"name": "DS_OBJETIVO_TRATAMENTO",
+										"type": "string"
+									},
+									{
+										"key": "22",
+										"name": "CO_HD_ACOMODACAO",
+										"type": "int"
+									},
+									{
+										"key": "23",
+										"name": "CO_ACOMODACAO",
+										"type": "int"
+									},
+									{
+										"key": "24",
+										"name": "DS_ACOMODACAO",
+										"type": "string"
+									},
+									{
+										"key": "25",
+										"name": "CO_HD_MOTIVO_ALTA",
+										"type": "int"
+									},
+									{
+										"key": "26",
+										"name": "CO_MOTIVO_ALTA",
+										"type": "int"
+									},
+									{
+										"key": "27",
+										"name": "DS_MOTIVO_ALTA",
+										"type": "string"
+									},
+									{
+										"key": "28",
+										"name": "PK_GRUPO",
+										"type": "int"
+									},
+									{
+										"key": "29",
+										"name": "DT_INICIO_VIGENCIA",
+										"type": "timestamp"
+									},
+									{
+										"key": "30",
+										"name": "DT_FIM_VIGENCIA",
+										"type": "timestamp"
+									},
+									{
+										"key": "31",
+										"name": "DT_INCLUSAO_REGISTRO",
+										"type": "timestamp"
+									},
+									{
+										"key": "32",
+										"name": "DT_ALTERACAO_REGISTRO",
+										"type": "timestamp"
+									},
+									{
+										"key": "33",
+										"name": "ST_REGISTRO_CORRENTE",
+										"type": "string"
+									},
+									{
+										"key": "34",
+										"name": "PK_GRUPO_HIERARQUIA",
+										"type": "string"
+									}
+								],
+								"truncated": false
+							},
+							"isSummary": false,
+							"language": "scala"
+						},
+						"persist_state": {
+							"view": {
+								"type": "details",
+								"chartOptions": {
+									"chartType": "bar",
+									"aggregationType": "sum",
+									"categoryFieldKeys": [
+										"1"
+									],
+									"seriesFieldKeys": [
+										"0"
+									],
+									"isStacked": false
+								}
+							}
+						}
+					}
+				}
+			},
+			"enableDebugMode": false,
+			"kernelspec": {
+				"name": "synapse_pyspark",
+				"display_name": "Synapse PySpark"
+			},
+			"language_info": {
+				"name": "python"
+			},
+			"a365ComputeOptions": {
+				"id": "/subscriptions/b117ec79-27e8-4aea-a6e3-782ae30883bd/resourceGroups/rg-data-plataform/providers/Microsoft.Synapse/workspaces/wrkcassisynapseworkspace001/bigDataPools/synPoolSpark002",
+				"name": "synPoolSpark002",
+				"type": "Spark",
+				"endpoint": "https://wrkcassisynapseworkspace001.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/synPoolSpark002",
+				"auth": {
+					"type": "AAD",
+					"authResource": "https://dev.azuresynapse.net",
+					"authHeader": null
+				},
+				"sparkVersion": "3.2",
+				"nodeCount": 10,
+				"cores": 16,
+				"memory": 112,
+				"extraHeader": null
+			},
+			"sessionKeepAliveTimeout": 30
+		},
+		"cells": [
+			{
+				"cell_type": "markdown",
+				"metadata": {
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"## 1. **Tratamento dos dados da tabela TD_CARACTERISTICA_AUTORIZACAO**\n",
+					"#### Caregando e importando.\n",
+					"\n",
+					"gold/DIMENSAO"
+				],
+				"attachments": null
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"import os\n",
+					"from pyspark.sql.types import * \n",
+					"import pyspark.sql.functions as f \n",
+					"\n",
+					"spark.conf.set(\"spark.sql.legacy.parquet.datetimeRebaseModeInRead\", \"CORRECTED\")\n",
+					"spark.conf.set(\"spark.sql.legacy.parquet.datetimeRebaseModeInWrite\", \"CORRECTED\")\n",
+					"spark.conf.set(\"spark.sql.legacy.parquet.int96RebaseModeInWrite\",\"CORRECTED\")\n",
+					"spark.conf.set(\"spark.sql.legacy.parquet.int96RebaseModeInRead\",\"CORRECTED\")\n",
+					""
+				],
+				"attachments": null,
+				"execution_count": 2
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"df =  spark.read.load('abfss://gold@stgcassidatalake001.dfs.core.windows.net/DIMENSAO/TD_CARACTERISTICA_AUTORIZACAO/', format='parquet')"
+				],
+				"attachments": null,
+				"execution_count": 3
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": false
+				},
+				"source": [
+					"display(df.limit(10))"
+				],
+				"attachments": null,
+				"execution_count": 51
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"df.printSchema()"
+				],
+				"attachments": null,
+				"execution_count": 4
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"dfnew = df.withColumn('SK_TD_CARACTERISTICA_AUTORIZ', df.SK_TD_CARACTERISTICA_AUTORIZ.cast('int')) \\\n",
+					".withColumn('CO_HD_REGIME_ATENDIMENTO', df.CO_HD_REGIME_ATENDIMENTO.cast('int')) \\\n",
+					".withColumn('CO_REGIME_ATENDIMENTO', df.CO_REGIME_ATENDIMENTO.cast('int')) \\\n",
+					".withColumn('CO_HD_CONDICAO_ATENDIMENTO', df.CO_HD_CONDICAO_ATENDIMENTO.cast('int')) \\\n",
+					".withColumn('CO_CONDICAO_ATENDIMENTO', df.CO_CONDICAO_ATENDIMENTO.cast('int')) \\\n",
+					".withColumn('CO_HD_LOCAL_ATENDIMENTO', df.CO_HD_LOCAL_ATENDIMENTO.cast('int')) \\\n",
+					".withColumn('CO_LOCAL_ATENDIMENTO', df.CO_LOCAL_ATENDIMENTO.cast('int')) \\\n",
+					".withColumn('CO_HD_FINALIDADE_ATENDIMENTO', df.CO_HD_FINALIDADE_ATENDIMENTO.cast('int')) \\\n",
+					".withColumn('CO_FINALIDADE_ATENDIMENTO', df.CO_FINALIDADE_ATENDIMENTO.cast('int')) \\\n",
+					".withColumn('CO_HD_TIPO_AUTORIZACAO', df.CO_HD_TIPO_AUTORIZACAO.cast('int')) \\\n",
+					".withColumn('CO_TIPO_AUTORIZACAO', df.CO_TIPO_AUTORIZACAO.cast('int')) \\\n",
+					".withColumn('CO_HD_TIPO_TRATAMENTO', df.CO_HD_TIPO_TRATAMENTO.cast('int')) \\\n",
+					".withColumn('CO_TIPO_TRATAMENTO', df.CO_TIPO_TRATAMENTO.cast('int')) \\\n",
+					".withColumn('CO_HD_OBJETIVO_TRATAMENTO', df.CO_HD_OBJETIVO_TRATAMENTO.cast('int')) \\\n",
+					".withColumn('CO_OBJETIVO_TRATAMENTO', df.CO_OBJETIVO_TRATAMENTO.cast('int')) \\\n",
+					".withColumn('CO_HD_ACOMODACAO', df.CO_HD_ACOMODACAO.cast('int')) \\\n",
+					".withColumn('CO_ACOMODACAO', df.CO_ACOMODACAO.cast('int')) \\\n",
+					".withColumn('CO_HD_MOTIVO_ALTA', df.CO_HD_MOTIVO_ALTA.cast('int')) \\\n",
+					".withColumn('CO_MOTIVO_ALTA', df.CO_MOTIVO_ALTA.cast('int')) \\\n",
+					".withColumn('PK_GRUPO', df.PK_GRUPO.cast('int'))          "
+				],
+				"attachments": null,
+				"execution_count": 5
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"dfnew.printSchema()\n",
+					""
+				],
+				"attachments": null,
+				"execution_count": 6
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": false
+				},
+				"source": [
+					"display(dfnew.limit(10))"
+				],
+				"attachments": null,
+				"execution_count": 7
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"dfnew.write.parquet('abfss://gold@stgcassidatalake001.dfs.core.windows.net/DIMENSAO/TD_CARACTERISTICA_AUTORIZACAO1/')\n",
+					""
+				],
+				"attachments": null,
+				"execution_count": 73
+			}
+		]
+	}
+}

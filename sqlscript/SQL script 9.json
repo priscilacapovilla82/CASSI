@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 9",
+	"properties": {
+		"content": {
+			"query": "DROP TABLE [PRODML].[PPTB_OUTLIER_IDATEND_2]\nGO\n\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "synsqlprod",
+				"poolName": "synsqlprod"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

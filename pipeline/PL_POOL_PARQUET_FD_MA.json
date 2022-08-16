@@ -1,0 +1,44 @@
+{
+	"name": "PL_POOL_PARQUET_FD_MA",
+	"properties": {
+		"activities": [
+			{
+				"name": "POOLPRQT",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "1.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "FD_PROVISAO_MA",
+						"type": "DataFlowReference"
+					},
+					"staging": {
+						"linkedService": {
+							"referenceName": "wrkcassisynapseworkspace001-WorkspaceDefaultStorage",
+							"type": "LinkedServiceReference"
+						},
+						"folderPath": "stagingstoragefolder/PROVISAO"
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
+			}
+		],
+		"folder": {
+			"name": "DESENVOLVIMENTO/FATOS/MENSAIS/PROVISAO"
+		},
+		"annotations": [],
+		"lastPublishTime": "2022-08-10T20:01:56Z"
+	},
+	"type": "Microsoft.Synapse/workspaces/pipelines"
+}

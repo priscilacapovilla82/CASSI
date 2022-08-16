@@ -1,0 +1,20 @@
+{
+	"name": "QRY2_CARACTERISTICAAUTORIZ",
+	"properties": {
+		"folder": {
+			"name": "FATOS/DIARIAS/AUTORIZACAO"
+		},
+		"content": {
+			"query": "SELECT \n\tAUT.HANDLE,\n\tAUT.REGIMEATENDIMENTO,\n\tAUT.CONDICAOATENDIMENTO,\n\tAUT.LOCALATENDIMENTO,\n\tAUT.FINALIDADEATENDIMENTO,\n\tAUT.TIPOAUTORIZACAO,\n\tAUT.TIPOTRATAMENTO,\n\tAUT.OBJETIVOTRATAMENTO,\n\tAUT.ACOMODACAO,\n\tAUT.MOTIVOALTA\n\nFROM PROSTG.SAM_AUTORIZ AUT\nLEFT JOIN PROSTG.SAM_AUTORIZ_EVENTOSOLICIT AES ON AES.AUTORIZACAO = AUT.HANDLE\nLEFT JOIN PROSTG.SAM_AUTORIZ_EVENTOGERADO  AEG ON AEG.EVENTOSOLICITADO = AES.HANDLE\n \nWHERE AUT.LOCALATENDIMENTO = 1 --Rede Credenciada\nAND AES.SITUACAO <> 'C' --Solicitações diferentes de Canceladas\nAND AUT.SITUACAO NOT IN ('C','F') --Autorizações diferentes de Cancelada e Fechada\nAND SUBSTRING(CAST(ISNULL(ISNULL(AEG.DATAAUTORIZACAO, AES.DATASOLICITACAO ), AUT.DATAAUTORIZACAO) AS VARCHAR),1,10) = '2022-01-01'",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "synsqlprod",
+				"poolName": "synsqlprod"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

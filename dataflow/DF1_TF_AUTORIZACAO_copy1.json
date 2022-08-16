@@ -1,0 +1,235 @@
+{
+	"name": "DF1_TF_AUTORIZACAO_copy1",
+	"properties": {
+		"folder": {
+			"name": "DESENVOLVIMENTO/FATOS/DIARIAS/AUTORIZACAO/Primeiros"
+		},
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"linkedService": {
+						"referenceName": "lnk_synprod",
+						"type": "LinkedServiceReference"
+					},
+					"name": "CARACAUTORIZ"
+				},
+				{
+					"linkedService": {
+						"referenceName": "lnk_synprod",
+						"type": "LinkedServiceReference"
+					},
+					"name": "AUTORIZ"
+				},
+				{
+					"linkedService": {
+						"referenceName": "lnk_synprod",
+						"type": "LinkedServiceReference"
+					},
+					"name": "LOGSTATUS"
+				},
+				{
+					"linkedService": {
+						"referenceName": "lnk_synprod",
+						"type": "LinkedServiceReference"
+					},
+					"name": "STATUSSOLICITACAO"
+				}
+			],
+			"sinks": [
+				{
+					"linkedService": {
+						"referenceName": "wrkcassisynapseworkspace001-WorkspaceDefaultStorage",
+						"type": "LinkedServiceReference"
+					},
+					"name": "sink1"
+				},
+				{
+					"linkedService": {
+						"referenceName": "wrkcassisynapseworkspace001-WorkspaceDefaultStorage",
+						"type": "LinkedServiceReference"
+					},
+					"name": "sink2"
+				}
+			],
+			"transformations": [
+				{
+					"name": "joinAutLogStatus"
+				},
+				{
+					"name": "joinLogStatusSolicitacao"
+				},
+				{
+					"name": "select1"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          HD_AUTORIZ as long,",
+				"          REGIMEATENDIMENTO as long,",
+				"          CONDICAOATENDIMENTO as long,",
+				"          LOCALATENDIMENTO as long,",
+				"          FINALIDADEATENDIMENTO as long,",
+				"          TIPOAUTORIZACAO as long,",
+				"          TIPOTRATAMENTO as long,",
+				"          OBJETIVOTRATAMENTO as long,",
+				"          ACOMODACAO as long,",
+				"          MOTIVOALTA as long",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'query',",
+				"     store: 'synapseanalytics',",
+				"     query: 'SELECT \\n     AUT.HANDLE AS HD_AUTORIZ,\\n     AUT.REGIMEATENDIMENTO AS REGIMEATENDIMENTO,\\n     AUT.CONDICAOATENDIMENTO AS CONDICAOATENDIMENTO ,\\n     AUT.LOCALATENDIMENTO AS LOCALATENDIMENTO,\\n     AUT.FINALIDADEATENDIMENTO AS FINALIDADEATENDIMENTO,\\n     AUT.TIPOAUTORIZACAO AS TIPOAUTORIZACAO,\\n     AUT.TIPOTRATAMENTO AS TIPOTRATAMENTO,\\n     AUT.OBJETIVOTRATAMENTO AS OBJETIVOTRATAMENTO,\\n     AUT.ACOMODACAO AS ACOMODACAO,\\n     AUT.MOTIVOALTA AS MOTIVOALTA\\n\\nFROM PROSTG.SAM_AUTORIZ AUT\\nLEFT JOIN PROSTG.SAM_AUTORIZ_EVENTOSOLICIT AES ON AES.AUTORIZACAO = AUT.HANDLE\\nLEFT JOIN PROSTG.SAM_AUTORIZ_EVENTOGERADO  AEG ON AEG.EVENTOSOLICITADO = AES.HANDLE\\n \\nWHERE AUT.LOCALATENDIMENTO = 1 --Rede Credenciada\\nAND AES.SITUACAO <> \\'C\\' --Solicitações diferentes de Canceladas\\nAND AUT.SITUACAO NOT IN (\\'C\\',\\'F\\') --Autorizações diferentes de Cancelada e Fechada\\nAND SUBSTRING(CAST(ISNULL(ISNULL(AEG.DATAAUTORIZACAO, AES.DATASOLICITACAO ), AUT.DATAAUTORIZACAO) AS VARCHAR),1,10) = \\'2022-01-01\\'',",
+				"     isolationLevel: 'READ_UNCOMMITTED',",
+				"     staged: true) ~> CARACAUTORIZ",
+				"source(output(",
+				"          HD_AUTORIZACAO as long,",
+				"          HD_AUTORIZ_EVENTO_SOLICIT as integer,",
+				"          HD_AUTORIZ_EVENTO_GERADO as integer,",
+				"          HD_TGE as integer,",
+				"          HD_BENEF as integer,",
+				"          HD_ESTADO_BENEF as integer,",
+				"          HD_ESTADO_PREST_EXEC as integer,",
+				"          HD_PREST_SOLICITANTE as integer,",
+				"          CO_PREST_SOLICITANTE as string,",
+				"          HD_PREST_EXECUTOR as integer,",
+				"          CO_PREST_EXECUTOR as string,",
+				"          HD_PREST_FORNECEDOR as integer,",
+				"          CO_PREST_FORNECEDOR as string,",
+				"          HD_TP_AUTORIZ as integer,",
+				"          HD_GRAU as integer,",
+				"          CO_GRAU as integer,",
+				"          CO_TP_TRATAMENTO as integer,",
+				"          CO_OBJ_TRATAMENTO as integer,",
+				"          HD_REGIME_ATEND as integer,",
+				"          HD_FINALID_ATEND as integer,",
+				"          HD_CARAT_ATEND as integer,",
+				"          HD_REGIME_INT as integer,",
+				"          HD_TP_ATEND as integer,",
+				"          HD_TP_INTERN as integer,",
+				"          HD_IND_ACIDENTE as integer,",
+				"          HD_TP_CONSULTA as integer,",
+				"          HD_PLANO as integer,",
+				"          HD_CONTRATO as integer,",
+				"          HD_USUARIO as integer,",
+				"          HD_TIS_TAB_PRECO as integer,",
+				"          CO_TIS_TAB_PRECO as string,",
+				"          HD_CBOS as integer,",
+				"          CO_CBOS as string,",
+				"          CO_SITUACAO_AUT as string,",
+				"          CO_SITUACAO_AES as string,",
+				"          CO_SITUACAO_AEG as string,",
+				"          ST_OPCAO_OPME as integer,",
+				"          NU_AUTORIZACAO as long,",
+				"          DT_AUTORIZACAO_AUT as timestamp,",
+				"          DT_SOLICITACAO_AUT as timestamp,",
+				"          DT_AUTORIZACAO_AEG as timestamp,",
+				"          DT_ATENDIMENTO_AEG as timestamp,",
+				"          QTDSOLICITADAORIGINAL as double,",
+				"          QTDAUTORIZADA as double,",
+				"          QT_NEGADA as double,",
+				"          VALORUNITARIOSOLICITADO as double,",
+				"          VALORUNITARIONEGOCIADOOPME as double,",
+				"          VALORUNITARIOCALCULADOOPME as double,",
+				"          VALORUNITARIOAUTORIZADOOPME as double,",
+				"          DT_SOLICITACAO_AES as timestamp,",
+				"          NU_NIVEL_AUTORIZACAO as integer,",
+				"          CO_ORIGEM_AUTORIZACAO as string,",
+				"          NO_PROF_SOLICITANTE as string,",
+				"          NU_CRM_PROF_SOLICITANTE_AUT as string,",
+				"          PK_TD_CONSELHO_Prof_Solic as long,",
+				"          PK_TD_CONSELHO_Uf_Prof_Solic as long,",
+				"          HD_PREST_SOLICITANTE_AES as integer,",
+				"          CO_PREST_SOLICITANTE_AES as string,",
+				"          DS_ORIGEM_SOLICITACAO as string,",
+				"          DS_INDICACAO_CLINICA as string,",
+				"          DT_VALIDADE_AUT as timestamp,",
+				"          HD_PREST_EXECUTOR_AES as integer,",
+				"          CO_PREST_EXECUTOR_AES as string,",
+				"          TS_GERACAO_AEG as timestamp,",
+				"          TS_LIBERACAO_AEG as timestamp,",
+				"          HD_USUARIO_GERACAO_AEG as integer,",
+				"          ST_HORARIO_ESPECIAL as string,",
+				"          HD_AUTORIZ_LOGSTATUS as integer",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'query',",
+				"     store: 'synapseanalytics',",
+				"     query: 'SELECT DISTINCT\\n     AUT.HANDLE AS HD_AUTORIZACAO\\n    ,AES.HANDLE AS HD_AUTORIZ_EVENTO_SOLICIT\\n    ,AEG.HANDLE AS HD_AUTORIZ_EVENTO_GERADO\\n    ,TGE.HANDLE AS HD_TGE \\n    ,BEN.HANDLE AS HD_BENEF\\n    ,ENDB.ESTADO AS HD_ESTADO_BENEF\\n    ,PRE2.ESTADOPAGAMENTO AS HD_ESTADO_PREST_EXEC\\n    ,PRE1.HANDLE AS HD_PREST_SOLICITANTE\\n    ,PRE1.PRESTADOR AS CO_PREST_SOLICITANTE\\n    ,PRE2.HANDLE AS HD_PREST_EXECUTOR\\n    ,PRE2.PRESTADOR AS CO_PREST_EXECUTOR\\n    ,PFO.HANDLE AS HD_PREST_FORNECEDOR  \\n    ,PFO.PRESTADOR AS CO_PREST_FORNECEDOR  \\n    ,TAU.HANDLE AS HD_TP_AUTORIZ\\n    ,GR.HANDLE AS HD_GRAU\\n    ,GR.GRAU AS CO_GRAU\\n    ,TPT.CODIGO AS CO_TP_TRATAMENTO\\n    ,OBJ.CODIGO AS CO_OBJ_TRATAMENTO\\n    ,TPA.HANDLE as HD_REGIME_ATEND \\n    ,FNL.HANDLE AS HD_FINALID_ATEND\\n    ,CRT.HANDLE AS HD_CARAT_ATEND\\n    ,RGM.HANDLE AS HD_REGIME_INT\\n    ,TPA.HANDLE AS HD_TP_ATEND\\n    ,TPI.HANDLE AS HD_TP_INTERN\\n    ,IND.HANDLE AS HD_IND_ACIDENTE\\n    ,TPC.HANDLE AS HD_TP_CONSULTA\\n    ,PLA.HANDLE AS HD_PLANO\\n    ,CON.HANDLE AS HD_CONTRATO\\n    ,GPU.HANDLE AS HD_USUARIO\\n    ,TPR.HANDLE AS HD_TIS_TAB_PRECO\\n    ,TPR.CODIGO AS CO_TIS_TAB_PRECO\\n    ,CBO.HANDLE AS HD_CBOS\\n    ,CBO.CODIGO AS CO_CBOS\\n /* ,TSS.CODIGO AS CO_ST_SOLICIT */\\n    ,AUT.SITUACAO AS CO_SITUACAO_AUT\\n    ,AES.SITUACAO AS CO_SITUACAO_AES\\n    ,AEG.SITUACAO AS CO_SITUACAO_AEG\\n    ,AES.OPCAOOPME AS ST_OPCAO_OPME  \\n    ,AUT.AUTORIZACAO AS NU_AUTORIZACAO\\n    ,AUT.DATAAUTORIZACAO AS DT_AUTORIZACAO_AUT\\n    ,AUT.DATASOLICITACAO AS DT_SOLICITACAO_AUT\\n    ,AEG.DATAAUTORIZACAO AS DT_AUTORIZACAO_AEG\\n    ,AEG.DATAATENDIMENTO AS DT_ATENDIMENTO_AEG\\n    ,AES.QTDSOLICITADAORIGINAL  AS QTDSOLICITADAORIGINAL\\n    ,AEG.QTDAUTORIZADA AS QTDAUTORIZADA\\n    ,(AES.QTDSOLICITADAORIGINAL - AEG.QTDAUTORIZADA) AS QT_NEGADA   \\n    ,AES.VALORUNITARIOSOLICITADO AS VALORUNITARIOSOLICITADO\\n    ,AES.VALORUNITARIONEGOCIADOOPME AS VALORUNITARIONEGOCIADOOPME\\n    ,AES.VALORUNITARIOCALCULADOOPME AS VALORUNITARIOCALCULADOOPME\\n    ,AES.VALORUNITARIOAUTORIZADOOPME AS VALORUNITARIOAUTORIZADOOPME\\n    ,AES.DATASOLICITACAO AS DT_SOLICITACAO_AES \\n    ,NAU.NIVELAUTORIZACAO AS NU_NIVEL_AUTORIZACAO \\n    ,AUT.ORIGEMAUTORIZACAO AS CO_ORIGEM_AUTORIZACAO \\n    ,AUT.SOLICITANTENOME AS NO_PROF_SOLICITANTE \\n    ,AUT.SOLICITANTECRNUM AS NU_CRM_PROF_SOLICITANTE_AUT \\n    ,AUT.CONSELHOPROFSOLICITANTETISS AS PK_TD_CONSELHO_Prof_Solic \\n    ,AUT.UFCONSELHOPROFSOLICITANTE AS PK_TD_CONSELHO_Uf_Prof_Solic \\n    ,PES.HANDLE AS HD_PREST_SOLICITANTE_AES \\n    ,PES.PRESTADOR AS CO_PREST_SOLICITANTE_AES \\n    ,AUT.RADIOSOLICITACAO AS DS_ORIGEM_SOLICITACAO\\n    ,AUT.INDICACAOCLINICA AS DS_INDICACAO_CLINICA\\n    ,AUT.DATAVALIDADE AS DT_VALIDADE_AUT\\n    ,PEX.HANDLE AS HD_PREST_EXECUTOR_AES \\n    ,PEX.PRESTADOR AS CO_PREST_EXECUTOR_AES \\n    ,AEG.DATAHORAGERACAO AS TS_GERACAO_AEG\\n    ,AEG.DATAHORALIBERACAO AS TS_LIBERACAO_AEG\\n    ,AEG.USUARIOGERACAO AS HD_USUARIO_GERACAO_AEG\\n    ,TGE.COMPORTAHE AS ST_HORARIO_ESPECIAL\\n    ,ALG.HANDLE AS HD_AUTORIZ_LOGSTATUS\\nFROM PROSTG.SAM_AUTORIZ AUT\\nLEFT JOIN PROSTG.SAM_AUTORIZ_EVENTOSOLICIT AES ON AES.AUTORIZACAO = AUT.HANDLE\\nLEFT JOIN PROSTG.SAM_AUTORIZ_EVENTOGERADO AEG ON AEG.EVENTOSOLICITADO = AES.HANDLE\\nJOIN PROSTG.SAM_TIPOAUTORIZ TAU ON TAU.HANDLE = AUT.TIPOAUTORIZACAO\\nLEFT JOIN PROSTG.SAM_REGIMEATENDIMENTO RA ON RA.HANDLE = AUT.REGIMEATENDIMENTO\\nLEFT JOIN PROSTG.SAM_LOCALATENDIMENTO LA ON LA.HANDLE = AUT.LOCALATENDIMENTO\\nLEFT JOIN PROSTG.SAM_TGE TGE ON TGE.HANDLE = ISNULL(AEG.EVENTOGERADO, AES.EVENTO)\\nLEFT JOIN PROSTG.SAM_TGE_NIVELAUTORIZACAO NAU ON NAU.EVENTO = TGE.HANDLE \\nLEFT JOIN PROSTG.TIS_TABELAPRECO TPR ON TPR.HANDLE = TGE.TABELADOMINIOTISS\\nLEFT JOIN PROSTG.SAM_GRAU GR ON GR.HANDLE = AEG.GRAUGERADO\\nLEFT JOIN PROSTG.SAM_TIPOTRATAMENTO TPT ON TPT.HANDLE = TGE.TIPOTRATAMENTO\\nLEFT JOIN PROSTG.SAM_OBJTRATAMENTO OBJ ON OBJ.HANDLE = TGE.OBJETIVOTRATAMENTO\\nJOIN PROSTG.SAM_BENEFICIARIO BEN ON BEN.HANDLE = AUT.BENEFICIARIO \\nLEFT JOIN PROSTG.SAM_PRESTADOR PRE1 ON PRE1.HANDLE = AUT.SOLICITANTE\\nLEFT JOIN PROSTG.SAM_PRESTADOR PRE2 ON PRE2.HANDLE = AUT.LOCALEXECUCAO\\nLEFT JOIN PROSTG.SAM_PRESTADOR PFO  ON PFO.HANDLE  = AES.FORNECEDOR\\nLEFT JOIN PROSTG.SAM_PRESTADOR PES  ON PES.HANDLE  = AES.SOLICITANTE\\nLEFT JOIN PROSTG.SAM_PRESTADOR PEX  ON PEX.HANDLE  = AES.EXECUTOR\\nLEFT JOIN PROSTG.TIS_CBOS CBO ON CBO.HANDLE = AUT.CBOSPROFSOLICITANTETISS\\nLEFT JOIN PROSTG.Z_GRUPOUSUARIOS GPU ON GPU.HANDLE = AUT.USUARIO\\nLEFT JOIN PROSTG.SAM_ENDERECO ENDB ON ENDB.HANDLE = BEN.ENDERECORESIDENCIAL\\nLEFT JOIN PROSTG.SAM_FINALIDADEATENDIMENTO FNL ON FNL.HANDLE = AUT.FINALIDADEATENDIMENTO\\nLEFT JOIN PROSTG.TIS_CARATERATENDIMENTO CRT ON CRT.HANDLE = AUT.CARATERATENDIMENTO\\nLEFT JOIN PROSTG.TIS_REGIMEINTERNACAO RGM ON RGM.HANDLE = AUT.REGIMEINTERNACAO\\nLEFT JOIN PROSTG.TIS_TIPOATENDIMENTO TPA ON TPA.HANDLE = AUT.TIPOATENDIMENTO\\nLEFT JOIN PROSTG.TIS_TIPOINTERNACAO TPI ON TPI.HANDLE = AUT.TIPOINTERNACAOTISS\\nLEFT JOIN PROSTG.TIS_INDICADORDEACIDENTE IND ON IND.HANDLE = AUT.INDICADORDEACIDENTE\\nLEFT JOIN PROSTG.TIS_TIPOCONSULTA TPC ON TPC.HANDLE = AUT.TIPOCONSULTA\\nLEFT JOIN PROSTG.SAM_CONTRATO CON ON CON.HANDLE = BEN.CONTRATO\\nJOIN PROSTG.SAM_PLANO PLA ON PLA.HANDLE = CON.PLANO\\nLEFT JOIN PROSTG.SAM_AUTORIZ_LOGSTATUS ALG ON ALG.AUTORIZACAO = AUT.HANDLE \\n/*         JOIN TABTMP ON SSMAX = ALG.HANDLE\\nLEFT JOIN PROSTG.TIS_STATUSSOLICITACAO TSS ON TSS.HANDLE = ALG.STATUS*/\\nWHERE AUT.LOCALATENDIMENTO = 1 \\nAND AES.SITUACAO <> \\'C\\' \\nAND AUT.SITUACAO NOT IN (\\'C\\',\\'F\\') \\nAND SUBSTRING(CAST(ISNULL(ISNULL(AEG.DATAAUTORIZACAO, AES.DATASOLICITACAO ), AUT.DATAAUTORIZACAO) AS VARCHAR),1,10) = \\'2022-01-01\\'\\nAND NAU.DATAFINAL IS NULL ',",
+				"     isolationLevel: 'READ_UNCOMMITTED',",
+				"     staged: true) ~> AUTORIZ",
+				"source(output(",
+				"          HD_AUTORIZ as long,",
+				"          SSMAX as integer",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'query',",
+				"     store: 'synapseanalytics',",
+				"     query: 'SELECT AU.HANDLE AS HD_AUTORIZ,\\nMAX(LG.HANDLE) AS SSMAX\\nFROM PROSTG.SAM_AUTORIZ_LOGSTATUS LG \\nJOIN PROSTG.SAM_AUTORIZ AU ON LG.AUTORIZACAO = AU.HANDLE\\nGROUP BY AU.HANDLE',",
+				"     isolationLevel: 'READ_UNCOMMITTED',",
+				"     staged: true) ~> LOGSTATUS",
+				"source(output(",
+				"          HD_SSMAX as integer,",
+				"          CO_ST_SOLICIT as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'query',",
+				"     store: 'synapseanalytics',",
+				"     query: 'SELECT LG.HANDLE AS HD_SSMAX\\n,TSS.CODIGO AS CO_ST_SOLICIT\\nFROM PROSTG.SAM_AUTORIZ_LOGSTATUS LG \\nLEFT JOIN PROSTG.TIS_STATUSSOLICITACAO TSS ON TSS.HANDLE = LG.STATUS',",
+				"     isolationLevel: 'READ_UNCOMMITTED',",
+				"     staged: true) ~> STATUSSOLICITACAO",
+				"AUTORIZ, LOGSTATUS join(HD_AUTORIZ_LOGSTATUS == SSMAX,",
+				"     joinType:'inner',",
+				"     matchType:'exact',",
+				"     ignoreSpaces: false,",
+				"     broadcast: 'auto')~> joinAutLogStatus",
+				"joinAutLogStatus, STATUSSOLICITACAO join(SSMAX == HD_SSMAX,",
+				"     joinType:'left',",
+				"     matchType:'exact',",
+				"     ignoreSpaces: false,",
+				"     broadcast: 'auto')~> joinLogStatusSolicitacao",
+				"joinLogStatusSolicitacao select(mapColumn(",
+				"          each(match(true()))",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> select1",
+				"CARACAUTORIZ sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'delimited',",
+				"     fileSystem: 'testes',",
+				"     columnDelimiter: ';',",
+				"     escapeChar: '\\\\',",
+				"     quoteChar: '',",
+				"     encodingName: 'ISO-8859-1',",
+				"     columnNamesAsHeader: false,",
+				"     partitionFileNames:['TST_AUTORIZ.csv'],",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     partitionBy('hash', 1)) ~> sink1",
+				"select1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'delimited',",
+				"     fileSystem: 'testes',",
+				"     columnDelimiter: ';',",
+				"     escapeChar: '\\\\',",
+				"     quoteChar: '',",
+				"     encodingName: 'ISO-8859-1',",
+				"     columnNamesAsHeader: false,",
+				"     partitionFileNames:['TST_AUTORIZ_2.csv'],",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     partitionBy('hash', 1)) ~> sink2"
+			]
+		}
+	}
+}

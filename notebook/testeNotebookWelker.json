@@ -1,0 +1,702 @@
+{
+	"name": "testeNotebookWelker",
+	"properties": {
+		"nbformat": 4,
+		"nbformat_minor": 2,
+		"bigDataPool": {
+			"referenceName": "synPoolSpark001",
+			"type": "BigDataPoolReference"
+		},
+		"targetSparkConfiguration": {
+			"referenceName": "sparkConfiguration1",
+			"type": "SparkConfigurationReference"
+		},
+		"sessionProperties": {
+			"driverMemory": "56g",
+			"driverCores": 8,
+			"executorMemory": "56g",
+			"executorCores": 8,
+			"numExecutors": 2,
+			"runAsWorkspaceSystemIdentity": false,
+			"conf": {
+				"spark.dynamicAllocation.enabled": "false",
+				"spark.dynamicAllocation.minExecutors": "2",
+				"spark.dynamicAllocation.maxExecutors": "2",
+				"spark.autotune.trackingId": "0d603a83-5751-4d41-9a5d-05f0f8427195"
+			}
+		},
+		"metadata": {
+			"saveOutput": true,
+			"synapse_widget": {
+				"version": "0.1",
+				"state": {
+					"15b4693c-b263-4fa2-bd9c-e59cb3320747": {
+						"type": "Synapse.DataFrame",
+						"sync_state": {
+							"table": {
+								"rows": [
+									{
+										"0": "147268329.000000000000000000",
+										"1": "1.000000000000000000",
+										"2": "1.000000000000000000",
+										"3": "1.000000000000000000",
+										"4": "12.000000000000000000",
+										"5": "47.000000000000000000",
+										"6": "1.000000000000000000",
+										"7": "3.000000000000000000",
+										"10": "2022-03-10 00:00:00",
+										"11": "2022-03-10 00:00:00",
+										"12": "2022-03-10 08:52:26"
+									},
+									{
+										"0": "147283779.000000000000000000",
+										"1": "1.000000000000000000",
+										"2": "1.000000000000000000",
+										"3": "1.000000000000000000",
+										"4": "12.000000000000000000",
+										"5": "47.000000000000000000",
+										"6": "1.000000000000000000",
+										"7": "3.000000000000000000",
+										"10": "2022-03-10 00:00:00",
+										"11": "2022-03-10 00:00:00",
+										"12": "2022-03-10 12:07:04"
+									},
+									{
+										"0": "147282762.000000000000000000",
+										"1": "1.000000000000000000",
+										"2": "1.000000000000000000",
+										"3": "1.000000000000000000",
+										"4": "12.000000000000000000",
+										"5": "47.000000000000000000",
+										"6": "1.000000000000000000",
+										"7": "3.000000000000000000",
+										"10": "2022-03-10 00:00:00",
+										"11": "2022-03-10 00:00:00",
+										"12": "2022-03-10 11:44:02"
+									},
+									{
+										"0": "147282428.000000000000000000",
+										"1": "3.000000000000000000",
+										"2": "1.000000000000000000",
+										"3": "1.000000000000000000",
+										"4": "12.000000000000000000",
+										"5": "68.000000000000000000",
+										"6": "1.000000000000000000",
+										"7": "1.000000000000000000",
+										"10": "2022-03-10 00:00:00",
+										"11": "2022-03-10 00:00:00",
+										"12": "2022-03-10 11:37:23"
+									},
+									{
+										"0": "147254085.000000000000000000",
+										"1": "1.000000000000000000",
+										"2": "1.000000000000000000",
+										"3": "1.000000000000000000",
+										"4": "12.000000000000000000",
+										"5": "47.000000000000000000",
+										"6": "1.000000000000000000",
+										"7": "3.000000000000000000",
+										"10": "2022-03-10 00:00:00",
+										"11": "2022-03-10 00:00:00",
+										"12": "2022-03-09 17:07:56"
+									},
+									{
+										"0": "147798020.000000000000000000",
+										"1": "1.000000000000000000",
+										"2": "1.000000000000000000",
+										"3": "1.000000000000000000",
+										"4": "12.000000000000000000",
+										"5": "47.000000000000000000",
+										"6": "1.000000000000000000",
+										"7": "3.000000000000000000",
+										"10": "2022-03-10 00:00:00",
+										"11": "2022-03-10 00:00:00",
+										"12": "2022-03-24 15:54:59"
+									},
+									{
+										"0": "148396091.000000000000000000",
+										"1": "1.000000000000000000",
+										"2": "1.000000000000000000",
+										"3": "1.000000000000000000",
+										"4": "12.000000000000000000",
+										"5": "47.000000000000000000",
+										"6": "1.000000000000000000",
+										"7": "3.000000000000000000",
+										"10": "2022-03-10 00:00:00",
+										"11": "2022-03-10 00:00:00",
+										"12": "2022-04-11 14:20:31"
+									},
+									{
+										"0": "147278282.000000000000000000",
+										"1": "1.000000000000000000",
+										"2": "1.000000000000000000",
+										"3": "1.000000000000000000",
+										"4": "12.000000000000000000",
+										"5": "47.000000000000000000",
+										"6": "1.000000000000000000",
+										"7": "3.000000000000000000",
+										"10": "2022-03-10 00:00:00",
+										"11": "2022-03-10 00:00:00",
+										"12": "2022-03-10 10:37:49"
+									},
+									{
+										"0": "147272898.000000000000000000",
+										"1": "1.000000000000000000",
+										"2": "1.000000000000000000",
+										"3": "1.000000000000000000",
+										"4": "12.000000000000000000",
+										"5": "47.000000000000000000",
+										"6": "1.000000000000000000",
+										"7": "3.000000000000000000",
+										"10": "2022-03-10 00:00:00",
+										"11": "2022-03-10 00:00:00",
+										"12": "2022-03-10 09:38:52"
+									},
+									{
+										"0": "147293618.000000000000000000",
+										"1": "2.000000000000000000",
+										"2": "1.000000000000000000",
+										"3": "1.000000000000000000",
+										"4": "12.000000000000000000",
+										"5": "47.000000000000000000",
+										"6": "1.000000000000000000",
+										"7": "3.000000000000000000",
+										"10": "2022-03-10 00:00:00",
+										"11": "2022-03-10 00:00:00",
+										"12": "2022-03-10 15:17:49"
+									}
+								],
+								"schema": [
+									{
+										"key": "0",
+										"name": "handle",
+										"type": "decimal"
+									},
+									{
+										"key": "1",
+										"name": "regimeatendimento",
+										"type": "decimal"
+									},
+									{
+										"key": "2",
+										"name": "condicaoatendimento",
+										"type": "decimal"
+									},
+									{
+										"key": "3",
+										"name": "localatendimento",
+										"type": "decimal"
+									},
+									{
+										"key": "4",
+										"name": "finalidadeatendimento",
+										"type": "decimal"
+									},
+									{
+										"key": "5",
+										"name": "tipoautorizacao",
+										"type": "decimal"
+									},
+									{
+										"key": "6",
+										"name": "tipotratamento",
+										"type": "decimal"
+									},
+									{
+										"key": "7",
+										"name": "objetivotratamento",
+										"type": "decimal"
+									},
+									{
+										"key": "8",
+										"name": "acomodacao",
+										"type": "decimal"
+									},
+									{
+										"key": "9",
+										"name": "motivoalta",
+										"type": "decimal"
+									},
+									{
+										"key": "10",
+										"name": "dataautorizacao",
+										"type": "timestamp"
+									},
+									{
+										"key": "11",
+										"name": "datasolicitacao",
+										"type": "timestamp"
+									},
+									{
+										"key": "12",
+										"name": "dataautorizacao",
+										"type": "timestamp"
+									}
+								],
+								"truncated": false
+							},
+							"isSummary": false,
+							"language": "scala"
+						},
+						"persist_state": {
+							"view": {
+								"type": "details",
+								"chartOptions": {
+									"chartType": "bar",
+									"aggregationType": "sum",
+									"categoryFieldKeys": [
+										"1"
+									],
+									"seriesFieldKeys": [
+										"0"
+									],
+									"isStacked": false
+								}
+							}
+						}
+					},
+					"95d9420e-b1fd-44f5-abe4-c727e2a038cc": {
+						"type": "Synapse.DataFrame",
+						"sync_state": {
+							"table": {
+								"rows": [
+									{
+										"0": "358482",
+										"1": "68742730320",
+										"2": "8/9/2022 9:26:05 PM",
+										"3": {
+											"x-opt-enqueued-time": {
+												"member0": 1660080365687
+											}
+										},
+										"5": "MjAyMi0wOC0wOSAxODoxNjowMy4wMzkwMDAwMDAwMDAsMCxJLE5PVCBTRVQgICAsXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sNDc5MTI3LFxOLDQ3OTEyNyw0LDAzMDAwNjg1NDYwMDAwLE4sOTkxOTc4MjMyLHplemVtYXJpbm9AZ21haWwuY29tLFxOLFxOLDAsTiw1MjMzLFxOLFMsXE4sXE4sTiwwLDMwLDQ3OTEyNywxOTczLTA3LTA1VDAwOjAwOjAwLjAwMDAwMDAwMDAwMCxcTixcTiw0NSxNQVJJQSBKT1NFIERFIENBU1RSTyBNQVJJTk8sMDEwMDA5MDU3NzEwMTAwOSxcTixcTiwwNSwwMDY4NTQ2MDAsTixOLDE5NzMtMDctMDVUMDA6MDA6MDAuMDAwMDAwMDAwMDAwLDE3NyxQLDI0LFMsNDc5MTI3LDUxMDk0MjgsNTEwOTQyNyxTLDM3NDkwMDUsXE4sXE4sMjUsXE4sTiwxOTczLTA3LTA1VDAwOjAwOjAwLjAwMDAwMDAwMDAwMCxOLDAxMDAwOTA1NzcxMDEwMDksTixcTiwxLFxOLFxOLFxOLFMsUyxcTixcTiw3OCwxOTczLTA3LTA1VDAwOjAwOjAwLjAwMDAwMDAwMDAwMCwxLDIsXE4sXE4sXE4sMDA2ODU0NjAwMDAsXE4sXE4sTixOLE4sMTAwMDQ3NTQ1NyxcTixcTiwxLDEsMSwxLDAzMDAwNjg1NDYwMDAwMzAsTiwwLDEsXE4sXE4sNSxOLE4sXE4sXE4sMjAyMC0xMS0wM1QwMDowMDowMC4wMDAwMDAwMDAwMDAsTixcTixcTixcTixcTixcTixcTixcTixcTixcTixcTixcTixOLE4sMjAxMC0wOS0zMFQwMDowMDowMC4wMDAwMDAwMDAwMDAsXE4sTUFSSUEgSk9TRSBERSBDQVNUUk8gTUFSSU5PLE1BUklBIEpPU0UgREUgQ0FTVFJPIE1BUklOTyxNQVJJQSBKT1NFIERFIENBU1RSTyBNQVJJTk8sXE4sUywxNjQwOTM4MTgsTixTLDQwLFxOLFxOLFxOLFxOLE4sXE4sXE4sXE4sXE4sTixOLE4sXE4sXE4sTixcTiwwLDE5OTYtMTAtMjlUMDA6MDA6MDAuMDAwMDAwMDAwMDAwLCAgLCAgICAgICAgLCAgLFxOLFxOLFxOLFxOLFxOLE4sTixQUFBJLFBBU1MsMSwxOTk2LTEwLTI5VDAwOjAwOjAwLjAwMDAwMDAwMDAwMCwyMDA4OTQ0MDIsMC4wLFxOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLDIxLE4sXE4sXE4sMSxcTixcTiwgLCAsMjcsMjAyMS0wMS0yOVQxMDozNjoyNS4wMDAwMDAwMDAwMDAsNDA0NDgsMjAyMi0wNC0xOVQwODowMDo0Mi4wMDAwMDAwMDAwMDAsXE4="
+									},
+									{
+										"0": "358483",
+										"1": "68742795136",
+										"2": "8/9/2022 9:26:05 PM",
+										"3": {
+											"x-opt-enqueued-time": {
+												"member0": 1660080365687
+											}
+										},
+										"5": "MjAyMi0wOC0wOSAxODoxNjowMy4wMzkwMDAwMDAwMDAsMCxJLE5PVCBTRVQgICAsXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sNDc5MTI4LFxOLDQ3OTEyNyw0LDAzMDAwNjg1NDYwMDAxLE4sXE4sXE4sXE4sXE4sMSxOLFxOLFxOLE4sXE4sXE4sTiwwLFxOLDQ3OTEyOCwxOTgwLTAxLTAxVDAwOjAwOjAwLjAwMDAwMDAwMDAwMCwyMDAzLTA3LTMwVDAwOjAwOjAwLjAwMDAwMDAwMDAwMCwxMyw4ODgsQ0FNSUxBIEJJQU5DQSBERSBDLk1BUklOTywwMTAxMDU2OTg3OTgxMDA4LFxOLFxOLDAxLFxOLE4sTiwxOTgwLTAxLTAxVDAwOjAwOjAwLjAwMDAwMDAwMDAwMCwxNzcsUCwyNCxTLDQ3OTEyNyw0NzkxMjcsNDc5MTI3LFxOLFxOLFxOLFxOLDI1LFxOLE4sMTk4MC0wMS0wMVQwMDowMDowMC4wMDAwMDAwMDAwMDAsTiwwMTAxOTk5OTk5OTkxMDA0LE4sXE4sMSxcTixcTixcTixTLFMsXE4sXE4sNzgsMTk4MC0wMS0wMVQwMDowMDowMC4wMDAwMDAwMDAwMDAsMSwxLFxOLFxOLFxOLDAwNjg1NDYwMDAxLFxOLFxOLE4sTixOLDEwMDA0NzU0NTgsXE4sXE4sMSwxLDEsMSwwMTAxOTk5OTk5OTkxMDA0LE4sXE4sMzAsXE4sXE4sNSxOLE4sXE4sXE4sXE4sTixcTixcTixcTixcTixcTixcTixcTixcTixcTixcTixcTixOLE4sXE4sXE4sQ0FNSUxBIEJJQU5DQSBERSBDIE1BUklOTyxDQU1JTEEgQklBTkNBIERFIEMgTUFSSU5PLENBTUlMQSBCSUFOQ0EgREUgQyBNQVJJTk8sXE4sTixcTixTLFMsXE4sXE4sXE4sXE4sXE4sTixcTixcTixcTixcTixOLE4sTixcTixcTixOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLDAsXE4sTixOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLDAwMDIsXE4sMSxcTixcTixcTixcTixTLFxOLFxOLDMsXE4sXE4sXE4sXE4sMjcsMjAyMS0wMS0yOVQxMDozNjoyNS4wMDAwMDAwMDAwMDAsNDA0NDgsXE4sXE4="
+									},
+									{
+										"0": "358484",
+										"1": "68742795192",
+										"2": "8/9/2022 9:26:05 PM",
+										"3": {
+											"x-opt-enqueued-time": {
+												"member0": 1660080365687
+											}
+										},
+										"5": "MjAyMi0wOC0wOSAxODoxNjowMy4wMzkwMDAwMDAwMDAsMCxJLE5PVCBTRVQgICAsXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sNDc5MTMwLFxOLDQ3OTEyNyw0LDAzMDAwNjg1NDYwMDAzLE4sMDAxMTkxOTc4MjMyLE1BSk9NQVJJTk9ASE9UTUFJTC5DT00sXE4sXE4sMyxOLDQ3NDQsXE4sTixcTixcTixOLDAsMDMsNDc5MTMwLDE5ODYtMTAtMDFUMDA6MDA6MDAuMDAwMDAwMDAwMDAwLDIwMTAtMDgtMjdUMDA6MDA6MDAuMDAwMDAwMDAwMDAwLDEzLDg4OCxBTkEgQ0FST0xJTkEgREUgQ0FTVFJPIE1BUklOTywwMTAzMDkwNTc3MTIxMDA0LFxOLFxOLDAyLFxOLE4sTiwxOTg2LTEwLTAxVDAwOjAwOjAwLjAwMDAwMDAwMDAwMCwxNzcsUCwyNCxTLDQ3OTEyNyw0NzkxMjcsNDc5MTI3LFxOLFxOLDIwMTAtMDgtMzFUMDA6MDA6MDAuMDAwMDAwMDAwMDAwLFxOLDI1LFxOLE4sMTk4Ni0xMC0wMVQwMDowMDowMC4wMDAwMDAwMDAwMDAsTiwwMTAzMDkwNTc3MTIxMDA0LE4sXE4sMSxcTixcTixcTixTLFMsXE4sXE4sNzgsMTk4Ni0xMC0wMVQwMDowMDowMC4wMDAwMDAwMDAwMDAsMSwyLFxOLFxOLFxOLDAwNjg1NDYwMDAzLFxOLFxOLE4sTixOLDEwMDA0NzU0NjAsXE4sXE4sMSwxLDEsMSwwMzAwMDY4NTQ2MDAwMzAzLE4sMywzMCxcTixcTiw1LE4sTixcTixcTixcTixOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLE4sTixcTixcTixBTkEgQ0FST0xJTkEgQ0FTVFJPIE1BUklOTyxBTkEgQ0FST0xJTkEgQ0FTVFJPIE1BUklOTyxBTkEgQ0FST0xJTkEgREUgQ0FTVFJPIE1BUklOTyxcTixOLDE2NDA5MzgxOSxOLFMsMjEsXE4sXE4sXE4sXE4sTixcTixcTixcTixcTixOLE4sTixcTixcTixOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLDAsXE4sTixOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLDAwMDIsXE4sMSxcTixcTixcTixcTixTLFxOLFxOLDMsXE4sXE4sXE4sXE4sMjcsMjAyMS0wMS0yOVQxMDozNjoyNS4wMDAwMDAwMDAwMDAsNDA0NDgsXE4sXE4="
+									},
+									{
+										"0": "358485",
+										"1": "68742795248",
+										"2": "8/9/2022 9:26:05 PM",
+										"3": {
+											"x-opt-enqueued-time": {
+												"member0": 1660080365687
+											}
+										},
+										"5": "MjAyMi0wOC0wOSAxODoxNjowMy4wMzkwMDAwMDAwMDAsMCxJLE5PVCBTRVQgICAsXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sNDc5MTM0LFxOLDQ3OTEzMyw0LDAzMDAwNjg1NDYwMTAxLE4sXE4sXE4sXE4sXE4sMSxOLFxOLFxOLE4sXE4sXE4sTiwwLFxOLDQ3OTEzNCwxOTgwLTA1LTAxVDAwOjAwOjAwLjAwMDAwMDAwMDAwMCwyMDA0LTA0LTIwVDAwOjAwOjAwLjAwMDAwMDAwMDAwMCwxMyw4ODgsREVMUEhPIEZVWklNT1RPIEpVTklPUiwwMTAxMDc0MjExMzQxMDA2LFxOLFxOLDAxLFxOLE4sTiwxOTgwLTA1LTAxVDAwOjAwOjAwLjAwMDAwMDAwMDAwMCwxNzcsUCwxNyxTLDQ3OTEzMyw0NzkxMzMsNDc5MTMzLFxOLFxOLFxOLFxOLDE2LFxOLE4sMTk4MC0wNS0wMVQwMDowMDowMC4wMDAwMDAwMDAwMDAsTiwwMTAxOTk5OTk5OTkxMDA0LE4sXE4sMSxcTixcTixcTixTLFMsXE4sXE4sNzgsMTk4MC0wNS0wMVQwMDowMDowMC4wMDAwMDAwMDAwMDAsMSwxLFxOLFxOLFxOLDAwNjg1NDYwMTAxLFxOLFxOLE4sTixOLDEwMDA0NzU0NjIsXE4sXE4sMSwxLDEsMSwwMTAxOTk5OTk5OTkxMDA0LE4sXE4sMyxcTixcTiw1LE4sTixcTixcTixcTixOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLE4sTixcTixcTixERUxQSE8gRlVaSU1PVE8gSlVOSU9SLERFTFBITyBGVVpJTU9UTyBKVU5JT1IsREVMUEhPIEZVWklNT1RPIEpVTklPUixcTixOLFxOLFMsUyxcTixcTixcTixcTixcTixOLFxOLFxOLFxOLFxOLE4sTixOLFxOLFxOLE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sMCxcTixOLE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sMDAwMixcTiwxLFxOLFxOLFxOLFxOLFMsXE4sXE4sMyxcTixcTixcTixcTiwyNywyMDIxLTAxLTI5VDEwOjM2OjI1LjAwMDAwMDAwMDAwMCw0MDQ0OCxcTixcTg=="
+									},
+									{
+										"0": "358486",
+										"1": "68742795304",
+										"2": "8/9/2022 9:26:05 PM",
+										"3": {
+											"x-opt-enqueued-time": {
+												"member0": 1660080365687
+											}
+										},
+										"5": "MjAyMi0wOC0wOSAxODoxNjowMy4wMzkwMDAwMDAwMDAsMCxJLE5PVCBTRVQgICAsXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sNDc4OTMwLFxOLDQ3ODkzMCwyLDAwMzAwNjg1NDI3NzAwLE4sMDAwMDAwMDAsXE4sXE4sXE4sMCxOLFxOLFxOLFMsXE4sXE4sTiwwLFxOLDQ3ODkzMCwxOTgwLTEwLTMxVDAwOjAwOjAwLjAwMDAwMDAwMDAwMCwxOTk3LTAxLTMxVDAwOjAwOjAwLjAwMDAwMDAwMDAwMCw1MCwxLE1BUklBIEpPU0UgTE9VUkVJUk8sMDEwMDAyNDA5OTQ1MTAwNixcTixcTiwwMSwwMDY4NTQyNzcsTixOLDE5ODAtMTAtMzFUMDA6MDA6MDAuMDAwMDAwMDAwMDAwLDE4NSxQLDI0LFMsNDc4OTMwLDQ3ODkzMCw0Nzg5MzAsTiwwLFxOLFxOLDI1LFxOLE4sMTk4MC0xMC0zMVQwMDowMDowMC4wMDAwMDAwMDAwMDAsTiwwMTAwOTk5OTk5OTkxMDA1LE4sXE4sMSxcTixcTixcTixTLFMsXE4sXE4sNzgsMTk4MC0xMC0zMVQwMDowMDowMC4wMDAwMDAwMDAwMDAsMSwyLFxOLFxOLFxOLDAwNjg1NDI3NzAwLFxOLFxOLE4sTixOLDEwMDA0NzUyNjIsXE4sXE4sMSwxLDEsMSwwMTAwOTk5OTk5OTkxMDA1LE4sXE4sMSxcTixcTiw1LE4sTixcTixcTixcTixOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLE4sTixcTixcTixNQVJJQSBKT1NFIExPVVJFSVJPLE1BUklBIEpPU0UgTE9VUkVJUk8sTUFSSUEgSk9TRSBMT1VSRUlSTyxcTixOLFxOLFMsUyxcTixcTixcTixcTixcTixOLFxOLDE5OTUtMDgtMDFUMDA6MDA6MDAuMDAwMDAwMDAwMDAwLFxOLFxOLE4sTixOLFxOLFxOLE4sXE4sMCwxOTk1LTA4LTAxVDAwOjAwOjAwLjAwMDAwMDAwMDAwMCwgICwgICAgICAgICwgICxcTixcTixcTixcTixcTixOLE4sUFBQSSxQQVNTLDEsMTk5NS0wOC0wMVQwMDowMDowMC4wMDAwMDAwMDAwMDAsMjAwNjI1MTc2LDAuMCxcTixcTixcTixcTixcTiwxLFxOLFxOLFxOLFxOLFMsXE4sXE4sMyxcTixcTixcTixcTiwxLDIwMjEtMDEtMjhUMDU6MzQ6MTEuMDAwMDAwMDAwMDAwLDc0NTIsXE4sXE4="
+									},
+									{
+										"0": "358487",
+										"1": "68742795360",
+										"2": "8/9/2022 9:26:05 PM",
+										"3": {
+											"x-opt-enqueued-time": {
+												"member0": 1660080365687
+											}
+										},
+										"5": "MjAyMi0wOC0wOSAxODoxNjowMy4wMzkwMDAwMDAwMDAsMCxJLE5PVCBTRVQgICAsXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sNDc2MjMxLFxOLDQ3NjIzMSw0LDAzMDAwNjg0OTc0OTAwLE4sOTk4NzI0NTQyLE1IRUxPSVNBM0BIT1RNQUlMLkNPTSxcTixcTiwwLE4sNTIzMyxcTixTLFxOLFxOLE4sMCw4Myw0NzYyMzEsMTk5Mi0wOS0wOFQwMDowMDowMC4wMDAwMDAwMDAwMDAsXE4sXE4sNDUsTUFSSUEgSEVMT0lTQSBKQU5VQVJJTyBET1MgUkVJUywwMzAwMDY4NDk3NDkwMDAwLFxOLFxOLDA0LDAwNjg0OTc0OSxOLE4sMTk5Mi0wOS0wOFQwMDowMDowMC4wMDAwMDAwMDAwMDAsMzM4LFAsMjQsUyw0NzYyMzEsNDc2MjMxLDQ3MTc5OTksUywwLFxOLFxOLDI1LFxOLE4sMTk5Mi0wOS0wOFQwMDowMDowMC4wMDAwMDAwMDAwMDAsTiwwMTAwMDg3MjcwODExMDA5LE4sXE4sMSxcTixcTixcTixTLFMsXE4sXE4sNzgsMTk5Mi0wOS0wOFQwMDowMDowMC4wMDAwMDAwMDAwMDAsMSwyLFxOLFxOLFxOLDAwNjg0OTc0OTAwLFxOLFxOLE4sTixOLDEwMDA0NzI1OTEsXE4sXE4sMSwxLDEsMSwwMzAwMDY4NDk3NDkwMDgzLE4sNCwxLFxOLFxOLDUsTixOLFxOLFxOLFxOLE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sTixOLDIwMTUtMDUtMDVUMDA6MDA6MDAuMDAwMDAwMDAwMDAwLFxOLE1BUklBIEhFTE9JU0EgSkFOVUFSSU8gUkVJUyxNQVJJQSBIRUxPSVNBIEpBTlVBUklPIFJFSVMsTUFSSUEgSEVMT0lTQSBKQU5VQVJJTyBET1MgUkVJUyxcTixTLDExMDczNjAxOSxOLFMsNjAsXE4sXE4sXE4sXE4sTixcTiwyMDA3LTEwLTAxVDAwOjAwOjAwLjAwMDAwMDAwMDAwMCxcTixcTixOLE4sTixcTixcTixOLFxOLDAsMjAwNy0xMC0wMVQwMDowMDowMC4wMDAwMDAwMDAwMDAsICAsICAgICAgICAsICAsXE4sXE4sXE4sXE4sXE4sTixOLFBQUEksUEFTUywxLDIwMDctMTAtMDFUMDA6MDA6MDAuMDAwMDAwMDAwMDAwLDIwMjc3OTUyMSwwLjAsXE4sXE4sXE4sXE4sXE4sMSxcTixcTixcTiwyOSxOLFxOLDExLDIsXE4sXE4sXE4sXE4sMjcsMjAyMS0wMS0yOVQxMDozNDo0My4wMDAwMDAwMDAwMDAsNDA0NDgsMjAyMS0xMS0xM1QxODo0NjoyNi4wMDAwMDAwMDAwMDAsXE4="
+									},
+									{
+										"0": "358488",
+										"1": "68742795416",
+										"2": "8/9/2022 9:26:05 PM",
+										"3": {
+											"x-opt-enqueued-time": {
+												"member0": 1660080365687
+											}
+										},
+										"5": "MjAyMi0wOC0wOSAxODoxNjowMy4wMzkwMDAwMDAwMDAsMCxJLE5PVCBTRVQgICAsXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sNDc4MjYyLFxOLDQ3ODI1OSw0LDAzMDAwNjg1MzUxNTA0LE4sOTg4NTExNzI0LGpvYXF1aW5hbWFjZWRvQHlhaG9vLmNvbS5icixcTixcTiw0LE4sNTIzMyxcTixOLFxOLFxOLE4sMCw4OSw0NzgyNjIsMTk4Ny0xMS0wMVQwMDowMDowMC4wMDAwMDAwMDAwMDAsXE4sXE4sNDcsSk9TRSBGRVJSRUlSQSBERSBBUkFVSk8sMDEwNDA4NTU3NjA2MTAwMixcTixcTiwwNSxcTixOLE4sMTk4Ny0xMS0wMVQwMDowMDowMC4wMDAwMDAwMDAwMDAsMTc3LFAsMTYsUyw0NzgyNTksNDc4MjU5LDQ3ODI1OSxcTixcTixcTixcTiwxOCxcTixOLDE5ODctMTEtMDFUMDA6MDA6MDAuMDAwMDAwMDAwMDAwLE4sMDEwNDA4NTU3NjA2MTAwMixOLFxOLDEsXE4sXE4sXE4sUyxTLFxOLFxOLDc4LDE5ODctMTEtMDFUMDA6MDA6MDAuMDAwMDAwMDAwMDAwLDEsMixcTixcTixcTiwwMDY4NTM1MTUwNCxcTixcTixTLE4sTiwxMDAwNDc0NTk5LFxOLFxOLDEsMSwxLDEsMDMwMDA2ODUzNTE1MDQ4OSxOLDUsMixcTixcTiw1LE4sTixcTixcTiwyMDEzLTAzLTIwVDAwOjAwOjAwLjAwMDAwMDAwMDAwMCxOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLE4sTiwyMDExLTExLTE2VDAwOjAwOjAwLjAwMDAwMDAwMDAwMCxcTixKT1NFIEZFUlJFSVJBIERFIEFSQVVKTyxKT1NFIEZFUlJFSVJBIERFIEFSQVVKTyxKT1NFIEZFUlJFSVJBIERFIEFSQVVKTyxcTixOLDk5MDU1NTg5LE4sUyw1MCxcTixcTixcTixcTixOLFxOLFxOLFxOLFxOLE4sTixOLFxOLFxOLE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sMCxcTixOLE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sMDAwMSxcTiwxLFxOLFxOLFxOLDc0LFMsXE4sXE4sMyxcTixcTixcTixcTiwyNywyMDIxLTAxLTI5VDEwOjM2OjAwLjAwMDAwMDAwMDAwMCw0MDQ0OCxcTixcTg=="
+									},
+									{
+										"0": "358489",
+										"1": "68742795472",
+										"2": "8/9/2022 9:26:05 PM",
+										"3": {
+											"x-opt-enqueued-time": {
+												"member0": 1660080365687
+											}
+										},
+										"5": "MjAyMi0wOC0wOSAxODoxNjowMy4wMzkwMDAwMDAwMDAsMCxJLE5PVCBTRVQgICAsXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sNDc4MjYzLFxOLDQ3ODI1OSw0LDAzMDAwNjg1MzUxNTA1LE4sXE4sXE4sXE4sXE4sNSxOLDUyMzMsMjAxMy0wOS0yMVQwMDowMDowMC4wMDAwMDAwMDAwMDAsTixcTixcTixOLDAsOTksMzAzODIyOCwyMDAwLTAzLTI4VDAwOjAwOjAwLjAwMDAwMDAwMDAwMCwyMDEzLTA5LTIxVDAwOjAwOjAwLjAwMDAwMDAwMDAwMCwxMyw4ODgsTFVBTkEgTUFDRURPIERFIEFSQVVKTywwMTA1MDg0NzY1OTIxMDAwLFxOLFxOLDAzLFxOLE4sTiwyMDAwLTAzLTI4VDAwOjAwOjAwLjAwMDAwMDAwMDAwMCwxNzcsUCwxNixTLDQ3ODI1OSw0NzgyNTksNDc4MjU5LFxOLFxOLDIwMTEtMDgtMzFUMDA6MDA6MDAuMDAwMDAwMDAwMDAwLFxOLDE4LFxOLE4sMjAwMC0wMy0yOFQwMDowMDowMC4wMDAwMDAwMDAwMDAsTiwwMTA1MDg0NzY1OTIxMDAwLE4sXE4sMSxcTixcTixcTixTLFMsXE4sXE4sNzgsMjAwMC0wMy0yOFQwMDowMDowMC4wMDAwMDAwMDAwMDAsMSwxLFxOLFxOLFxOLDAwNjg1MzUxNTA1LFxOLFxOLE4sTixOLDEwMDA0NzQ2MDAsXE4sXE4sMSwxLDEsMSwwMzAwMDY4NTM1MTUwNTk5LE4sNywzMCxcTixcTiw1LE4sTixcTixcTiwyMDExLTEwLTEwVDAwOjAwOjAwLjAwMDAwMDAwMDAwMCxOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLE4sTixcTixcTixMVUFOQSBNQUNFRE8gREUgQVJBVUpPICAgICAgICAsTFVBTkEgTUFDRURPIERFIEFSQVVKTyAgICAgICAgLExVQU5BIE1BQ0VETyBERSBBUkFVSk8sXE4sTiw5OTA1NzYwMCxOLFMsOCxcTixcTixcTixcTixOLFxOLFxOLFxOLFxOLE4sTixOLFxOLFxOLE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sMCxcTixOLE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sMDAwMixcTiwxLFxOLFxOLFxOLFxOLFMsXE4sXE4sMyxcTixcTixcTixcTiwyNywyMDIxLTAxLTI5VDEwOjM2OjAwLjAwMDAwMDAwMDAwMCw0MDQ0OCxcTixcTg=="
+									},
+									{
+										"0": "358490",
+										"1": "68742795528",
+										"2": "8/9/2022 9:26:05 PM",
+										"3": {
+											"x-opt-enqueued-time": {
+												"member0": 1660080365687
+											}
+										},
+										"5": "MjAyMi0wOC0wOSAxODoxNjowMy4wMzkwMDAwMDAwMDAsMCxJLE5PVCBTRVQgICAsXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sNDc4MjY0LFxOLDQ3ODI1OSw0LDAzMDAwNjg1MzUxNTA2LE4sXE4sXE4sXE4sXE4sNixOLDUyMzMsMjAxMy0wOS0yMVQwMDowMDowMC4wMDAwMDAwMDAwMDAsTixcTixcTixOLDAsNjAsMzAzODI2MywxOTkwLTAxLTAxVDAwOjAwOjAwLjAwMDAwMDAwMDAwMCwyMDEzLTA5LTIxVDAwOjAwOjAwLjAwMDAwMDAwMDAwMCwxMyw4ODgsSUxBTkEgTUFDRURPIERFIEFSQVVKTywwMzAwMDY4NTM1MTUwNjgwLFxOLFxOLDAzLFxOLE4sTiwxOTkwLTAxLTAxVDAwOjAwOjAwLjAwMDAwMDAwMDAwMCwxNzcsUCwxNixTLDQ3ODI1OSw0NzgyNTksNDc4MjU5LFxOLFxOLDIwMTMtMDktMzBUMDA6MDA6MDAuMDAwMDAwMDAwMDAwLFxOLDE4LFxOLE4sMTk5MC0wMS0wMVQwMDowMDowMC4wMDAwMDAwMDAwMDAsTiwwMTA2MDkyNTA5MTYxMDA2LE4sXE4sMSxcTixcTixcTixTLFMsXE4sXE4sNzgsMTk5MC0wMS0wMVQwMDowMDowMC4wMDAwMDAwMDAwMDAsMSwxLFxOLFxOLFxOLDAwNjg1MzUxNTA2LFxOLFxOLE4sTixOLDEwMDA0NzQ2MDEsXE4sXE4sMSwxLDEsMSwwMzAwMDY4NTM1MTUwNjYwLE4sNywzMCxcTixcTiw1LE4sTixcTixcTiwyMDExLTAxLTEyVDAwOjAwOjAwLjAwMDAwMDAwMDAwMCxOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLFxOLE4sTixcTixcTixJTEFOQSBNQUNFRE8gQVJBVUpPLElMQU5BIE1BQ0VETyBBUkFVSk8sSUxBTkEgTUFDRURPIERFIEFSQVVKTyxcTixOLDk5MDU3Njk4LE4sUywxMSxcTixcTixcTixcTixOLFxOLFxOLFxOLFxOLE4sTixOLFxOLFxOLE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sMCxcTixOLE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sMDAwMixcTiwxLFxOLFxOLFxOLFxOLFMsXE4sXE4sMyxcTixcTixcTixcTiwyNywyMDIxLTAxLTI5VDEwOjM2OjAwLjAwMDAwMDAwMDAwMCw0MDQ0OCxcTixcTg=="
+									},
+									{
+										"0": "358491",
+										"1": "68742795584",
+										"2": "8/9/2022 9:26:05 PM",
+										"3": {
+											"x-opt-enqueued-time": {
+												"member0": 1660080365687
+											}
+										},
+										"5": "MjAyMi0wOC0wOSAxODoxNjowMy4wMzkwMDAwMDAwMDAsMCxJLE5PVCBTRVQgICAsXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sNDc4MjY2LFxOLDQ3ODI2NSw0LDAzMDAwNjg1MzUyMDAxLE4sXE4sXE4sXE4sXE4sMSxOLFxOLFxOLE4sXE4sXE4sTiwwLFxOLDQ3ODI2NiwxOTc1LTA4LTE4VDAwOjAwOjAwLjAwMDAwMDAwMDAwMCwxOTk5LTA4LTE4VDAwOjAwOjAwLjAwMDAwMDAwMDAwMCwxMyw4ODgsRkFCSU8gQUxFWEFORFJFIEIuR09OJEFMVkVTLDAxMDEwMzQ4MTg0MzEwMDYsXE4sXE4sMDEsXE4sTixOLDE5NzUtMDgtMThUMDA6MDA6MDAuMDAwMDAwMDAwMDAwLDE3NyxQLDI0LFMsNDc4MjY1LDQ3ODI2NSw0NzgyNjUsXE4sXE4sXE4sXE4sMjUsXE4sTiwxOTc1LTA4LTAxVDAwOjAwOjAwLjAwMDAwMDAwMDAwMCxOLDAxMDE5OTk5OTk5OTEwMDQsTixcTiwxLFxOLFxOLFxOLFMsUyxcTixcTiw3OCwxOTc1LTA4LTAxVDAwOjAwOjAwLjAwMDAwMDAwMDAwMCwxLDEsXE4sXE4sXE4sMDA2ODUzNTIwMDEsXE4sXE4sTixOLE4sMTAwMDQ3NDYwMyxcTixcTiwxLDEsMSwxLDAxMDE5OTk5OTk5OTEwMDQsTixcTiwzLFxOLFxOLDUsTixOLFxOLFxOLFxOLE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sXE4sTixOLFxOLFxOLEZBQklPIEFMRVhBTkRSRSBCIEdPTiBBTFZFUyxGQUJJTyBBTEVYQU5EUkUgQiBHT04gQUxWRVMsRkFCSU8gQUxFWEFORFJFIEIgR09OIEFMVkVTLFxOLE4sXE4sUyxTLFxOLFxOLFxOLFxOLFxOLE4sXE4sXE4sXE4sXE4sTixOLE4sXE4sXE4sTixcTixcTixcTixcTixcTixcTixcTixcTixcTiwwLFxOLE4sTixcTixcTixcTixcTixcTixcTixcTixcTixcTiwwMDAyLFxOLDEsXE4sXE4sXE4sXE4sUyxcTixcTiwzLFxOLFxOLFxOLFxOLDI3LDIwMjEtMDEtMjlUMTA6MzY6MDAuMDAwMDAwMDAwMDAwLDQwNDQ4LFxOLFxO"
+									}
+								],
+								"schema": [
+									{
+										"key": "0",
+										"name": "SequenceNumber",
+										"type": "bigint"
+									},
+									{
+										"key": "1",
+										"name": "Offset",
+										"type": "string"
+									},
+									{
+										"key": "2",
+										"name": "EnqueuedTimeUtc",
+										"type": "string"
+									},
+									{
+										"key": "3",
+										"name": "SystemProperties",
+										"type": "MapType(StringType,StructType(StructField(member0,LongType,true), StructField(member1,DoubleType,true), StructField(member2,StringType,true), StructField(member3,BinaryType,true)),true)"
+									},
+									{
+										"key": "4",
+										"name": "Properties",
+										"type": "MapType(StringType,StructType(StructField(member0,LongType,true), StructField(member1,DoubleType,true), StructField(member2,StringType,true), StructField(member3,BinaryType,true)),true)"
+									},
+									{
+										"key": "5",
+										"name": "Body",
+										"type": "BinaryType"
+									}
+								],
+								"truncated": false
+							},
+							"isSummary": false,
+							"language": "scala"
+						},
+						"persist_state": {
+							"view": {
+								"type": "details",
+								"chartOptions": {
+									"chartType": "bar",
+									"aggregationType": "sum",
+									"categoryFieldKeys": [
+										"1"
+									],
+									"seriesFieldKeys": [
+										"0"
+									],
+									"isStacked": false
+								}
+							}
+						}
+					}
+				}
+			},
+			"enableDebugMode": false,
+			"kernelspec": {
+				"name": "synapse_pyspark",
+				"display_name": "Synapse PySpark"
+			},
+			"language_info": {
+				"name": "python"
+			},
+			"a365ComputeOptions": {
+				"id": "/subscriptions/b117ec79-27e8-4aea-a6e3-782ae30883bd/resourceGroups/rg-data-plataform/providers/Microsoft.Synapse/workspaces/wrkcassisynapseworkspace001/bigDataPools/synPoolSpark001",
+				"name": "synPoolSpark001",
+				"type": "Spark",
+				"endpoint": "https://wrkcassisynapseworkspace001.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/synPoolSpark001",
+				"auth": {
+					"type": "AAD",
+					"authResource": "https://dev.azuresynapse.net",
+					"authHeader": null
+				},
+				"sparkVersion": "3.2",
+				"nodeCount": 8,
+				"cores": 8,
+				"memory": 56,
+				"extraHeader": null
+			},
+			"sessionKeepAliveTimeout": 15,
+			"targetSparkConfiguration": "sparkConfiguration1"
+		},
+		"cells": [
+			{
+				"cell_type": "markdown",
+				"metadata": {
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"## Construção de query para exemplos\n",
+					"### Processo para acessar o Lake através do Spark\n",
+					"* Para ler o arquivo parquet : \n",
+					"```\n",
+					"#Exemplo \n",
+					"\n",
+					"spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/SAM_AUTORIZ/', format='parquet')\n",
+					"\n",
+					"```\n",
+					"### Processo para acessar o PoolSQL através do spark\n",
+					"\n",
+					"### Error comuns encontrados\n",
+					"* Erro ao ler datas no pySpark\n",
+					"**Abrir em uma celula e executar**\n",
+					"\n",
+					"```\n",
+					"spark.conf.set(\"spark.sql.legacy.parquet.datetimeRebaseModeInRead\", \"CORRECTED\")\n",
+					"spark.conf.set(\"spark.sql.legacy.parquet.datetimeRebaseModeInWrite\", \"CORRECTED\")\n",
+					"spark.conf.set(\"spark.sql.legacy.parquet.int96RebaseModeInWrite\",\"CORRECTED\")\n",
+					"spark.conf.set(\"spark.sql.legacy.parquet.int96RebaseModeInRead\",\"CORRECTED\")\n",
+					"\n",
+					"```\n",
+					""
+				],
+				"attachments": null
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"import os\n",
+					"from pyspark.sql.types import * \n",
+					"spark.conf.set(\"spark.sql.legacy.parquet.datetimeRebaseModeInRead\", \"CORRECTED\")\n",
+					"spark.conf.set(\"spark.sql.legacy.parquet.datetimeRebaseModeInWrite\", \"CORRECTED\")\n",
+					"spark.conf.set(\"spark.sql.legacy.parquet.int96RebaseModeInWrite\",\"CORRECTED\")\n",
+					"spark.conf.set(\"spark.sql.legacy.parquet.int96RebaseModeInRead\",\"CORRECTED\")"
+				],
+				"attachments": null,
+				"execution_count": 1
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": false
+				},
+				"source": [
+					"## Teste de lietura AVRO Landin-zone\n",
+					"df = spark.read.format('avro').load('abfss://landing-zone@stgcassidatalake001.dfs.core.windows.net/hubcassieventhub001/eventhub01.toazure0.sourcedb.socpro.sam_beneficiario-audit/*/*/*/*/*/*')\n",
+					"##df.printSchema()\n",
+					"display(df.limit(10))"
+				],
+				"attachments": null,
+				"execution_count": 3
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"## Carrega as tabela do lake\n",
+					"sam_autoriz = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/SAM_AUTORIZ/', format='parquet')\n",
+					"sam_autoriz_eventoslicit = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/SAM_AUTORIZ_EVENTOSOLICIT/', format='parquet')\n",
+					"sam_autoriz_eventogerado = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/SAM_AUTORIZ_EVENTOGERADO/', format='parquet')\n",
+					"\n",
+					"## Cria a abstração para temp view\n",
+					"sam_autoriz.createOrReplaceTempView(\"SAM_AUTORIZ\")\n",
+					"sam_autoriz_eventoslicit.createOrReplaceTempView(\"SAM_AUTORIZ_EVENTOSOLICIT\")\n",
+					"sam_autoriz_eventogerado.createOrReplaceTempView(\"SAM_AUTORIZ_EVENTOGERADO\")"
+				],
+				"attachments": null,
+				"execution_count": 4
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": false
+				},
+				"source": [
+					"sqlcmd = \"\"\"\n",
+					"SELECT AUT.HANDLE as handle,   \n",
+					"       AUT.REGIMEATENDIMENTO as regimeatendimento,\n",
+					"       AUT.CONDICAOATENDIMENTO as condicaoatendimento,\n",
+					"       AUT.LOCALATENDIMENTO as localatendimento,\n",
+					"       AUT.FINALIDADEATENDIMENTO as finalidadeatendimento,\n",
+					"       AUT.TIPOAUTORIZACAO as tipoautorizacao,\n",
+					"       AUT.TIPOTRATAMENTO as tipotratamento,\n",
+					"       AUT.OBJETIVOTRATAMENTO as objetivotratamento,\n",
+					"       AUT.ACOMODACAO as acomodacao,\n",
+					"       AUT.MOTIVOALTA as motivoalta,\n",
+					"       AEG.DATAAUTORIZACAO as dataautorizacao,\n",
+					"       AES.DATASOLICITACAO as datasolicitacao,\n",
+					"       AUT.DATAAUTORIZACAO as dataautorizacao\n",
+					"FROM SAM_AUTORIZ AUT\n",
+					"LEFT JOIN SAM_AUTORIZ_EVENTOSOLICIT AES ON AES.AUTORIZACAO = AUT.HANDLE\n",
+					"LEFT JOIN SAM_AUTORIZ_EVENTOGERADO  AEG ON AEG.EVENTOSOLICITADO = AES.HANDLE\n",
+					"WHERE AUT.LOCALATENDIMENTO = 1 \n",
+					"AND AES.SITUACAO <> 'C'\n",
+					"AND AUT.SITUACAO NOT IN ('C','F')\n",
+					"AND NVL(NVL(AEG.DATAAUTORIZACAO, AES.DATASOLICITACAO ), AUT.DATAAUTORIZACAO) = date_format('2022-03-10','yyyy-MM-dd') \n",
+					"\"\"\"   \n",
+					"\n",
+					"df = spark.sql(sqlcmd)\n",
+					"df.cache()\n",
+					"display(df.limit(10))"
+				],
+				"attachments": null,
+				"execution_count": 10
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"df.printSchema()"
+				],
+				"attachments": null,
+				"execution_count": 12
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"microsoft": {
+						"language": "sparksql"
+					},
+					"collapsed": false
+				},
+				"source": [
+					"%%sql\n",
+					"SELECT AUT.HANDLE as handle,   \n",
+					"       AUT.REGIMEATENDIMENTO as regimeatendimento,\n",
+					"       AUT.CONDICAOATENDIMENTO as condicaoatendimento,\n",
+					"       AUT.LOCALATENDIMENTO as localatendimento,\n",
+					"       AUT.FINALIDADEATENDIMENTO as finalidadeatendimento,\n",
+					"       AUT.TIPOAUTORIZACAO as tipoautorizacao,\n",
+					"       AUT.TIPOTRATAMENTO as tipotratamento,\n",
+					"       AUT.OBJETIVOTRATAMENTO as objetivotratamento,\n",
+					"       AUT.ACOMODACAO as acomodacao,\n",
+					"       AUT.MOTIVOALTA as motivoalta,\n",
+					"       AEG.DATAAUTORIZACAO as dataautorizacao,\n",
+					"       AES.DATASOLICITACAO as datasolicitacao,\n",
+					"       AUT.DATAAUTORIZACAO as dataautorizacao  \n",
+					"FROM SAM_AUTORIZ AUT\n",
+					"LEFT JOIN SAM_AUTORIZ_EVENTOSOLICIT AES ON AES.AUTORIZACAO = AUT.HANDLE\n",
+					"LEFT JOIN SAM_AUTORIZ_EVENTOGERADO  AEG ON AEG.EVENTOSOLICITADO = AES.HANDLE\n",
+					"WHERE AUT.LOCALATENDIMENTO = 1 \n",
+					"AND AES.SITUACAO <> 'C'\n",
+					"AND AUT.SITUACAO NOT IN ('C','F')\n",
+					"AND NVL(NVL(AEG.DATAAUTORIZACAO, AES.DATASOLICITACAO ), AUT.DATAAUTORIZACAO) = date_format('2022-03-10','yyyy-MM-dd') "
+				],
+				"attachments": null,
+				"execution_count": 11
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"microsoft": {
+						"language": "scala"
+					}
+				},
+				"source": [
+					"%%spark\n",
+					"val df = spark.read.synapsesql(\"synsqlprod.PROSTG.TIS_CBOS\") \n",
+					"df.write.mode(\"overwrite\").saveAsTable(\"default.t1\")\n",
+					"df.printSchema()"
+				],
+				"attachments": null,
+				"execution_count": 75
+			}
+		]
+	}
+}

@@ -1,0 +1,44 @@
+{
+	"name": "PL2_CARAC_AUT",
+	"properties": {
+		"activities": [
+			{
+				"name": "D2CARACAUT",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "1.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "DF2_CARAC_AUT",
+						"type": "DataFlowReference"
+					},
+					"staging": {
+						"linkedService": {
+							"referenceName": "wrkcassisynapseworkspace001-WorkspaceDefaultStorage",
+							"type": "LinkedServiceReference"
+						},
+						"folderPath": "stagingstoragefolder/AUTORIZACAO"
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
+			}
+		],
+		"folder": {
+			"name": "DESENVOLVIMENTO/FATOS/DIARIAS/AUTORIZACAO"
+		},
+		"annotations": [],
+		"lastPublishTime": "2022-07-28T11:45:08Z"
+	},
+	"type": "Microsoft.Synapse/workspaces/pipelines"
+}

@@ -1,0 +1,17 @@
+{
+	"name": "TBOUTLIER",
+	"properties": {
+		"content": {
+			"query": "\n\n\nSELECT X.SK_TD_EVENTO, Z.media_qtd_Aut_Orig, x.mediana_qtd_Aut_Orig, X.qrt1_qtd_aut_Orig, X.qrt3_qtd_aut_Orig, X.amp_IntQtr, X.limite_superior_moderado, X.limite_inferior_moderado, X.limite_superior_extremo, X.limite_inferior_extremo\nFROM (\nSELECT distinct SK_TD_EVENTO,\nPERCENTILE_CONT (0.5) WITHIN GROUP (ORDER BY qt_autorizada_ori) OVER(partition by sk_td_evento) as mediana_qtd_Aut_Orig,\nPERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY qt_autorizada_ori) OVER(partition by sk_td_evento) as qrt1_qtd_aut_Orig,\nPERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY qt_autorizada_ori) OVER(partition by sk_td_evento) as qrt3_qtd_aut_Orig,\nPERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY qt_autorizada_ori) OVER(partition by sk_td_evento) - PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY qt_autorizada_ori) OVER(partition by sk_td_evento) as amp_IntQtr,\nPERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY qt_autorizada_ori) OVER(partition by sk_td_evento) +1.5 * PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY qt_autorizada_ori) OVER(partition by sk_td_evento) - PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY qt_autorizada_ori) OVER(partition by sk_td_evento) as limite_superior_moderado,\nPERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY qt_autorizada_ori) OVER(partition by sk_td_evento) -1.5 * PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY qt_autorizada_ori) OVER(partition by sk_td_evento) - PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY qt_autorizada_ori) OVER(partition by sk_td_evento) as limite_inferior_moderado,\nPERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY qt_autorizada_ori) OVER(partition by sk_td_evento) +3 * PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY qt_autorizada_ori) OVER(partition by sk_td_evento) - PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY qt_autorizada_ori) OVER(partition by sk_td_evento) as limite_superior_extremo,\nPERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY qt_autorizada_ori) OVER(partition by sk_td_evento) -3 * PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY qt_autorizada_ori) OVER(partition by sk_td_evento) - PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY qt_autorizada_ori) OVER(partition by sk_td_evento) as limite_inferior_extremo\nFROM [PRODIM].[TF_AUTORIZACAO]\nwhere sk_td_evento = 184381\n) X\n\nINNER JOIN (select SK_TD_EVENTO, avg(QT_AUTORIZADA_ORI) AS media_qtd_Aut_Orig from PRODIM.TF_AUTORIZACAO GROUP by SK_TD_EVENTO) AS Z ON Z.sk_td_evento = X.sk_td_evento\n\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "synsqlprod",
+				"poolName": "synsqlprod"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

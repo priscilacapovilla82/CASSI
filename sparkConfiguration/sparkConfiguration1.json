@@ -1,0 +1,17 @@
+{
+	"name": "sparkConfiguration1",
+	"properties": {
+		"description": "spark.sql.legacy.parquet.datetimeRebaseModeInRead\nspark.sql.legacy.parquet.datetimeRebaseModeInWrite",
+		"configs": {
+			"spark.sql.legacy.parquet.datetimeRebaseModeInRead": "CORRECTED",
+			"spark.sql.legacy.parquet.datetimeRebaseModeInWrite": "CORRECTED"
+		},
+		"created": "2022-07-25T21:22:56.454Z",
+		"createdBy": "welker.luna@cassi.com.br",
+		"annotations": [],
+		"configMergeRule": {
+			"artifact.currentOperation.spark.sql.legacy.parquet.datetimeRebaseModeInRead": "replace",
+			"artifact.currentOperation.spark.sql.legacy.parquet.datetimeRebaseModeInWrite": "replace"
+		}
+	}
+}

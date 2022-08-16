@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 8",
+	"properties": {
+		"content": {
+			"query": "drop table PRODML.TB_DIAGNOSE_TERAPIAS_LIMITES_IDATEND\ngo \n\nIF NOT EXISTS (SELECT * FROM sys.objects O JOIN sys.schemas S ON O.schema_id = S.schema_id WHERE O.NAME = 'TB_DIAGNOSE_TERAPIAS_LIMITES_IDATEND' AND O.TYPE = 'U' AND S.NAME = 'PRODML')\nCREATE TABLE PRODML.TB_DIAGNOSE_TERAPIAS_LIMITES_IDATEND\n\t(\n\t [HD_TGE_EVENTO2] int,\n\t [GRAU2] numeric(38,18),\n\t [count] bigint,\n\t [QTDPAGTO_mean] float,\n\t [QTDPAGTO_std] float,\n\t [QTDPAGTO_min] float,\n\t [QTDPAGTO_25] float,\n\t [QTDPAGTO_50] float,\n\t [QTDPAGTO_75] float,\n\t [QTDPAGTO_99] float,\n\t [QTDPAGTO_995] float,\n\t [QTDPAGTO_max] float,\n\t [LMSP] float,\n\t [LMSP_EX] float,\n\t [LMSP_995] float,\n\t [LMSP_99] float,\n\t [MAIOR99] bit\n\t)\nWITH\n\t(\n\tDISTRIBUTION = ROUND_ROBIN,\n\t CLUSTERED COLUMNSTORE INDEX\n\t -- HEAP\n\t)\nGO\n\n--Uncomment the 4 lines below to create a stored procedure for data pipeline orchestration​\n--CREATE PROC bulk_load_TB_DIAGNOSE_TERAPIAS_LIMITES_IDATEND\n--AS\n--BEGIN\nCOPY INTO PRODML.TB_DIAGNOSE_TERAPIAS_LIMITES_IDATEND\n(HD_TGE_EVENTO2 1, GRAU2 2, count 3, QTDPAGTO_mean 4, QTDPAGTO_std 5, QTDPAGTO_min 6, QTDPAGTO_25 7, QTDPAGTO_50 8, QTDPAGTO_75 9, QTDPAGTO_99 10, QTDPAGTO_995 11, QTDPAGTO_max 12, LMSP 13, LMSP_EX 14, LMSP_995 15, LMSP_99 16, MAIOR99 17)\nFROM 'https://stgcassigsmadatalake02.dfs.core.windows.net/data/raw-data/TB_DIAGNOSE_TERAPIAS_LIMITES_IDATEND'\nWITH\n(\n\tFILE_TYPE = 'PARQUET'\n\t,MAXERRORS = 0\n)\n--END\nGO\n\nSELECT TOP 100 * FROM PRODML.TB_DIAGNOSE_TERAPIAS_LIMITES_IDATEND\nGO",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "synsqlprod",
+				"poolName": "synsqlprod"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

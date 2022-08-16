@@ -1,0 +1,1783 @@
+{
+	"name": "NTB_AUTORIZACAO_2022_08_02",
+	"properties": {
+		"description": "Fluxo FATO Autorização",
+		"folder": {
+			"name": "AUTORIZACAO - 02082022"
+		},
+		"nbformat": 4,
+		"nbformat_minor": 2,
+		"bigDataPool": {
+			"referenceName": "synPoolSpark002",
+			"type": "BigDataPoolReference"
+		},
+		"sessionProperties": {
+			"driverMemory": "112g",
+			"driverCores": 16,
+			"executorMemory": "112g",
+			"executorCores": 16,
+			"numExecutors": 4,
+			"runAsWorkspaceSystemIdentity": false,
+			"conf": {
+				"spark.dynamicAllocation.enabled": "false",
+				"spark.dynamicAllocation.minExecutors": "4",
+				"spark.dynamicAllocation.maxExecutors": "4",
+				"spark.autotune.trackingId": "5f25e371-78a3-4c57-b9fd-53211b9ad1c8"
+			}
+		},
+		"metadata": {
+			"saveOutput": true,
+			"synapse_widget": {
+				"version": "0.1",
+				"state": {
+					"46056e3b-def7-465e-a9a1-ade3d4bf5ded": {
+						"type": "Synapse.DataFrame",
+						"sync_state": {
+							"table": {
+								"rows": [
+									{
+										"0": "144334482.000000000000000000",
+										"1": "322440144.000000000000000000",
+										"2": "354233584.000000000000000000",
+										"3": "19136.000000000000000000",
+										"4": "2063616.000000000000000000",
+										"5": "5.000000000000000000",
+										"6": "16.000000000000000000",
+										"9": "3054532.000000000000000000",
+										"10": "94445992",
+										"13": "47.000000000000000000",
+										"14": "3933.000000000000000000",
+										"15": "251.000000000000000000",
+										"18": "5.000000000000000000",
+										"19": "12.000000000000000000",
+										"20": "3.000000000000000000",
+										"22": "5.000000000000000000",
+										"24": "6.000000000000000000",
+										"26": "1.000000000000000000",
+										"27": "2.000000000000000000",
+										"28": "50771.000000000000000000",
+										"29": "89.000000000000000000",
+										"30": "22",
+										"31": "694.000000000000000000",
+										"32": "225270",
+										"33": "1",
+										"34": "A",
+										"35": "A",
+										"36": "L",
+										"38": "2110645810.000000000000000000",
+										"39": "2021-12-07 15:50:54",
+										"41": "2022-01-01 00:00:00",
+										"42": "2022-01-01 00:00:00",
+										"44": "100.0",
+										"50": "2022-01-01 00:00:00",
+										"51": "20.000000000000000000",
+										"52": "1",
+										"54": "61007",
+										"56": "5.000000000000000000",
+										"59": "T",
+										"61": "2023-02-02 00:00:00",
+										"62": "3054532.000000000000000000",
+										"63": "94445992",
+										"64": "2021-12-07 15:50:54",
+										"65": "2021-12-07 15:50:54",
+										"66": "50771.000000000000000000",
+										"67": "S"
+									},
+									{
+										"0": "144334482.000000000000000000",
+										"1": "322440145.000000000000000000",
+										"2": "354233585.000000000000000000",
+										"3": "314239.000000000000000000",
+										"4": "2063616.000000000000000000",
+										"5": "5.000000000000000000",
+										"6": "16.000000000000000000",
+										"9": "3054532.000000000000000000",
+										"10": "94445992",
+										"13": "47.000000000000000000",
+										"14": "3933.000000000000000000",
+										"15": "251.000000000000000000",
+										"18": "5.000000000000000000",
+										"19": "12.000000000000000000",
+										"20": "3.000000000000000000",
+										"22": "5.000000000000000000",
+										"24": "6.000000000000000000",
+										"26": "1.000000000000000000",
+										"27": "2.000000000000000000",
+										"28": "50771.000000000000000000",
+										"29": "89.000000000000000000",
+										"30": "22",
+										"31": "694.000000000000000000",
+										"32": "225270",
+										"33": "1",
+										"34": "A",
+										"35": "A",
+										"36": "L",
+										"38": "2110645810.000000000000000000",
+										"39": "2021-12-07 15:50:54",
+										"41": "2022-01-01 00:00:00",
+										"42": "2022-01-01 00:00:00",
+										"44": "100.0",
+										"50": "2022-01-01 00:00:00",
+										"51": "20.000000000000000000",
+										"52": "1",
+										"54": "61007",
+										"56": "5.000000000000000000",
+										"59": "T",
+										"61": "2023-02-02 00:00:00",
+										"62": "3054532.000000000000000000",
+										"63": "94445992",
+										"64": "2021-12-07 15:50:54",
+										"65": "2021-12-07 15:50:54",
+										"66": "50771.000000000000000000",
+										"67": "N"
+									},
+									{
+										"0": "144384561.000000000000000000",
+										"1": "322556602.000000000000000000",
+										"2": "354357858.000000000000000000",
+										"3": "1467519.000000000000000000",
+										"4": "3387380.000000000000000000",
+										"5": "17.000000000000000000",
+										"9": "769681.000000000000000000",
+										"10": "769681",
+										"13": "47.000000000000000000",
+										"14": "34.000000000000000000",
+										"15": "81.000000000000000000",
+										"18": "3.000000000000000000",
+										"19": "12.000000000000000000",
+										"20": "3.000000000000000000",
+										"22": "3.000000000000000000",
+										"24": "6.000000000000000000",
+										"26": "1.000000000000000000",
+										"27": "2.000000000000000000",
+										"28": "92778.000000000000000000",
+										"29": "89.000000000000000000",
+										"30": "22",
+										"33": "1",
+										"34": "A",
+										"35": "A",
+										"36": "L",
+										"38": "2110696300.000000000000000000",
+										"39": "2021-12-09 18:04:15",
+										"41": "2022-01-01 00:00:00",
+										"42": "2022-01-01 00:00:00",
+										"44": "144.0",
+										"50": "2022-01-01 00:00:00",
+										"51": "10.000000000000000000",
+										"52": "1",
+										"57": "769681.000000000000000000",
+										"58": "769681",
+										"59": "T",
+										"61": "2022-12-04 00:00:00",
+										"62": "769681.000000000000000000",
+										"63": "769681",
+										"64": "2021-12-09 18:04:15",
+										"65": "2021-12-09 18:04:16",
+										"66": "92778.000000000000000000",
+										"67": "N"
+									},
+									{
+										"0": "144384561.000000000000000000",
+										"1": "322556603.000000000000000000",
+										"2": "354357859.000000000000000000",
+										"3": "5605.000000000000000000",
+										"4": "3387380.000000000000000000",
+										"5": "17.000000000000000000",
+										"9": "769681.000000000000000000",
+										"10": "769681",
+										"13": "47.000000000000000000",
+										"14": "34.000000000000000000",
+										"15": "81.000000000000000000",
+										"18": "3.000000000000000000",
+										"19": "12.000000000000000000",
+										"20": "3.000000000000000000",
+										"22": "3.000000000000000000",
+										"24": "6.000000000000000000",
+										"26": "1.000000000000000000",
+										"27": "2.000000000000000000",
+										"28": "92778.000000000000000000",
+										"29": "89.000000000000000000",
+										"30": "22",
+										"33": "1",
+										"34": "A",
+										"35": "A",
+										"36": "L",
+										"38": "2110696300.000000000000000000",
+										"39": "2021-12-09 18:04:15",
+										"41": "2022-01-01 00:00:00",
+										"42": "2022-01-01 00:00:00",
+										"44": "72.0",
+										"50": "2022-01-01 00:00:00",
+										"51": "10.000000000000000000",
+										"52": "1",
+										"57": "769681.000000000000000000",
+										"58": "769681",
+										"59": "T",
+										"61": "2022-12-04 00:00:00",
+										"62": "769681.000000000000000000",
+										"63": "769681",
+										"64": "2021-12-09 18:04:16",
+										"65": "2021-12-09 18:04:16",
+										"66": "92778.000000000000000000",
+										"67": "N"
+									},
+									{
+										"0": "144384561.000000000000000000",
+										"1": "322556604.000000000000000000",
+										"2": "354357860.000000000000000000",
+										"3": "5590.000000000000000000",
+										"4": "3387380.000000000000000000",
+										"5": "17.000000000000000000",
+										"9": "769681.000000000000000000",
+										"10": "769681",
+										"13": "47.000000000000000000",
+										"14": "34.000000000000000000",
+										"15": "81.000000000000000000",
+										"18": "3.000000000000000000",
+										"19": "12.000000000000000000",
+										"20": "3.000000000000000000",
+										"22": "3.000000000000000000",
+										"24": "6.000000000000000000",
+										"26": "1.000000000000000000",
+										"27": "2.000000000000000000",
+										"28": "92778.000000000000000000",
+										"29": "89.000000000000000000",
+										"30": "22",
+										"33": "1",
+										"34": "A",
+										"35": "A",
+										"36": "L",
+										"38": "2110696300.000000000000000000",
+										"39": "2021-12-09 18:04:15",
+										"41": "2022-01-01 00:00:00",
+										"42": "2022-01-01 00:00:00",
+										"44": "72.0",
+										"50": "2022-01-01 00:00:00",
+										"51": "10.000000000000000000",
+										"52": "1",
+										"57": "769681.000000000000000000",
+										"58": "769681",
+										"59": "T",
+										"61": "2022-12-04 00:00:00",
+										"62": "769681.000000000000000000",
+										"63": "769681",
+										"64": "2021-12-09 18:04:16",
+										"65": "2021-12-09 18:04:16",
+										"66": "92778.000000000000000000",
+										"67": "N"
+									},
+									{
+										"0": "144388508.000000000000000000",
+										"1": "322564703.000000000000000000",
+										"2": "354368060.000000000000000000",
+										"3": "17256.000000000000000000",
+										"4": "1936787.000000000000000000",
+										"5": "26.000000000000000000",
+										"9": "769681.000000000000000000",
+										"10": "769681",
+										"13": "47.000000000000000000",
+										"14": "24.000000000000000000",
+										"15": "89.000000000000000000",
+										"18": "6.000000000000000000",
+										"19": "12.000000000000000000",
+										"20": "3.000000000000000000",
+										"21": "3.000000000000000000",
+										"22": "6.000000000000000000",
+										"24": "6.000000000000000000",
+										"26": "1.000000000000000000",
+										"27": "2.000000000000000000",
+										"28": "60313.000000000000000000",
+										"29": "89.000000000000000000",
+										"30": "22",
+										"33": "1",
+										"34": "A",
+										"35": "A",
+										"36": "L",
+										"38": "2110700411.000000000000000000",
+										"39": "2021-12-10 14:24:24",
+										"41": "2022-01-01 00:00:00",
+										"42": "2022-01-01 00:00:00",
+										"44": "98.0",
+										"50": "2022-01-01 00:00:00",
+										"51": "10.000000000000000000",
+										"52": "1",
+										"57": "769681.000000000000000000",
+										"58": "769681",
+										"59": "T",
+										"61": "2022-12-05 00:00:00",
+										"62": "769681.000000000000000000",
+										"63": "769681",
+										"64": "2021-12-10 14:24:24",
+										"65": "2021-12-10 14:24:24",
+										"66": "60313.000000000000000000",
+										"67": "N"
+									},
+									{
+										"0": "144759051.000000000000000000",
+										"1": "323492758.000000000000000000",
+										"2": "355328305.000000000000000000",
+										"3": "14541.000000000000000000",
+										"4": "1686065.000000000000000000",
+										"5": "26.000000000000000000",
+										"9": "769681.000000000000000000",
+										"10": "769681",
+										"13": "47.000000000000000000",
+										"14": "4032.000000000000000000",
+										"15": "84.000000000000000000",
+										"18": "6.000000000000000000",
+										"19": "12.000000000000000000",
+										"20": "3.000000000000000000",
+										"22": "6.000000000000000000",
+										"24": "6.000000000000000000",
+										"26": "1.000000000000000000",
+										"27": "4.000000000000000000",
+										"28": "60313.000000000000000000",
+										"29": "89.000000000000000000",
+										"30": "22",
+										"33": "1",
+										"34": "A",
+										"35": "A",
+										"36": "L",
+										"38": "2111072421.000000000000000000",
+										"39": "2021-12-21 11:03:46",
+										"41": "2022-01-01 00:00:00",
+										"42": "2022-01-01 00:00:00",
+										"44": "180.0",
+										"50": "2022-01-01 00:00:00",
+										"51": "10.000000000000000000",
+										"52": "1",
+										"57": "769681.000000000000000000",
+										"58": "769681",
+										"59": "T",
+										"61": "2022-12-16 00:00:00",
+										"62": "769681.000000000000000000",
+										"63": "769681",
+										"64": "2021-12-21 11:03:46",
+										"65": "2021-12-21 11:03:46",
+										"66": "60313.000000000000000000",
+										"67": "S"
+									},
+									{
+										"0": "144759795.000000000000000000",
+										"1": "323494413.000000000000000000",
+										"2": "355330052.000000000000000000",
+										"3": "14542.000000000000000000",
+										"4": "1652934.000000000000000000",
+										"5": "26.000000000000000000",
+										"9": "769681.000000000000000000",
+										"10": "769681",
+										"13": "47.000000000000000000",
+										"14": "4032.000000000000000000",
+										"15": "84.000000000000000000",
+										"18": "6.000000000000000000",
+										"19": "12.000000000000000000",
+										"20": "3.000000000000000000",
+										"22": "6.000000000000000000",
+										"24": "6.000000000000000000",
+										"26": "4.000000000000000000",
+										"27": "24.000000000000000000",
+										"28": "60313.000000000000000000",
+										"29": "89.000000000000000000",
+										"30": "22",
+										"33": "1",
+										"34": "A",
+										"35": "A",
+										"36": "L",
+										"38": "2111073169.000000000000000000",
+										"39": "2021-12-21 11:18:12",
+										"41": "2022-01-01 00:00:00",
+										"42": "2022-01-01 00:00:00",
+										"44": "180.0",
+										"50": "2022-01-01 00:00:00",
+										"51": "10.000000000000000000",
+										"52": "1",
+										"57": "769681.000000000000000000",
+										"58": "769681",
+										"59": "T",
+										"61": "2022-12-16 00:00:00",
+										"62": "769681.000000000000000000",
+										"63": "769681",
+										"64": "2021-12-21 11:18:12",
+										"65": "2021-12-21 11:18:13",
+										"66": "60313.000000000000000000",
+										"67": "S"
+									},
+									{
+										"0": "144760588.000000000000000000",
+										"1": "323496100.000000000000000000",
+										"2": "355331823.000000000000000000",
+										"3": "17256.000000000000000000",
+										"4": "1061349.000000000000000000",
+										"5": "26.000000000000000000",
+										"9": "769681.000000000000000000",
+										"10": "769681",
+										"13": "47.000000000000000000",
+										"14": "24.000000000000000000",
+										"15": "89.000000000000000000",
+										"18": "6.000000000000000000",
+										"19": "12.000000000000000000",
+										"20": "3.000000000000000000",
+										"22": "6.000000000000000000",
+										"24": "6.000000000000000000",
+										"26": "4.000000000000000000",
+										"27": "24.000000000000000000",
+										"28": "60313.000000000000000000",
+										"29": "89.000000000000000000",
+										"30": "22",
+										"33": "1",
+										"34": "A",
+										"35": "A",
+										"36": "L",
+										"38": "2111073972.000000000000000000",
+										"39": "2021-12-21 11:33:51",
+										"41": "2022-01-01 00:00:00",
+										"42": "2022-01-01 00:00:00",
+										"44": "1.0",
+										"50": "2022-01-01 00:00:00",
+										"51": "10.000000000000000000",
+										"52": "1",
+										"57": "769681.000000000000000000",
+										"58": "769681",
+										"59": "T",
+										"61": "2022-12-16 00:00:00",
+										"62": "769681.000000000000000000",
+										"63": "769681",
+										"64": "2021-12-21 11:33:51",
+										"65": "2021-12-21 11:33:51",
+										"66": "60313.000000000000000000",
+										"67": "N"
+									},
+									{
+										"0": "144874488.000000000000000000",
+										"1": "323763031.000000000000000000",
+										"2": "355612523.000000000000000000",
+										"3": "20079.000000000000000000",
+										"4": "536473.000000000000000000",
+										"5": "20.000000000000000000",
+										"6": "20.000000000000000000",
+										"9": "2334268.000000000000000000",
+										"10": "2059154",
+										"13": "47.000000000000000000",
+										"14": "218.000000000000000000",
+										"15": "11.000000000000000000",
+										"18": "6.000000000000000000",
+										"19": "12.000000000000000000",
+										"20": "3.000000000000000000",
+										"21": "3.000000000000000000",
+										"22": "6.000000000000000000",
+										"24": "6.000000000000000000",
+										"26": "1.000000000000000000",
+										"27": "4.000000000000000000",
+										"28": "11168.000000000000000000",
+										"29": "89.000000000000000000",
+										"30": "22",
+										"33": "1",
+										"34": "A",
+										"35": "A",
+										"36": "L",
+										"38": "2111188546.000000000000000000",
+										"39": "2021-12-27 16:16:13",
+										"41": "2022-01-01 00:00:00",
+										"42": "2022-01-01 00:00:00",
+										"44": "1.0",
+										"50": "2022-01-01 00:00:00",
+										"51": "10.000000000000000000",
+										"52": "1",
+										"57": "2334268.000000000000000000",
+										"58": "2059154",
+										"59": "T",
+										"61": "2022-12-22 00:00:00",
+										"62": "2334268.000000000000000000",
+										"63": "2059154",
+										"64": "2021-12-27 16:16:14",
+										"65": "2021-12-27 16:16:14",
+										"66": "11168.000000000000000000",
+										"67": "S"
+									}
+								],
+								"schema": [
+									{
+										"key": "0",
+										"name": "HD_AUTORIZACAO",
+										"type": "decimal"
+									},
+									{
+										"key": "1",
+										"name": "HD_AUTORIZ_EVENTO_SOLICIT",
+										"type": "decimal"
+									},
+									{
+										"key": "2",
+										"name": "HD_AUTORIZ_EVENTO_GERADO",
+										"type": "decimal"
+									},
+									{
+										"key": "3",
+										"name": "HD_TGE",
+										"type": "decimal"
+									},
+									{
+										"key": "4",
+										"name": "HD_BENEF",
+										"type": "decimal"
+									},
+									{
+										"key": "5",
+										"name": "HD_ESTADO_BENEF",
+										"type": "decimal"
+									},
+									{
+										"key": "6",
+										"name": "HD_ESTADO_PREST_EXEC",
+										"type": "decimal"
+									},
+									{
+										"key": "7",
+										"name": "HD_PREST_SOLICITANTE",
+										"type": "decimal"
+									},
+									{
+										"key": "8",
+										"name": "CO_PREST_SOLICITANTE",
+										"type": "string"
+									},
+									{
+										"key": "9",
+										"name": "HD_PREST_EXECUTOR",
+										"type": "decimal"
+									},
+									{
+										"key": "10",
+										"name": "CO_PREST_EXECUTOR",
+										"type": "string"
+									},
+									{
+										"key": "11",
+										"name": "HD_PREST_FORNECEDOR",
+										"type": "decimal"
+									},
+									{
+										"key": "12",
+										"name": "CO_PREST_FORNECEDOR",
+										"type": "string"
+									},
+									{
+										"key": "13",
+										"name": "HD_TP_AUTORIZ",
+										"type": "decimal"
+									},
+									{
+										"key": "14",
+										"name": "HD_GRAU",
+										"type": "decimal"
+									},
+									{
+										"key": "15",
+										"name": "CO_GRAU",
+										"type": "decimal"
+									},
+									{
+										"key": "16",
+										"name": "CO_TP_TRATAMENTO",
+										"type": "decimal"
+									},
+									{
+										"key": "17",
+										"name": "CO_OBJ_TRATAMENTO",
+										"type": "decimal"
+									},
+									{
+										"key": "18",
+										"name": "HD_REGIME_ATEND",
+										"type": "decimal"
+									},
+									{
+										"key": "19",
+										"name": "HD_FINALID_ATEND",
+										"type": "decimal"
+									},
+									{
+										"key": "20",
+										"name": "HD_CARAT_ATEND",
+										"type": "decimal"
+									},
+									{
+										"key": "21",
+										"name": "HD_REGIME_INT",
+										"type": "decimal"
+									},
+									{
+										"key": "22",
+										"name": "HD_TP_ATEND",
+										"type": "decimal"
+									},
+									{
+										"key": "23",
+										"name": "HD_TP_INTERN",
+										"type": "decimal"
+									},
+									{
+										"key": "24",
+										"name": "HD_IND_ACIDENTE",
+										"type": "decimal"
+									},
+									{
+										"key": "25",
+										"name": "HD_TP_CONSULTA",
+										"type": "decimal"
+									},
+									{
+										"key": "26",
+										"name": "HD_PLANO",
+										"type": "decimal"
+									},
+									{
+										"key": "27",
+										"name": "HD_CONTRATO",
+										"type": "decimal"
+									},
+									{
+										"key": "28",
+										"name": "HD_USUARIO",
+										"type": "decimal"
+									},
+									{
+										"key": "29",
+										"name": "HD_TIS_TAB_PRECO",
+										"type": "decimal"
+									},
+									{
+										"key": "30",
+										"name": "CO_TIS_TAB_PRECO",
+										"type": "string"
+									},
+									{
+										"key": "31",
+										"name": "HD_CBOS",
+										"type": "decimal"
+									},
+									{
+										"key": "32",
+										"name": "CO_CBOS",
+										"type": "string"
+									},
+									{
+										"key": "33",
+										"name": "CO_ST_SOLICIT",
+										"type": "string"
+									},
+									{
+										"key": "34",
+										"name": "CO_SITUACAO_AUT",
+										"type": "string"
+									},
+									{
+										"key": "35",
+										"name": "CO_SITUACAO_AES",
+										"type": "string"
+									},
+									{
+										"key": "36",
+										"name": "CO_SITUACAO_AEG",
+										"type": "string"
+									},
+									{
+										"key": "37",
+										"name": "ST_OPCAO_OPME",
+										"type": "decimal"
+									},
+									{
+										"key": "38",
+										"name": "NU_AUTORIZACAO",
+										"type": "decimal"
+									},
+									{
+										"key": "39",
+										"name": "DT_AUTORIZACAO_AUT",
+										"type": "timestamp"
+									},
+									{
+										"key": "40",
+										"name": "DT_SOLICITACAO_AUT",
+										"type": "timestamp"
+									},
+									{
+										"key": "41",
+										"name": "DT_AUTORIZACAO_AEG",
+										"type": "timestamp"
+									},
+									{
+										"key": "42",
+										"name": "DT_ATENDIMENTO_AEG",
+										"type": "timestamp"
+									},
+									{
+										"key": "43",
+										"name": "QTDSOLICITADAORIGINAL",
+										"type": "double"
+									},
+									{
+										"key": "44",
+										"name": "QTDAUTORIZADA",
+										"type": "double"
+									},
+									{
+										"key": "45",
+										"name": "QT_NEGADA",
+										"type": "double"
+									},
+									{
+										"key": "46",
+										"name": "VALORUNITARIOSOLICITADO",
+										"type": "double"
+									},
+									{
+										"key": "47",
+										"name": "VALORUNITARIONEGOCIADOOPME",
+										"type": "double"
+									},
+									{
+										"key": "48",
+										"name": "VALORUNITARIOCALCULADOOPME",
+										"type": "double"
+									},
+									{
+										"key": "49",
+										"name": "VALORUNITARIOAUTORIZADOOPME",
+										"type": "double"
+									},
+									{
+										"key": "50",
+										"name": "DT_SOLICITACAO_AES",
+										"type": "timestamp"
+									},
+									{
+										"key": "51",
+										"name": "NU_NIVEL_AUTORIZACAO",
+										"type": "decimal"
+									},
+									{
+										"key": "52",
+										"name": "CO_ORIGEM_AUTORIZACAO",
+										"type": "string"
+									},
+									{
+										"key": "53",
+										"name": "NO_PROF_SOLICITANTE",
+										"type": "string"
+									},
+									{
+										"key": "54",
+										"name": "NU_CRM_PROF_SOLICITANTE_AUT",
+										"type": "string"
+									},
+									{
+										"key": "55",
+										"name": "PK_TD_CONSELHO_Prof_Solic",
+										"type": "decimal"
+									},
+									{
+										"key": "56",
+										"name": "PK_TD_CONSELHO_Uf_Prof_Solic",
+										"type": "decimal"
+									},
+									{
+										"key": "57",
+										"name": "HD_PREST_SOLICITANTE_AES",
+										"type": "decimal"
+									},
+									{
+										"key": "58",
+										"name": "CO_PREST_SOLICITANTE_AES",
+										"type": "string"
+									},
+									{
+										"key": "59",
+										"name": "DS_ORIGEM_SOLICITACAO",
+										"type": "string"
+									},
+									{
+										"key": "60",
+										"name": "DS_INDICACAO_CLINICA",
+										"type": "string"
+									},
+									{
+										"key": "61",
+										"name": "DT_VALIDADE_AUT",
+										"type": "timestamp"
+									},
+									{
+										"key": "62",
+										"name": "HD_PREST_EXECUTOR_AES",
+										"type": "decimal"
+									},
+									{
+										"key": "63",
+										"name": "CO_PREST_EXECUTOR_AES",
+										"type": "string"
+									},
+									{
+										"key": "64",
+										"name": "TS_GERACAO_AEG",
+										"type": "timestamp"
+									},
+									{
+										"key": "65",
+										"name": "TS_LIBERACAO_AEG",
+										"type": "timestamp"
+									},
+									{
+										"key": "66",
+										"name": "HD_USUARIO_GERACAO_AEG",
+										"type": "decimal"
+									},
+									{
+										"key": "67",
+										"name": "ST_HORARIO_ESPECIAL",
+										"type": "string"
+									}
+								],
+								"truncated": false
+							},
+							"isSummary": false,
+							"language": "scala"
+						},
+						"persist_state": {
+							"view": {
+								"type": "details",
+								"chartOptions": {
+									"chartType": "bar",
+									"aggregationType": "sum",
+									"categoryFieldKeys": [
+										"1"
+									],
+									"seriesFieldKeys": [
+										"0"
+									],
+									"isStacked": false
+								}
+							}
+						}
+					}
+				}
+			},
+			"enableDebugMode": false,
+			"kernelspec": {
+				"name": "synapse_pyspark",
+				"display_name": "Synapse PySpark"
+			},
+			"language_info": {
+				"name": "python"
+			},
+			"a365ComputeOptions": {
+				"id": "/subscriptions/b117ec79-27e8-4aea-a6e3-782ae30883bd/resourceGroups/rg-data-plataform/providers/Microsoft.Synapse/workspaces/wrkcassisynapseworkspace001/bigDataPools/synPoolSpark002",
+				"name": "synPoolSpark002",
+				"type": "Spark",
+				"endpoint": "https://wrkcassisynapseworkspace001.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/synPoolSpark002",
+				"auth": {
+					"type": "AAD",
+					"authResource": "https://dev.azuresynapse.net",
+					"authHeader": null
+				},
+				"sparkVersion": "3.2",
+				"nodeCount": 10,
+				"cores": 16,
+				"memory": 112,
+				"extraHeader": null
+			},
+			"sessionKeepAliveTimeout": 30
+		},
+		"cells": [
+			{
+				"cell_type": "code",
+				"source": [
+					"## IMPORTAÇÃO DAS LIBRARYS\n",
+					"import os\n",
+					"from pyspark.sql.types import * \n",
+					"from pyspark.sql.functions import *\n",
+					"spark.conf.set(\"spark.sql.legacy.parquet.datetimeRebaseModeInRead\", \"CORRECTED\")\n",
+					"spark.conf.set(\"spark.sql.legacy.parquet.datetimeRebaseModeInWrite\", \"CORRECTED\")\n",
+					"spark.conf.set(\"spark.sql.legacy.parquet.int96RebaseModeInWrite\",\"CORRECTED\")\n",
+					"spark.conf.set(\"spark.sql.legacy.parquet.int96RebaseModeInRead\",\"CORRECTED\")"
+				],
+				"attachments": null,
+				"execution_count": 1
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"###  Carrega as tabela do lake\n",
+					"#  \n",
+					"#  SAM_AUTORIZ_EVENTOSOLICIT , SAM_AUTORIZ_EVENTOGERADO , SAM_AUTORIZ               , SAM_TIPOAUTORIZ        , SAM_REGIMEATENDIMENTO\n",
+					"#  SAM_LOCALATENDIMENTO      , SAM_TGE                  , SAM_TGE_NIVELAUTORIZACAO  , TIS_TABELAPRECO        , SAM_GRAU\n",
+					"#  SAM_TIPOTRATAMENTO        , SAM_OBJTRATAMENTO        , SAM_BENEFICIARIO          , SAM_PRESTADOR          , TIS_CBOS \n",
+					"#  Z_GRUPOUSUARIOS           , SAM_ENDERECO             , SAM_FINALIDADEATENDIMENTO , TIS_CARATERATENDIMENTO , TIS_REGIMEINTERNACAO\n",
+					"#  TIS_TIPOATENDIMENTO       , TIS_TIPOINTERNACAO       , TIS_INDICADORDEACIDENTE   , TIS_TIPOCONSULTA       , SAM_CONTRATO\n",
+					"#  SAM_PLANO                 , SAM_AUTORIZ_LOGSTATUS    , TIS_STATUSSOLICITACAO     , SAM_AUTORIZ_LOGSTATUS  , SAM_AUTORIZ_EVENTONEGACAO \n",
+					"#  SAM_TABFILME_VLR          , SAM_PRECOPRESTADOR_AN    , ESTADOS                   , MUNICIPIOS             , TIS_TABELAPRECO\n",
+					"#  SAM_TABCUSTOOPERAC        , SAM_TABCUSTOOPERAC_VLR   , SAM_TABUS                 , SAM_TABUS_VLR          , SAM_TABFILME\n",
+					"#  SAM_PRECOESTADO_DOTAC     , SAM_PRECOESTADO_AN \n",
+					"\n",
+					"\n",
+					"df_sa_eventosolicit        = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/SAM_AUTORIZ_EVENTOSOLICIT/', format='parquet')\n",
+					"df_sa_eventogerado         = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/SAM_AUTORIZ_EVENTOGERADO/', format='parquet')\n",
+					"df_sa                      = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/SAM_AUTORIZ/', format='parquet')\n",
+					"df_s_tipoautoriz           = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/SAM_TIPOAUTORIZ/', format='parquet')\n",
+					"df_s_regimeatendimento     = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/SAM_REGIMEATENDIMENTO/', format='parquet')\n",
+					"\n",
+					"df_s_localatedimento       = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/SAM_LOCALATENDIMENTO/', format='parquet')\n",
+					"df_s_tge                   = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/SAM_TGE/', format='parquet')\n",
+					"df_s_tgenivelautorizacao   = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/SAM_TGE_NIVELAUTORIZACAO/', format='parquet')\n",
+					"df_t_tabelapreco           = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/TIS_TABELAPRECO', format='parquet')\n",
+					"df_s_grau                  = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/SAM_GRAU/', format='parquet')\n",
+					"\n",
+					"df_s_tipotratamento        = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/SAM_TIPOTRATAMENTO/', format='parquet')\n",
+					"df_s_objtratamento         = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/SAM_OBJTRATAMENTO/', format='parquet')\n",
+					"df_s_beneficiario          = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/SAM_BENEFICIARIO/', format='parquet')\n",
+					"df_s_prestador             = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/SAM_PRESTADOR/', format='parquet')\n",
+					"df_t_cbos                  = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/TIS_CBOS', format='parquet')\n",
+					"\n",
+					"df_z_grupousuarios         = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/Z_GRUPOUSUARIOS/', format='parquet')\n",
+					"df_s_endereco              = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/SAM_ENDERECO/', format='parquet')\n",
+					"df_s_finalidadeatenimento  = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/SAM_FINALIDADEATENDIMENTO/', format='parquet')\n",
+					"df_t_carateratendimento    = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/TIS_CARATERATENDIMENTO/', format='parquet')\n",
+					"df_t_regimeinternacao      = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/TIS_REGIMEINTERNACAO/', format='parquet')\n",
+					"\n",
+					"df_t_tipoatendimento       = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/TIS_TIPOATENDIMENTO/', format='parquet')\n",
+					"df_t_tipointernacao        = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/TIS_TIPOINTERNACAO/', format='parquet')\n",
+					"df_t_indicadoracidente     = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/TIS_INDICADORDEACIDENTE/', format='parquet')\n",
+					"df_t_tipoconsulta          = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/TIS_TIPOCONSULTA/', format='parquet')\n",
+					"df_s_contrato              = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/SAM_CONTRATO/', format='parquet')\n",
+					"\n",
+					"df_s_plano                 = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/SAM_PLANO/', format='parquet')\n",
+					"df_s_autoriz_logstatus     = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/SAM_AUTORIZ_LOGSTATUS/', format='parquet')\n",
+					"df_t_statussolicitacao     = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/TIS_STATUSSOLICITACAO/', format='parquet')\n",
+					"df_s_autoriz_eventonegacao = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/SAM_AUTORIZ_EVENTONEGACAO/', format='parquet')\n",
+					"df_s_tabfilme_vlr          = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/SAM_TABFILME_VLR/', format='parquet')\n",
+					"\n",
+					"df_s_prestador_an          = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/SAM_PRECOPRESTADOR_AN/', format='parquet')\n",
+					"df_estados                 = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/ESTADOS/', format='parquet')\n",
+					"df_municipios              = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/MUNICIPIOS/', format='parquet')\n",
+					"df_t_tabelapreco           = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/TIS_TABELAPRECO/', format='parquet')\n",
+					"df_s_tabcustooperac        = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/SAM_TABCUSTOOPERAC/', format='parquet')\n",
+					"\n",
+					"df_s_tabcustooperac_vlr    = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/SAM_TABCUSTOOPERAC_VLR/', format='parquet')\n",
+					"df_s_tabus                 = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/SAM_TABUS/', format='parquet')\n",
+					"df_s_tabus_vlr             = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/SAM_TABUS_VLR/', format='parquet')\n",
+					"df_s_tabfilme              = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/SAM_TABFILME/', format='parquet')\n",
+					"df_s_precoestado_dotac     = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/SAM_PRECOESTADO_DOTAC/', format='parquet')\n",
+					"df_s_preestado_an          = spark.read.load('abfss://raw-data@stgcassidatalake001.dfs.core.windows.net/STAGE/SAM_PRECOESTADO_AN/', format='parquet')\n",
+					"\n",
+					""
+				],
+				"attachments": null,
+				"execution_count": 2
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"## Criação das TEMPVIEWS\n",
+					"##\n",
+					"df_sa_eventosolicit.createOrReplaceTempView(\"SAM_AUTORIZ_EVENTOSOLICIT\")       \n",
+					"df_sa_eventogerado.createOrReplaceTempView(\"SAM_AUTORIZ_EVENTOGERADO\")        \n",
+					"df_sa.createOrReplaceTempView(\"SAM_AUTORIZ\")                     \n",
+					"df_s_tipoautoriz.createOrReplaceTempView(\"SAM_TIPOAUTORIZ\")          \n",
+					"df_s_regimeatendimento.createOrReplaceTempView(\"SAM_REGIMEATENDIMENTO\") \n",
+					"df_s_localatedimento.createOrReplaceTempView(\"SAM_LOCALATENDIMENTO\")      \n",
+					"df_s_tge.createOrReplaceTempView(\"SAM_TGE\")                  \n",
+					"df_s_tgenivelautorizacao.createOrReplaceTempView(\"SAM_TGE_NIVELAUTORIZACAO\")  \n",
+					"df_t_tabelapreco.createOrReplaceTempView(\"TIS_TABELAPRECO\")          \n",
+					"df_s_grau.createOrReplaceTempView(\"SAM_GRAU\")    \n",
+					"df_s_tipotratamento.createOrReplaceTempView(\"SAM_TIPOTRATAMENTO\")       \n",
+					"df_s_objtratamento.createOrReplaceTempView(\"SAM_OBJTRATAMENTO\")        \n",
+					"df_s_beneficiario.createOrReplaceTempView(\"SAM_BENEFICIARIO\")         \n",
+					"df_s_prestador.createOrReplaceTempView(\"SAM_PRESTADOR\")            \n",
+					"df_t_cbos.createOrReplaceTempView(\"TIS_CBOS\")  \n",
+					"df_z_grupousuarios.createOrReplaceTempView(\"Z_GRUPOUSUARIOS\")        \n",
+					"df_s_endereco.createOrReplaceTempView(\"SAM_ENDERECO\")             \n",
+					"df_s_finalidadeatenimento.createOrReplaceTempView(\"SAM_FINALIDADEATENDIMENTO\") \n",
+					"df_t_carateratendimento.createOrReplaceTempView(\"TIS_CARATERATENDIMENTO\")   \n",
+					"df_t_regimeinternacao.createOrReplaceTempView(\"TIS_REGIMEINTERNACAO\")    \n",
+					"df_t_tipoatendimento.createOrReplaceTempView(\"TIS_TIPOATENDIMENTO\")      \n",
+					"df_t_tipointernacao.createOrReplaceTempView(\"TIS_TIPOINTERNACAO\")       \n",
+					"df_t_indicadoracidente.createOrReplaceTempView(\"TIS_INDICADORDEACIDENTE\")    \n",
+					"df_t_tipoconsulta.createOrReplaceTempView(\"TIS_TIPOCONSULTA\")         \n",
+					"df_s_contrato.createOrReplaceTempView(\"SAM_CONTRATO\")   \n",
+					"df_s_plano.createOrReplaceTempView(\"SAM_PLANO\")                \n",
+					"df_s_autoriz_logstatus.createOrReplaceTempView(\"SAM_AUTORIZ_LOGSTATUS\")    \n",
+					"df_t_statussolicitacao.createOrReplaceTempView(\"TIS_STATUSSOLICITACAO\")    \n",
+					"df_s_autoriz_eventonegacao.createOrReplaceTempView(\"SAM_AUTORIZ_EVENTONEGACAO\")          \n",
+					"df_s_tabfilme_vlr.createOrReplaceTempView(\"SAM_TABFILME_VLR\")\n",
+					"df_s_prestador_an.createOrReplaceTempView(\"SAM_PRECOPRESTADOR_AN\")         \n",
+					"df_estados.createOrReplaceTempView(\"ESTADOS\")         \n",
+					"df_municipios.createOrReplaceTempView(\"MUNICIPIOS\")       \n",
+					"df_s_tabcustooperac.createOrReplaceTempView(\"SAM_TABCUSTOOPERAC\")            \n",
+					"df_s_tabcustooperac_vlr.createOrReplaceTempView(\"SAM_TABCUSTOOPERAC_VLR\")   \n",
+					"df_s_tabus.createOrReplaceTempView(\"SAM_TABUS\")                \n",
+					"df_s_tabus_vlr.createOrReplaceTempView(\"SAM_TABUS_VLR\")            \n",
+					"df_s_tabfilme.createOrReplaceTempView(\"SAM_TABFILME\")             \n",
+					"df_s_precoestado_dotac.createOrReplaceTempView(\"SAM_PRECOESTADO_DOTAC\")    \n",
+					"df_s_preestado_an.createOrReplaceTempView(\"SAM_PRECOESTADO_AN\")\n",
+					"## Subquery\n",
+					"df_tab_tmp = spark.sql('''\n",
+					"SELECT AU.HANDLE, MAX(LG.HANDLE) AS SSMAX \n",
+					"  FROM SAM_AUTORIZ_LOGSTATUS LG \n",
+					"  JOIN SAM_AUTORIZ AU ON LG.AUTORIZACAO = AU.HANDLE\n",
+					" GROUP BY AU.HANDLE\n",
+					"''')\n",
+					"df_tab_tmp.cache()\n",
+					"df_tab_tmp.createOrReplaceTempView(\"TABTMP\")"
+				],
+				"attachments": null,
+				"execution_count": 3
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"## Execução da query principal HD_AUTORIZACAO,HD_AUTORIZ_EVENTO_SOLICIT,HD_AUTORIZ_EVENTO_GERADO,HD_TGE,HD_BENEF\n",
+					"df_result = spark.sql(\"\"\"  \n",
+					"SELECT DISTINCT\n",
+					"     AUT.HANDLE AS HD_AUTORIZACAO\n",
+					"    ,AES.HANDLE AS HD_AUTORIZ_EVENTO_SOLICIT\n",
+					"    ,AEG.HANDLE AS HD_AUTORIZ_EVENTO_GERADO\n",
+					"    ,TGE.HANDLE AS HD_TGE \n",
+					"    ,BEN.HANDLE AS HD_BENEF\n",
+					"    ,ENDB.ESTADO AS HD_ESTADO_BENEF\n",
+					"    ,PRE2.ESTADOPAGAMENTO AS HD_ESTADO_PREST_EXEC\n",
+					"    ,PRE1.HANDLE AS HD_PREST_SOLICITANTE\n",
+					"    ,PRE1.PRESTADOR AS CO_PREST_SOLICITANTE\n",
+					"    ,PRE2.HANDLE AS HD_PREST_EXECUTOR\n",
+					"    ,PRE2.PRESTADOR AS CO_PREST_EXECUTOR\n",
+					"    ,PFO.HANDLE AS HD_PREST_FORNECEDOR \n",
+					"    ,PFO.PRESTADOR AS CO_PREST_FORNECEDOR \n",
+					"    ,TAU.HANDLE AS HD_TP_AUTORIZ\n",
+					"    ,GR.HANDLE AS HD_GRAU\n",
+					"    ,GR.GRAU AS CO_GRAU\n",
+					"    ,TPT.CODIGO AS CO_TP_TRATAMENTO\n",
+					"    ,OBJ.CODIGO AS CO_OBJ_TRATAMENTO\n",
+					"    ,TPA.HANDLE as HD_REGIME_ATEND \n",
+					"    ,FNL.HANDLE AS HD_FINALID_ATEND\n",
+					"    ,CRT.HANDLE AS HD_CARAT_ATEND\n",
+					"    ,RGM.HANDLE AS HD_REGIME_INT\n",
+					"    ,TPA.HANDLE AS HD_TP_ATEND\n",
+					"    ,TPI.HANDLE AS HD_TP_INTERN\n",
+					"    ,IND.HANDLE AS HD_IND_ACIDENTE\n",
+					"    ,TPC.HANDLE AS HD_TP_CONSULTA\n",
+					"    ,PLA.HANDLE AS HD_PLANO\n",
+					"    ,CON.HANDLE AS HD_CONTRATO\n",
+					"    ,GPU.HANDLE AS HD_USUARIO\n",
+					"    ,TPR.HANDLE AS HD_TIS_TAB_PRECO\n",
+					"    ,TPR.CODIGO AS CO_TIS_TAB_PRECO\n",
+					"    ,CBO.HANDLE AS HD_CBOS\n",
+					"    ,CBO.CODIGO AS CO_CBOS\n",
+					"    ,TSS.CODIGO AS CO_ST_SOLICIT\n",
+					"    ,AUT.SITUACAO AS CO_SITUACAO_AUT\n",
+					"    ,AES.SITUACAO AS CO_SITUACAO_AES\n",
+					"    ,AEG.SITUACAO AS CO_SITUACAO_AEG\n",
+					"    ,AES.OPCAOOPME AS ST_OPCAO_OPME \n",
+					"    ,AUT.AUTORIZACAO AS NU_AUTORIZACAO\n",
+					"    ,AUT.DATAAUTORIZACAO AS DT_AUTORIZACAO_AUT\n",
+					"    ,AUT.DATASOLICITACAO AS DT_SOLICITACAO_AUT\n",
+					"    ,AEG.DATAAUTORIZACAO AS DT_AUTORIZACAO_AEG\n",
+					"    ,AEG.DATAATENDIMENTO AS DT_ATENDIMENTO_AEG\n",
+					"    ,AES.QTDSOLICITADAORIGINAL\n",
+					"    ,AEG.QTDAUTORIZADA\n",
+					"    ,(AES.QTDSOLICITADAORIGINAL - AEG.QTDAUTORIZADA) AS QT_NEGADA \n",
+					"    ,AES.VALORUNITARIOSOLICITADO\n",
+					"    ,AES.VALORUNITARIONEGOCIADOOPME\n",
+					"    ,AES.VALORUNITARIOCALCULADOOPME\n",
+					"    ,AES.VALORUNITARIOAUTORIZADOOPME\n",
+					"    ,AES.DATASOLICITACAO AS DT_SOLICITACAO_AES \n",
+					"    ,NAU.NIVELAUTORIZACAO AS NU_NIVEL_AUTORIZACAO \n",
+					"    ,AUT.ORIGEMAUTORIZACAO AS CO_ORIGEM_AUTORIZACAO \n",
+					"    ,AUT.SOLICITANTENOME AS NO_PROF_SOLICITANTE \n",
+					"    ,AUT.SOLICITANTECRNUM AS NU_CRM_PROF_SOLICITANTE_AUT \n",
+					"    ,AUT.CONSELHOPROFSOLICITANTETISS AS PK_TD_CONSELHO_Prof_Solic \n",
+					"    ,AUT.UFCONSELHOPROFSOLICITANTE AS PK_TD_CONSELHO_Uf_Prof_Solic \n",
+					"    ,PES.HANDLE AS HD_PREST_SOLICITANTE_AES \n",
+					"    ,PES.PRESTADOR AS CO_PREST_SOLICITANTE_AES \n",
+					"    ,AUT.RADIOSOLICITACAO AS DS_ORIGEM_SOLICITACAO\n",
+					"    ,AUT.INDICACAOCLINICA AS DS_INDICACAO_CLINICA\n",
+					"    ,AUT.DATAVALIDADE AS DT_VALIDADE_AUT\n",
+					"    ,PEX.HANDLE AS HD_PREST_EXECUTOR_AES \n",
+					"    ,PEX.PRESTADOR AS CO_PREST_EXECUTOR_AES \n",
+					"    ,AEG.DATAHORAGERACAO AS TS_GERACAO_AEG\n",
+					"    ,AEG.DATAHORALIBERACAO AS TS_LIBERACAO_AEG\n",
+					"    ,AEG.USUARIOGERACAO AS HD_USUARIO_GERACAO_AEG\n",
+					"    ,TGE.COMPORTAHE AS ST_HORARIO_ESPECIAL\n",
+					"FROM SAM_AUTORIZ AUT\n",
+					"LEFT JOIN SAM_AUTORIZ_EVENTOSOLICIT AES ON AES.AUTORIZACAO = AUT.HANDLE\n",
+					"LEFT JOIN SAM_AUTORIZ_EVENTOGERADO AEG ON AEG.EVENTOSOLICITADO = AES.HANDLE\n",
+					"JOIN SAM_TIPOAUTORIZ TAU ON TAU.HANDLE = AUT.TIPOAUTORIZACAO\n",
+					"LEFT JOIN SAM_REGIMEATENDIMENTO RA ON RA.HANDLE = AUT.REGIMEATENDIMENTO\n",
+					"LEFT JOIN SAM_LOCALATENDIMENTO LA ON LA.HANDLE = AUT.LOCALATENDIMENTO\n",
+					"LEFT JOIN SAM_TGE TGE ON TGE.HANDLE = nvl(AEG.EVENTOGERADO, AES.EVENTO)\n",
+					"LEFT JOIN SAM_TGE_NIVELAUTORIZACAO NAU ON NAU.EVENTO = TGE.HANDLE \n",
+					"LEFT JOIN TIS_TABELAPRECO TPR ON TPR.HANDLE = TGE.TABELADOMINIOTISS\n",
+					"LEFT JOIN SAM_GRAU GR ON GR.HANDLE = AEG.GRAUGERADO\n",
+					"LEFT JOIN SAM_TIPOTRATAMENTO TPT ON TPT.HANDLE = TGE.TIPOTRATAMENTO\n",
+					"LEFT JOIN SAM_OBJTRATAMENTO OBJ ON OBJ.HANDLE = TGE.OBJETIVOTRATAMENTO\n",
+					"JOIN SAM_BENEFICIARIO BEN ON BEN.HANDLE = AUT.BENEFICIARIO \n",
+					"LEFT JOIN SAM_PRESTADOR PRE1 ON PRE1.HANDLE = AUT.SOLICITANTE\n",
+					"LEFT JOIN SAM_PRESTADOR PRE2 ON PRE2.HANDLE = AUT.LOCALEXECUCAO\n",
+					"LEFT JOIN SAM_PRESTADOR PFO  ON PFO.HANDLE  = AES.FORNECEDOR\n",
+					"LEFT JOIN SAM_PRESTADOR PES  ON PES.HANDLE  = AES.SOLICITANTE\n",
+					"LEFT JOIN SAM_PRESTADOR PEX  ON PEX.HANDLE  = AES.EXECUTOR\n",
+					"LEFT JOIN TIS_CBOS CBO ON CBO.HANDLE = AUT.CBOSPROFSOLICITANTETISS\n",
+					"LEFT JOIN Z_GRUPOUSUARIOS GPU ON GPU.HANDLE = AUT.USUARIO\n",
+					"LEFT JOIN SAM_ENDERECO ENDB ON ENDB.HANDLE = BEN.ENDERECORESIDENCIAL\n",
+					"LEFT JOIN SAM_FINALIDADEATENDIMENTO FNL ON FNL.HANDLE = AUT.FINALIDADEATENDIMENTO\n",
+					"LEFT JOIN TIS_CARATERATENDIMENTO CRT ON CRT.HANDLE = AUT.CARATERATENDIMENTO\n",
+					"LEFT JOIN TIS_REGIMEINTERNACAO RGM ON RGM.HANDLE = AUT.REGIMEINTERNACAO\n",
+					"LEFT JOIN TIS_TIPOATENDIMENTO TPA ON TPA.HANDLE = AUT.TIPOATENDIMENTO\n",
+					"LEFT JOIN TIS_TIPOINTERNACAO TPI ON TPI.HANDLE = AUT.TIPOINTERNACAOTISS\n",
+					"LEFT JOIN TIS_INDICADORDEACIDENTE IND ON IND.HANDLE = AUT.INDICADORDEACIDENTE\n",
+					"LEFT JOIN TIS_TIPOCONSULTA TPC ON TPC.HANDLE = AUT.TIPOCONSULTA\n",
+					"LEFT JOIN SAM_CONTRATO CON ON CON.HANDLE = BEN.CONTRATO\n",
+					"JOIN SAM_PLANO PLA ON PLA.HANDLE = CON.PLANO\n",
+					"LEFT JOIN SAM_AUTORIZ_LOGSTATUS ALG ON ALG.AUTORIZACAO = AUT.HANDLE \n",
+					"\t    JOIN TABTMP ON SSMAX = ALG.HANDLE\n",
+					"LEFT JOIN TIS_STATUSSOLICITACAO TSS ON TSS.HANDLE = ALG.STATUS\n",
+					"WHERE AUT.LOCALATENDIMENTO = 1 \n",
+					"AND AES.SITUACAO <> 'C' \n",
+					"AND AUT.SITUACAO NOT IN ('C','F') \n",
+					"AND nvl(nvl(AEG.DATAAUTORIZACAO,AES.DATASOLICITACAO),AUT.DATAAUTORIZACAO) = date_format('2022-01-01','yyyy-MM-dd')\n",
+					"AND NAU.DATAFINAL IS NULL   \n",
+					"ORDER BY HD_AUTORIZACAO,HD_AUTORIZ_EVENTO_SOLICIT,HD_AUTORIZ_EVENTO_GERADO,HD_TGE,HD_BENEF asc \n",
+					"\"\"\")\n",
+					"df_result.cache()"
+				],
+				"attachments": null,
+				"execution_count": 4
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": false
+				},
+				"source": [
+					"display(df_result.limit(10))"
+				],
+				"attachments": null,
+				"execution_count": 5
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"## Carrega query de caracteristica autorizacao \n",
+					"df_lk_caracautoriz = spark.sql(\"\"\"\n",
+					"SELECT DISTINCT\n",
+					"\tAUT.HANDLE HANDLE,\n",
+					"\tAUT.REGIMEATENDIMENTO REGIMEATENDIMENTO,\n",
+					"\tAUT.CONDICAOATENDIMENTO CONDICAOATENDIMENTO,\n",
+					"\tAUT.LOCALATENDIMENTO LOCALATENDIMENTO,\n",
+					"\tAUT.FINALIDADEATENDIMENTO FINALIDADEATENDIMENTO,\n",
+					"\tAUT.TIPOAUTORIZACAO TIPOAUTORIZACAO,\n",
+					"\tAUT.TIPOTRATAMENTO TIPOTRATAMENTO,\n",
+					"\tAUT.OBJETIVOTRATAMENTO OBJETIVOTRATAMENTO,\n",
+					"\tAUT.ACOMODACAO ACOMODACAO,\n",
+					"\tAUT.MOTIVOALTA MOTIVOALTA\n",
+					"\n",
+					"FROM SAM_AUTORIZ AUT\n",
+					"LEFT JOIN SAM_AUTORIZ_EVENTOSOLICIT AES ON AES.AUTORIZACAO = AUT.HANDLE\n",
+					"LEFT JOIN SAM_AUTORIZ_EVENTOGERADO  AEG ON AEG.EVENTOSOLICITADO = AES.HANDLE\n",
+					" \n",
+					"WHERE AUT.LOCALATENDIMENTO = 1 --Rede Credenciada\n",
+					"AND AES.SITUACAO <> 'C' --Solicitações diferentes de Canceladas\n",
+					"AND AUT.SITUACAO NOT IN ('C','F') --Autorizações diferentes de Cancelada e Fechada\n",
+					"AND NVL(NVL(AEG.DATAAUTORIZACAO, AES.DATASOLICITACAO ), AUT.DATAAUTORIZACAO) = date_format('2022-01-01','yyyy-MM-dd') \n",
+					"ORDER BY AUT.HANDLE\n",
+					"\"\"\")\n",
+					"df_lk_caracautoriz.cache()"
+				],
+				"attachments": null,
+				"execution_count": 5
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": false
+				},
+				"source": [
+					"#display(df_lk_caracautoriz.limit(10))\n",
+					"df_lk_caracautoriz.printSchema()\n",
+					"rdd_lk = df_lk_caracautoriz.collect()"
+				],
+				"attachments": null,
+				"execution_count": 28
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"def lkpHandle (pHandle):\n",
+					"    #print (df_lk_caracautoriz.select('HANDLE').where(col('HANDLE') == pHandle))\n",
+					"    print(dfTMP.count())\n",
+					"    #print(dfTMP.select(col('HANDLE')).limit(1)).show()\n",
+					"    #print( dfTMP['HANDLE'] )\n",
+					"\n",
+					"   \n",
+					"        \n",
+					"lkpHandle(144334482)\n",
+					""
+				],
+				"attachments": null,
+				"execution_count": 36
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"## Criando o DF vazio para receber os valores do lookup. abs\n",
+					"dftmp = df_result.limit(0)\n",
+					"dftmp = dftmp.withColumn(\"HANDLE\", lit(None).cast(\"decimal(38,18)\") )\n",
+					"dftmp = dftmp.withColumn(\"REGIMEATENDIMENTO\", lit(None).cast(\"decimal(38,18)\") )\n",
+					"dftmp = dftmp.withColumn(\"CONDICAOATENDIMENTO\", lit(None).cast(\"decimal(38,18)\") )\n",
+					"dftmp = dftmp.withColumn(\"LOCALATENDIMENTO\", lit(None).cast(\"decimal(38,18)\") )\n",
+					"dftmp = dftmp.withColumn(\"FINALIDADEATENDIMENTO\", lit(None).cast(\"decimal(38,18)\") )\n",
+					"dftmp = dftmp.withColumn(\"TIPOAUTORIZACAO\", lit(None).cast(\"decimal(38,18)\") )\n",
+					"dftmp = dftmp.withColumn(\"TIPOTRATAMENTO\", lit(None).cast(\"decimal(38,18)\") )\n",
+					"dftmp = dftmp.withColumn(\"OBJETIVOTRATAMENTO\", lit(None).cast(\"decimal(38,18)\") )\n",
+					"dftmp = dftmp.withColumn(\"ACOMODACAO\", lit(None).cast(\"decimal(38,18)\") )\n",
+					"dftmp = dftmp.withColumn(\"MOTIVOALTA\", lit(None).cast(\"decimal(38,18)\") )"
+				],
+				"attachments": null,
+				"execution_count": 60
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": false
+				},
+				"source": [
+					"#dftmp = df_result\n",
+					"#display(dftmp.limit(10))\n",
+					"\n",
+					"\n",
+					"#display(df_lk_caracautoriz.select(col('HANDLE')).limit(5))\n",
+					"#dftmp.withColumn(\"HANDLE\", df_lk_caracautoriz.select(col(HANDLE)).where(col('HANDLE') == 144334482).limit(1) )\n",
+					"\n",
+					"#df_lk = df_lk_caracautoriz\n",
+					"#display(df_lk_caracautoriz.select(col('HANDLE')).where(col('HANDLE') == 144334482).limit(1))\n",
+					"\n",
+					"dftmp2 = dftmp.withColumn('HANDLE1', df_lk.select(col('HANDLE')).where(col('HANDLE') == dftmp['HD_AUTORIZACAO']).limit(1).cast('int')  )\n",
+					"\n",
+					"\n",
+					""
+				],
+				"attachments": null,
+				"execution_count": 104
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"dftmp2 = dftmp.withColumn('HANDLE', df_lk_caracautoriz.select(col('HANDLE')).where(col('HANDLE') == dftmp['HD_AUTORIZACAO']).limit(1).cast('int') )"
+				],
+				"attachments": null,
+				"execution_count": 103
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"####  Tratativa \n",
+					"##    Dados da autorizacao na query principal (df_result)\n",
+					"##    Dados da caracteristica autorizacao estão na (df_lk_caracautoriz)\n",
+					"\n",
+					"for row in df_result.rdd.collect():\n",
+					"    dftmp['HD_AUTORIZACAO']\n",
+					"    dftmp['HD_AUTORIZ_EVENTO_SOLICIT\n",
+					"    dftmp['HD_AUTORIZ_EVENTO_GERADO\n",
+					"    dftmp['HD_TGE \n",
+					"    dftmp['HD_BENEF\n",
+					"    dftmp['HD_ESTADO_BENEF\n",
+					"    dftmp['HD_ESTADO_PREST_EXEC\n",
+					"    dftmp['HD_PREST_SOLICITANTE\n",
+					"    dftmp['CO_PREST_SOLICITANTE\n",
+					"    dftmp['HD_PREST_EXECUTOR\n",
+					"    dftmp['CO_PREST_EXECUTOR\n",
+					"    dftmp['HD_PREST_FORNECEDOR \n",
+					"    dftmp['CO_PREST_FORNECEDOR \n",
+					"    dftmp['HD_TP_AUTORIZ\n",
+					"    dftmp['HD_GRAU\n",
+					"    dftmp['CO_GRAU\n",
+					"    dftmp['CO_TP_TRATAMENTO\n",
+					"    dftmp['CO_OBJ_TRATAMENTO\n",
+					"    dftmp['HD_REGIME_ATEND \n",
+					"    dftmp['HD_FINALID_ATEND\n",
+					"    dftmp['HD_CARAT_ATEND\n",
+					"    dftmp['HD_REGIME_INT\n",
+					"    dftmp['HD_TP_ATEND\n",
+					"    dftmp['HD_TP_INTERN\n",
+					"    dftmp['HD_IND_ACIDENTE\n",
+					"    dftmp['HD_TP_CONSULTA\n",
+					"    dftmp['HD_PLANO\n",
+					"    dftmp['HD_CONTRATO\n",
+					"    dftmp['HD_USUARIO\n",
+					"    dftmp['HD_TIS_TAB_PRECO\n",
+					"    dftmp['CO_TIS_TAB_PRECO\n",
+					"    dftmp['HD_CBOS\n",
+					"    dftmp['CO_CBOS\n",
+					"    dftmp['CO_ST_SOLICIT\n",
+					"    dftmp['CO_SITUACAO_AUT\n",
+					"    dftmp['CO_SITUACAO_AES\n",
+					"    dftmp['CO_SITUACAO_AEG\n",
+					"    dftmp['ST_OPCAO_OPME \n",
+					"    dftmp['NU_AUTORIZACAO\n",
+					"    dftmp['DT_AUTORIZACAO_AUT\n",
+					"    dftmp['DT_SOLICITACAO_AUT\n",
+					"    dftmp['DT_AUTORIZACAO_AEG\n",
+					"    dftmp['DT_ATENDIMENTO_AEG\n",
+					"    dftmp['QTDSOLICITADAORIGINAL\n",
+					"    dftmp['QTDAUTORIZADA\n",
+					"    dftmp['QT_NEGADA \n",
+					"    dftmp['VALORUNITARIOSOLICITADO\n",
+					"    dftmp['VALORUNITARIONEGOCIADOOPME\n",
+					"    dftmp['VALORUNITARIOCALCULADOOPME\n",
+					"    dftmp['VALORUNITARIOAUTORIZADOOPME\n",
+					"    dftmp['DT_SOLICITACAO_AES \n",
+					"    dftmp['NU_NIVEL_AUTORIZACAO \n",
+					"    dftmp['CO_ORIGEM_AUTORIZACAO \n",
+					"    dftmp['NO_PROF_SOLICITANTE \n",
+					"    dftmp['NU_CRM_PROF_SOLICITANTE_AUT \n",
+					"    dftmp['PK_TD_CONSELHO_Prof_Solic \n",
+					"    dftmp['PK_TD_CONSELHO_Uf_Prof_Solic \n",
+					"    dftmp['HD_PREST_SOLICITANTE_AES \n",
+					"    dftmp['CO_PREST_SOLICITANTE_AES \n",
+					"    dftmp['DS_ORIGEM_SOLICITACAO\n",
+					"    dftmp['DS_INDICACAO_CLINICA\n",
+					"    dftmp['DT_VALIDADE_AUT\n",
+					"    dftmp['HD_PREST_EXECUTOR_AES \n",
+					"    dftmp['CO_PREST_EXECUTOR_AES \n",
+					"    dftmp['TS_GERACAO_AEG\n",
+					"    dftmp['TS_LIBERACAO_AEG\n",
+					"    dftmp['HD_USUARIO_GERACAO_AEG\n",
+					"    dftmp['ST_HORARIO_ESPECIAL\n",
+					"    dfcheck = df_lk_caracautoriz.where(col('HANDLE') == row['HD_AUTORIZACAO'])\n",
+					"    dftmp = row\n",
+					"    \n",
+					"    \n",
+					"    break\n",
+					"\n",
+					"\n",
+					"\n",
+					"# -------------------------------\n",
+					"# --> SE TIVER ALGUMA COISA\n",
+					"#     agregar os resultados da primeira linha do lookup com o DF_RESULT\n",
+					"#\n",
+					"# --> SE NAO TIVER\n",
+					"#.    Colocar campos como null    \n",
+					""
+				],
+				"attachments": null,
+				"execution_count": 73
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					""
+				],
+				"attachments": null,
+				"execution_count": 74
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"\n",
+					"df_teste = df_teste.withColumn(\"HANDLE\", lit(None).cast(\"decimal(38,18)\") )\n",
+					"df_teste = df_teste.withColumn(\"REGIMEATENDIMENTO\", lit(None).cast(\"decimal(38,18)\") )\n",
+					"df_teste = df_teste.withColumn(\"CONDICAOATENDIMENTO\", lit(None).cast(\"decimal(38,18)\") )\n",
+					"df_teste = df_teste.withColumn(\"LOCALATENDIMENTO\", lit(None).cast(\"decimal(38,18)\") )\n",
+					"df_teste = df_teste.withColumn(\"FINALIDADEATENDIMENTO\", lit(None).cast(\"decimal(38,18)\") )\n",
+					"df_teste = df_teste.withColumn(\"TIPOAUTORIZACAO\", lit(None).cast(\"decimal(38,18)\") )\n",
+					"df_teste = df_teste.withColumn(\"TIPOTRATAMENTO\", lit(None).cast(\"decimal(38,18)\") )\n",
+					"df_teste = df_teste.withColumn(\"OBJETIVOTRATAMENTO\", lit(None).cast(\"decimal(38,18)\") )\n",
+					"df_teste = df_teste.withColumn(\"ACOMODACAO\", lit(None).cast(\"decimal(38,18)\") )\n",
+					"df_teste = df_teste.withColumn(\"MOTIVOALTA\", lit(None).cast(\"decimal(38,18)\") )\n",
+					"\n",
+					"df_teste.printSchema()"
+				],
+				"attachments": null,
+				"execution_count": 59
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"\n",
+					"#df_result.printSchema()\n",
+					"#df_teste = df_result.limit(0) \n",
+					"\n",
+					"\n",
+					"# |-- HANDLE: decimal(38,18) (nullable = true)\n",
+					"# |-- REGIMEATENDIMENTO: decimal(38,18) (nullable = true)\n",
+					"# |-- CONDICAOATENDIMENTO: decimal(38,18) (nullable = true)\n",
+					"# |-- LOCALATENDIMENTO: decimal(38,18) (nullable = true)\n",
+					"# |-- FINALIDADEATENDIMENTO: decimal(38,18) (nullable = true)\n",
+					"# |-- TIPOAUTORIZACAO: decimal(38,18) (nullable = true)\n",
+					"# |-- TIPOTRATAMENTO: decimal(38,18) (nullable = true)\n",
+					"# |-- OBJETIVOTRATAMENTO: decimal(38,18) (nullable = true)\n",
+					"# |-- ACOMODACAO: decimal(38,18) (nullable = true)\n",
+					"# |-- MOTIVOALTA: decimal(38,18) (nullable = true)"
+				],
+				"attachments": null,
+				"execution_count": null
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"\n",
+					"df_teste.printSchema()"
+				],
+				"attachments": null,
+				"execution_count": 48
+			},
+			{
+				"cell_type": "markdown",
+				"metadata": {
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"## TESTE DAS QUERYS\n",
+					"#### Query 01"
+				],
+				"attachments": null
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"microsoft": {
+						"language": "sparksql"
+					},
+					"collapsed": false
+				},
+				"source": [
+					"%%sql \n",
+					"SELECT DISTINCT\n",
+					"     AUT.HANDLE AS HD_AUTORIZACAO\n",
+					"    ,AES.HANDLE AS HD_AUTORIZ_EVENTO_SOLICIT\n",
+					"    ,AEG.HANDLE AS HD_AUTORIZ_EVENTO_GERADO\n",
+					"    ,TGE.HANDLE AS HD_TGE \n",
+					"    ,BEN.HANDLE AS HD_BENEF\n",
+					"    ,ENDB.ESTADO AS HD_ESTADO_BENEF\n",
+					"    ,PRE2.ESTADOPAGAMENTO AS HD_ESTADO_PREST_EXEC\n",
+					"    ,PRE1.HANDLE AS HD_PREST_SOLICITANTE\n",
+					"    ,PRE1.PRESTADOR AS CO_PREST_SOLICITANTE\n",
+					"    ,PRE2.HANDLE AS HD_PREST_EXECUTOR\n",
+					"    ,PRE2.PRESTADOR AS CO_PREST_EXECUTOR\n",
+					"    ,PFO.HANDLE AS HD_PREST_FORNECEDOR \n",
+					"    ,PFO.PRESTADOR AS CO_PREST_FORNECEDOR \n",
+					"    ,TAU.HANDLE AS HD_TP_AUTORIZ\n",
+					"    ,GR.HANDLE AS HD_GRAU\n",
+					"    ,GR.GRAU AS CO_GRAU\n",
+					"    ,TPT.CODIGO AS CO_TP_TRATAMENTO\n",
+					"    ,OBJ.CODIGO AS CO_OBJ_TRATAMENTO\n",
+					"    ,TPA.HANDLE as HD_REGIME_ATEND \n",
+					"    ,FNL.HANDLE AS HD_FINALID_ATEND\n",
+					"    ,CRT.HANDLE AS HD_CARAT_ATEND\n",
+					"    ,RGM.HANDLE AS HD_REGIME_INT\n",
+					"    ,TPA.HANDLE AS HD_TP_ATEND\n",
+					"    ,TPI.HANDLE AS HD_TP_INTERN\n",
+					"    ,IND.HANDLE AS HD_IND_ACIDENTE\n",
+					"    ,TPC.HANDLE AS HD_TP_CONSULTA\n",
+					"    ,PLA.HANDLE AS HD_PLANO\n",
+					"    ,CON.HANDLE AS HD_CONTRATO\n",
+					"    ,GPU.HANDLE AS HD_USUARIO\n",
+					"    ,TPR.HANDLE AS HD_TIS_TAB_PRECO\n",
+					"    ,TPR.CODIGO AS CO_TIS_TAB_PRECO\n",
+					"    ,CBO.HANDLE AS HD_CBOS\n",
+					"    ,CBO.CODIGO AS CO_CBOS\n",
+					"    ,TSS.CODIGO AS CO_ST_SOLICIT\n",
+					"    ,AUT.SITUACAO AS CO_SITUACAO_AUT\n",
+					"    ,AES.SITUACAO AS CO_SITUACAO_AES\n",
+					"    ,AEG.SITUACAO AS CO_SITUACAO_AEG\n",
+					"    ,AES.OPCAOOPME AS ST_OPCAO_OPME \n",
+					"    ,AUT.AUTORIZACAO AS NU_AUTORIZACAO\n",
+					"    ,AUT.DATAAUTORIZACAO AS DT_AUTORIZACAO_AUT\n",
+					"    ,AUT.DATASOLICITACAO AS DT_SOLICITACAO_AUT\n",
+					"    ,AEG.DATAAUTORIZACAO AS DT_AUTORIZACAO_AEG\n",
+					"    ,AEG.DATAATENDIMENTO AS DT_ATENDIMENTO_AEG\n",
+					"    ,AES.QTDSOLICITADAORIGINAL\n",
+					"    ,AEG.QTDAUTORIZADA\n",
+					"    ,(AES.QTDSOLICITADAORIGINAL - AEG.QTDAUTORIZADA) AS QT_NEGADA \n",
+					"    ,AES.VALORUNITARIOSOLICITADO\n",
+					"    ,AES.VALORUNITARIONEGOCIADOOPME\n",
+					"    ,AES.VALORUNITARIOCALCULADOOPME\n",
+					"    ,AES.VALORUNITARIOAUTORIZADOOPME\n",
+					"    ,AES.DATASOLICITACAO AS DT_SOLICITACAO_AES \n",
+					"    ,NAU.NIVELAUTORIZACAO AS NU_NIVEL_AUTORIZACAO \n",
+					"    ,AUT.ORIGEMAUTORIZACAO AS CO_ORIGEM_AUTORIZACAO \n",
+					"    ,AUT.SOLICITANTENOME AS NO_PROF_SOLICITANTE \n",
+					"    ,AUT.SOLICITANTECRNUM AS NU_CRM_PROF_SOLICITANTE_AUT \n",
+					"    ,AUT.CONSELHOPROFSOLICITANTETISS AS PK_TD_CONSELHO_Prof_Solic \n",
+					"    ,AUT.UFCONSELHOPROFSOLICITANTE AS PK_TD_CONSELHO_Uf_Prof_Solic \n",
+					"    ,PES.HANDLE AS HD_PREST_SOLICITANTE_AES \n",
+					"    ,PES.PRESTADOR AS CO_PREST_SOLICITANTE_AES \n",
+					"    ,AUT.RADIOSOLICITACAO AS DS_ORIGEM_SOLICITACAO\n",
+					"    ,AUT.INDICACAOCLINICA AS DS_INDICACAO_CLINICA\n",
+					"    ,AUT.DATAVALIDADE AS DT_VALIDADE_AUT\n",
+					"    ,PEX.HANDLE AS HD_PREST_EXECUTOR_AES \n",
+					"    ,PEX.PRESTADOR AS CO_PREST_EXECUTOR_AES \n",
+					"    ,AEG.DATAHORAGERACAO AS TS_GERACAO_AEG\n",
+					"    ,AEG.DATAHORALIBERACAO AS TS_LIBERACAO_AEG\n",
+					"    ,AEG.USUARIOGERACAO AS HD_USUARIO_GERACAO_AEG\n",
+					"    ,TGE.COMPORTAHE AS ST_HORARIO_ESPECIAL\n",
+					"FROM SAM_AUTORIZ AUT\n",
+					"LEFT JOIN SAM_AUTORIZ_EVENTOSOLICIT AES ON AES.AUTORIZACAO = AUT.HANDLE\n",
+					"LEFT JOIN SAM_AUTORIZ_EVENTOGERADO AEG ON AEG.EVENTOSOLICITADO = AES.HANDLE\n",
+					"JOIN SAM_TIPOAUTORIZ TAU ON TAU.HANDLE = AUT.TIPOAUTORIZACAO\n",
+					"LEFT JOIN SAM_REGIMEATENDIMENTO RA ON RA.HANDLE = AUT.REGIMEATENDIMENTO\n",
+					"LEFT JOIN SAM_LOCALATENDIMENTO LA ON LA.HANDLE = AUT.LOCALATENDIMENTO\n",
+					"LEFT JOIN SAM_TGE TGE ON TGE.HANDLE = nvl(AEG.EVENTOGERADO, AES.EVENTO)\n",
+					"LEFT JOIN SAM_TGE_NIVELAUTORIZACAO NAU ON NAU.EVENTO = TGE.HANDLE \n",
+					"LEFT JOIN TIS_TABELAPRECO TPR ON TPR.HANDLE = TGE.TABELADOMINIOTISS\n",
+					"LEFT JOIN SAM_GRAU GR ON GR.HANDLE = AEG.GRAUGERADO\n",
+					"LEFT JOIN SAM_TIPOTRATAMENTO TPT ON TPT.HANDLE = TGE.TIPOTRATAMENTO\n",
+					"LEFT JOIN SAM_OBJTRATAMENTO OBJ ON OBJ.HANDLE = TGE.OBJETIVOTRATAMENTO\n",
+					"JOIN SAM_BENEFICIARIO BEN ON BEN.HANDLE = AUT.BENEFICIARIO \n",
+					"LEFT JOIN SAM_PRESTADOR PRE1 ON PRE1.HANDLE = AUT.SOLICITANTE\n",
+					"LEFT JOIN SAM_PRESTADOR PRE2 ON PRE2.HANDLE = AUT.LOCALEXECUCAO\n",
+					"LEFT JOIN SAM_PRESTADOR PFO  ON PFO.HANDLE  = AES.FORNECEDOR\n",
+					"LEFT JOIN SAM_PRESTADOR PES  ON PES.HANDLE  = AES.SOLICITANTE\n",
+					"LEFT JOIN SAM_PRESTADOR PEX  ON PEX.HANDLE  = AES.EXECUTOR\n",
+					"LEFT JOIN TIS_CBOS CBO ON CBO.HANDLE = AUT.CBOSPROFSOLICITANTETISS\n",
+					"LEFT JOIN Z_GRUPOUSUARIOS GPU ON GPU.HANDLE = AUT.USUARIO\n",
+					"LEFT JOIN SAM_ENDERECO ENDB ON ENDB.HANDLE = BEN.ENDERECORESIDENCIAL\n",
+					"LEFT JOIN SAM_FINALIDADEATENDIMENTO FNL ON FNL.HANDLE = AUT.FINALIDADEATENDIMENTO\n",
+					"LEFT JOIN TIS_CARATERATENDIMENTO CRT ON CRT.HANDLE = AUT.CARATERATENDIMENTO\n",
+					"LEFT JOIN TIS_REGIMEINTERNACAO RGM ON RGM.HANDLE = AUT.REGIMEINTERNACAO\n",
+					"LEFT JOIN TIS_TIPOATENDIMENTO TPA ON TPA.HANDLE = AUT.TIPOATENDIMENTO\n",
+					"LEFT JOIN TIS_TIPOINTERNACAO TPI ON TPI.HANDLE = AUT.TIPOINTERNACAOTISS\n",
+					"LEFT JOIN TIS_INDICADORDEACIDENTE IND ON IND.HANDLE = AUT.INDICADORDEACIDENTE\n",
+					"LEFT JOIN TIS_TIPOCONSULTA TPC ON TPC.HANDLE = AUT.TIPOCONSULTA\n",
+					"LEFT JOIN SAM_CONTRATO CON ON CON.HANDLE = BEN.CONTRATO\n",
+					"JOIN SAM_PLANO PLA ON PLA.HANDLE = CON.PLANO\n",
+					"LEFT JOIN SAM_AUTORIZ_LOGSTATUS ALG ON ALG.AUTORIZACAO = AUT.HANDLE \n",
+					"\t    JOIN TABTMP ON SSMAX = ALG.HANDLE\n",
+					"LEFT JOIN TIS_STATUSSOLICITACAO TSS ON TSS.HANDLE = ALG.STATUS\n",
+					"WHERE AUT.LOCALATENDIMENTO = 1 \n",
+					"AND AES.SITUACAO <> 'C' \n",
+					"AND AUT.SITUACAO NOT IN ('C','F') \n",
+					"AND nvl(nvl(AEG.DATAAUTORIZACAO,AES.DATASOLICITACAO),AUT.DATAAUTORIZACAO) = date_format('2022-01-01','yyyy-MM-dd')\n",
+					"AND NAU.DATAFINAL IS NULL \n",
+					"\n",
+					""
+				],
+				"attachments": null,
+				"execution_count": null
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"microsoft": {
+						"language": "sparksql"
+					}
+				},
+				"source": [
+					"%%sql\n",
+					"SELECT \n",
+					"\tAUT.HANDLE,\n",
+					"\tAUT.REGIMEATENDIMENTO,\n",
+					"\tAUT.CONDICAOATENDIMENTO,\n",
+					"\tAUT.LOCALATENDIMENTO,\n",
+					"\tAUT.FINALIDADEATENDIMENTO,\n",
+					"\tAUT.TIPOAUTORIZACAO,\n",
+					"\tAUT.TIPOTRATAMENTO,\n",
+					"\tAUT.OBJETIVOTRATAMENTO,\n",
+					"\tAUT.ACOMODACAO,\n",
+					"\tAUT.MOTIVOALTA\n",
+					"\n",
+					"FROM SAM_AUTORIZ AUT\n",
+					"LEFT JOIN SAM_AUTORIZ_EVENTOSOLICIT AES ON AES.AUTORIZACAO = AUT.HANDLE\n",
+					"LEFT JOIN SAM_AUTORIZ_EVENTOGERADO  AEG ON AEG.EVENTOSOLICITADO = AES.HANDLE\n",
+					" \n",
+					"WHERE AUT.LOCALATENDIMENTO = 1 --Rede Credenciada\n",
+					"AND AES.SITUACAO <> 'C' --Solicitações diferentes de Canceladas\n",
+					"AND AUT.SITUACAO NOT IN ('C','F') --Autorizações diferentes de Cancelada e Fechada\n",
+					"AND NVL(NVL(AEG.DATAAUTORIZACAO, AES.DATASOLICITACAO ), AUT.DATAAUTORIZACAO) = date_format('2022-01-01','yyyy-MM-dd') \n",
+					"\n",
+					""
+				],
+				"attachments": null,
+				"execution_count": null
+			}
+		]
+	}
+}

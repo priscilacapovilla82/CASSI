@@ -1,0 +1,13 @@
+{
+	"name": "PowerBIWorkspace",
+	"type": "Microsoft.Synapse/workspaces/linkedservices",
+	"properties": {
+		"description": "Teste Autorização",
+		"annotations": [],
+		"type": "PowerBIWorkspace",
+		"typeProperties": {
+			"workspaceID": "54b35b2e-b97b-4b15-96cf-4538ce041e89",
+			"tenantID": "e0e71e1d-4c06-450d-98af-e6e3ff47472c"
+		}
+	}
+}

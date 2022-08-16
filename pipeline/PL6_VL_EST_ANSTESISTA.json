@@ -1,0 +1,44 @@
+{
+	"name": "PL6_VL_EST_ANSTESISTA",
+	"properties": {
+		"activities": [
+			{
+				"name": "DF6",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "1.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "DF6_VL_EST_ANESTASISTA",
+						"type": "DataFlowReference"
+					},
+					"staging": {
+						"linkedService": {
+							"referenceName": "wrkcassisynapseworkspace001-WorkspaceDefaultStorage",
+							"type": "LinkedServiceReference"
+						},
+						"folderPath": "stagingstoragefolder/AUTORIZACAO"
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
+			}
+		],
+		"folder": {
+			"name": "DESENVOLVIMENTO/FATOS/DIARIAS/AUTORIZACAO"
+		},
+		"annotations": [],
+		"lastPublishTime": "2022-08-04T12:56:26Z"
+	},
+	"type": "Microsoft.Synapse/workspaces/pipelines"
+}

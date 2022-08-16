@@ -1,0 +1,75 @@
+{
+	"name": "DF4_VL_PRESTADORES",
+	"properties": {
+		"folder": {
+			"name": "DESENVOLVIMENTO/FATOS/DIARIAS/AUTORIZACAO"
+		},
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"linkedService": {
+						"referenceName": "lnk_synprod",
+						"type": "LinkedServiceReference"
+					},
+					"name": "poolVLPRESTADORES"
+				}
+			],
+			"sinks": [
+				{
+					"linkedService": {
+						"referenceName": "wrkcassisynapseworkspace001-WorkspaceDefaultStorage",
+						"type": "LinkedServiceReference"
+					},
+					"name": "parquetVLPRETADORES"
+				}
+			],
+			"transformations": [
+				{
+					"name": "ColDerStLookup"
+				},
+				{
+					"name": "filter1"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          HD_PRESTADOR as integer,",
+				"          HD_TGE as integer,",
+				"          HD_CBO as integer,",
+				"          HD_REGIME_ATENDIMENTO as integer,",
+				"          HD_GRAU as integer,",
+				"          DT_INICIAL as timestamp,",
+				"          DT_FINAL as timestamp,",
+				"          NU_PORTE_ANESTESICO as integer,",
+				"          NU_PORTE_SALA as integer,",
+				"          VL_US as double,",
+				"          VL_UCO as double,",
+				"          VL_FILME as double",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'query',",
+				"     store: 'synapseanalytics',",
+				"     query: 'SELECT DISTINCT \\n     PR.HANDLE AS HD_PRESTADOR\\n    ,TGE.HANDLE AS HD_TGE\\n    ,CBO.HANDLE AS HD_CBO\\n    ,DT.TIPOATENDIMENTO AS HD_REGIME_ATENDIMENTO\\n    ,GRA.HANDLE AS HD_GRAU\\n    ,DT.DATAINICIAL AS DT_INICIAL\\n    ,DT.DATAFINAL AS DT_FINAL\\n    ,DT.PORTEANESTESICO AS NU_PORTE_ANESTESICO\\n    ,DT.PORTESALA AS NU_PORTE_SALA\\n\\n    ,(DT.QTDUSHONORARIO*DT.PERCENTUALPGTOUS*VUS.VALORUSHONORARIO)/100     AS VL_US\\n    ,(DT.QTDUSCUSTOOPERACIONAL*DT.PERCENTUALPGTOCUSTO*VCO.VALORUSCUSTOOPERACIONAL)/100  AS VL_UCO --Unidade Custo Operacional\\n    ,(DT.FATORFILME*DT.PERCENTUALPGTOFILME* VIL.FILMEVALOR)/100    AS VL_FILME\\n\\nFROM PROSTG.SAM_PRESTADOR                                       PR\\n          JOIN PROSTG.SAM_PRECOPRESTADOR_DOTAC                  DT     ON PR.HANDLE  = DT.PRESTADOR\\n          JOIN PROSTG.SAM_TGE                                   TGE    ON TGE.HANDLE = DT.EVENTO\\n     LEFT JOIN PROSTG.SAM_GRAU                                  GRA    ON TGE.HANDLE = GRA.TERMO\\n     LEFT JOIN PROSTG.TIS_CBOS                                  CBO    ON CBO.HANDLE = DT.CBOSTISS       \\n     LEFT JOIN PROSTG.TIS_TABELAPRECO                           TD     ON TD.HANDLE = TGE.TABELADOMINIOTISS\\n     LEFT JOIN PROSTG.SAM_TABCUSTOOPERAC                        UCO    ON UCO.HANDLE = DT.TABELACUSTOOPERAC \\n     LEFT JOIN PROSTG.SAM_TABCUSTOOPERAC_VLR                    VCO    ON UCO.HANDLE = VCO.TABELACUSTOOPERACUS\\n     LEFT JOIN PROSTG.SAM_TABUS                                 US     ON US.HANDLE  = DT.TABELAUS\\n     LEFT JOIN PROSTG.SAM_TABUS_VLR                             VUS    ON US.HANDLE  = VUS.TABELAUS\\n     LEFT JOIN PROSTG.SAM_TABFILME                              FIL    ON DT.TABELAFILME = FIL.HANDLE\\n     LEFT JOIN PROSTG.SAM_TABFILME_VLR                          VIL    ON FIL.HANDLE = VIL.TABELAFILME\\n\\n WHERE TD.CODIGO = 22\\n      AND VIL.DATAFINAL IS NULL\\n      AND VUS.DATAFINAL IS NULL\\n      AND VCO.DATAFINAL IS NULL\\n\\nAND \\'2022-01-01\\' BETWEEN SUBSTRING(CAST(DT.DATAINICIAL AS VARCHAR),1,10) AND SUBSTRING(CAST(ISNULL(DT.DATAFINAL,\\'9999-12-31\\') AS VARCHAR),1,10)',",
+				"     isolationLevel: 'READ_UNCOMMITTED',",
+				"     staged: true) ~> poolVLPRESTADORES",
+				"filter1 derive(ST_LOOKUP = toBoolean('1')) ~> ColDerStLookup",
+				"poolVLPRESTADORES filter(!isNull(HD_PRESTADOR) && !isNull(HD_TGE) && !isNull(HD_CBO) && !isNull(HD_REGIME_ATENDIMENTO)) ~> filter1",
+				"ColDerStLookup sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'parquet',",
+				"     fileSystem: 'testes',",
+				"     folderPath: 'parquet',",
+				"     partitionFileNames:['QRY4_VL_PRESTADORES'],",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     saveOrder: 1,",
+				"     partitionBy('hash', 1)) ~> parquetVLPRETADORES"
+			]
+		}
+	}
+}

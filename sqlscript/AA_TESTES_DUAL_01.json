@@ -1,0 +1,20 @@
+{
+	"name": "AA_TESTES_DUAL_01",
+	"properties": {
+		"folder": {
+			"name": "FATOS/MENSAIS/PROVISAO"
+		},
+		"content": {
+			"query": "--ADD_MONTHS(TO_DATE(TO_CHAR(TO_DATE('#par_DATA_REF#','YYYY-MM-DD'), 'YYYY-MM')||'-01','YYYY-MM-DD'), 1) \n--AND ADD_MONTHS(LAST_DAY(TO_DATE('#par_DATA_REF#','YYYY-MM-DD')), 1)\n\nSELECT \n    SYSDATETIME(),\n    CAST('2022-07-22' AS DATE),\n    CONCAT(FORMAT(CAST('2022-07-22' AS DATE),'yyyy-MM'),'-01'),\n    DATEADD(MONTH, 1, CONCAT(FORMAT(CAST('2022-07-22' AS DATE),'yyyy-MM'),'-01')),\n\n    FORMAT(DATEADD(MONTH, 1, CONCAT(FORMAT(CAST('2022-07-22' AS DATE),'yyyy-MM'),'-01')),'yyyy-MM-dd') AS Prim_Dia_Mes_Seguinte,\n    FORMAT(EOMONTH(DATEADD(MONTH, 1, CAST('2022-07-22' AS DATE))),'yyyy-MM-dd') AS Ultimo_Dia_Mes_Seguinte\n;",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "master",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

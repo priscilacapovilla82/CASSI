@@ -1,0 +1,20 @@
+{
+	"name": "QRY04_MA2_Result_prqt",
+	"properties": {
+		"folder": {
+			"name": "FATOS/MENSAIS/PROVISAO"
+		},
+		"content": {
+			"query": "SELECT *\nFROM\n    OPENROWSET(\n        BULK 'https://stgcassidatalake001.blob.core.windows.net/testes/provisao/QRY_MA2.parquet',\n        FORMAT = 'PARQUET'\n    ) AS RESULT_QRY_MA_prqt\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "master",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

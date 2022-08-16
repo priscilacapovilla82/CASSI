@@ -1,0 +1,20 @@
+{
+	"name": "QRY6_VL_ANESTESIA_EST",
+	"properties": {
+		"folder": {
+			"name": "FATOS/DIARIAS/AUTORIZACAO"
+		},
+		"content": {
+			"query": "SELECT DISTINCT \n     ES.HANDLE AS HD_ESTADO\n    ,DT.PORTEANESTESICO AS NU_PORTE_ANESTESICO -- PAN\n    ,DT.DATAINICIAL AS DT_INICIAL\n    ,DT.DATAFINAL AS DT_FINAL\n    ,DT.PERCENTUALAUXILIARANESTESISTA\n    ,DT.QTDUSANESTESISTA\n    ,DT.PERCENTUALPAGTOUS\n    ,VUS.VALORUSHONORARIO\n    ,(DT.QTDUSANESTESISTA*DT.PERCENTUALPAGTOUS*VUS.VALORUSHONORARIO)/100  AS VL_US_ANESTESISTA\n\nFROM PROSTG.ESTADOS                ES\n   JOIN PROSTG.SAM_PRECOESTADO_AN  DT     ON ES.HANDLE  = DT.ESTADO\n   LEFT JOIN PROSTG.SAM_TABUS      US     ON US.HANDLE  = DT.TABELAUS\n   LEFT JOIN PROSTG.SAM_TABUS_VLR  VUS    ON US.HANDLE  = VUS.TABELAUS\n\nWHERE VUS.DATAFINAL IS NULL",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "synsqlprod",
+				"poolName": "synsqlprod"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

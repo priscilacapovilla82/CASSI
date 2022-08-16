@@ -1,0 +1,117 @@
+{
+	"name": "FD_VL_EST_PRESTADOR",
+	"properties": {
+		"folder": {
+			"name": "DESENVOLVIMENTO/FATOS/DIARIAS/AUTORIZACAO"
+		},
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"linkedService": {
+						"referenceName": "wrkcassisynapseworkspace001-WorkspaceDefaultStorage",
+						"type": "LinkedServiceReference"
+					},
+					"name": "prqtAUTSEMVLPREST"
+				},
+				{
+					"linkedService": {
+						"referenceName": "wrkcassisynapseworkspace001-WorkspaceDefaultStorage",
+						"type": "LinkedServiceReference"
+					},
+					"name": "prqtQRY5VLESTADOS"
+				}
+			],
+			"sinks": [
+				{
+					"linkedService": {
+						"referenceName": "wrkcassisynapseworkspace001-WorkspaceDefaultStorage",
+						"type": "LinkedServiceReference"
+					},
+					"name": "sink1"
+				}
+			],
+			"transformations": [
+				{
+					"name": "colQRY5VLESTADOS"
+				},
+				{
+					"name": "derColQRY5VLESTADOS"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          HD_AUTORIZACAO as long,",
+				"          HD_AUTORIZ_EVENTO_SOLICIT as integer,",
+				"          HD_AUTORIZ_EVENTO_GERADO as integer,",
+				"          HD_TGE as integer,",
+				"          HD_PREST_EXECUTOR as integer,",
+				"          HD_REGIME_ATEND as integer,",
+				"          HD_CBOS as integer,",
+				"          DT_ATENDIMENTO_AEG as date",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false,",
+				"     format: 'parquet',",
+				"     fileSystem: 'testes',",
+				"     folderPath: 'parquet',",
+				"     fileName: 'AUT_SEM_VL_PRESTADORES') ~> prqtAUTSEMVLPREST",
+				"source(output(",
+				"          HD_ESTADO as long,",
+				"          HD_TGE as integer,",
+				"          HD_CBO as integer,",
+				"          HD_REGIME_ATENDIMENTO as long,",
+				"          HD_GRAU as integer,",
+				"          DT_INICIAL as timestamp,",
+				"          DT_FINAL as timestamp,",
+				"          NU_PORTE_ANESTESICO as long,",
+				"          NU_PORTE_SALA as long,",
+				"          VL_US as double,",
+				"          VL_UCO as double,",
+				"          VL_FILME as double,",
+				"          ST_LOOKUP as boolean",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false,",
+				"     format: 'parquet',",
+				"     fileSystem: 'testes',",
+				"     folderPath: 'parquet',",
+				"     fileName: 'QRY5_VL_ESTADOS') ~> prqtQRY5VLESTADOS",
+				"prqtQRY5VLESTADOS select(mapColumn(",
+				"          HD_ESTADO,",
+				"          HD_TGE,",
+				"          HD_CBO,",
+				"          HD_REGIME_ATENDIMENTO,",
+				"          DT_INICIAL,",
+				"          DT_FINAL,",
+				"          VL_US,",
+				"          VL_UCO,",
+				"          VL_FILME,",
+				"          ST_LOOKUP",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> colQRY5VLESTADOS",
+				"colQRY5VLESTADOS derive(HD_ESTADO = iif(isNull(HD_ESTADO), -2, toInteger(HD_ESTADO)),",
+				"          HD_TGE = iif(isNull(HD_TGE), -2, toInteger(HD_TGE)),",
+				"          HD_CBO = iif(isNull(HD_CBO), -2, toInteger(HD_CBO)),",
+				"          HD_REGIME_ATENDIMENTO = iif(isNull(HD_REGIME_ATENDIMENTO), -2, toInteger(HD_REGIME_ATENDIMENTO)),",
+				"          DT_INICIAL = iif(isNull(DT_INICIAL), toDate('9999-12-31'), toDate(DT_INICIAL)),",
+				"          DT_FINAL = iif(isNull(DT_FINAL), toDate('9999-12-31'), toDate(DT_FINAL))) ~> derColQRY5VLESTADOS",
+				"prqtAUTSEMVLPREST sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'parquet',",
+				"     fileSystem: 'testes',",
+				"     folderPath: 'parquet',",
+				"     partitionFileNames:['AUT_TESTE'],",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     partitionBy('hash', 1)) ~> sink1"
+			]
+		}
+	}
+}

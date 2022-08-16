@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 13",
+	"properties": {
+		"content": {
+			"query": "drop external table dbo.CLI_FAMILIA_ESF\ngo \n\nIF NOT EXISTS (SELECT * FROM sys.external_file_formats WHERE name = 'SynapseParquetFormat') \n\tCREATE EXTERNAL FILE FORMAT [SynapseParquetFormat] \n\tWITH ( FORMAT_TYPE = PARQUET)\nGO\n\nIF NOT EXISTS (SELECT * FROM sys.external_data_sources WHERE name = 'raw-data_stgcassidatalake001_dfs_core_windows_net') \n\tCREATE EXTERNAL DATA SOURCE [raw-data_stgcassidatalake001_dfs_core_windows_net] \n\tWITH (\n\t\tLOCATION = 'abfss://raw-data@stgcassidatalake001.dfs.core.windows.net' \n\t)\nGO\n\nCREATE EXTERNAL TABLE PROSTG.CLI_FAMILIA_ESF (\n\t[HANDLE] int,\n\t[Z_GRUPO] int,\n\t[CLINICA] int,\n\t[EQUIPE] int,\n\t[DATAINCLUSAOESF] datetime2(7),\n\t[DATACANCELAMENTOESF] datetime2(7),\n\t[MOTIVOCANCELAMENTOESF] int,\n\t[NOMEFAMILIA] nvarchar(4000),\n\t[CODIGOFAMILIA] int,\n\t[LOTEMIGRACAO] int,\n\t[IDMIGRACAO] int,\n\t[USUARIOINCLUSAO] int,\n\t[DATAHORAINCLUSAO] datetime2(7),\n\t[USUARIOALTERACAO] int,\n\t[DATAHORAALTERACAO] datetime2(7),\n\t[Z_NOMEFAMILIA] nvarchar(4000)\n\t)\n\tWITH (\n\tLOCATION = 'STAGE/CLI_FAMILIA_ESF/**',\n\tDATA_SOURCE = [raw-data_stgcassidatalake001_dfs_core_windows_net],\n\tFILE_FORMAT = [SynapseParquetFormat]\n\t)\nGO\n\n\nSELECT TOP 100 * FROM PROSTG.CLI_FAMILIA_ESF\nGO",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "synsqlstage",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

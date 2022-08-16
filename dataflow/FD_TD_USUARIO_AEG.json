@@ -1,0 +1,173 @@
+{
+	"name": "FD_TD_USUARIO_AEG",
+	"properties": {
+		"folder": {
+			"name": "DESENVOLVIMENTO/FATOS/DIARIAS/AUTORIZACAO"
+		},
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"linkedService": {
+						"referenceName": "wrkcassisynapseworkspace001-WorkspaceDefaultStorage",
+						"type": "LinkedServiceReference"
+					},
+					"name": "prqtQR1AUTORIZACAO"
+				},
+				{
+					"linkedService": {
+						"referenceName": "lnk_synprod",
+						"type": "LinkedServiceReference"
+					},
+					"name": "poolTDUSUARIOAEG"
+				}
+			],
+			"sinks": [
+				{
+					"linkedService": {
+						"referenceName": "wrkcassisynapseworkspace001-WorkspaceDefaultStorage",
+						"type": "LinkedServiceReference"
+					},
+					"name": "prqtAUTTDUSUARIOAEG"
+				}
+			],
+			"transformations": [
+				{
+					"name": "colQR1AUTORIZACAO"
+				},
+				{
+					"name": "derColQR1AUTORIZACAO"
+				},
+				{
+					"name": "lkpTDUSUARIOAEG"
+				},
+				{
+					"name": "colAUTTDUSUARIOAEG"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          HD_AUTORIZACAO as long,",
+				"          HD_AUTORIZ_EVENTO_SOLICIT as integer,",
+				"          HD_AUTORIZ_EVENTO_GERADO as integer,",
+				"          HD_TGE as integer,",
+				"          HD_BENEF as integer,",
+				"          HD_ESTADO_BENEF as integer,",
+				"          HD_ESTADO_PREST_EXEC as integer,",
+				"          HD_PREST_SOLICITANTE as integer,",
+				"          CO_PREST_SOLICITANTE as string,",
+				"          HD_PREST_EXECUTOR as integer,",
+				"          CO_PREST_EXECUTOR as string,",
+				"          HD_PREST_FORNECEDOR as integer,",
+				"          CO_PREST_FORNECEDOR as string,",
+				"          HD_TP_AUTORIZ as integer,",
+				"          HD_GRAU as integer,",
+				"          CO_GRAU as integer,",
+				"          CO_TP_TRATAMENTO as integer,",
+				"          CO_OBJ_TRATAMENTO as integer,",
+				"          HD_REGIME_ATEND as integer,",
+				"          HD_FINALID_ATEND as integer,",
+				"          HD_CARAT_ATEND as integer,",
+				"          HD_REGIME_INT as integer,",
+				"          HD_TP_ATEND as integer,",
+				"          HD_TP_INTERN as integer,",
+				"          HD_IND_ACIDENTE as integer,",
+				"          HD_TP_CONSULTA as integer,",
+				"          HD_PLANO as integer,",
+				"          HD_CONTRATO as integer,",
+				"          HD_USUARIO as integer,",
+				"          HD_TIS_TAB_PRECO as integer,",
+				"          CO_TIS_TAB_PRECO as string,",
+				"          HD_CBOS as integer,",
+				"          CO_CBOS as string,",
+				"          CO_SITUACAO_AUT as string,",
+				"          CO_SITUACAO_AES as string,",
+				"          CO_SITUACAO_AEG as string,",
+				"          ST_OPCAO_OPME as integer,",
+				"          NU_AUTORIZACAO as long,",
+				"          DT_AUTORIZACAO_AUT as timestamp,",
+				"          DT_SOLICITACAO_AUT as timestamp,",
+				"          DT_AUTORIZACAO_AEG as timestamp,",
+				"          DT_ATENDIMENTO_AEG as timestamp,",
+				"          QTDSOLICITADAORIGINAL as double,",
+				"          QTDAUTORIZADA as double,",
+				"          QT_NEGADA as double,",
+				"          VALORUNITARIOSOLICITADO as double,",
+				"          VALORUNITARIONEGOCIADOOPME as double,",
+				"          VALORUNITARIOCALCULADOOPME as double,",
+				"          VALORUNITARIOAUTORIZADOOPME as double,",
+				"          DT_SOLICITACAO_AES as timestamp,",
+				"          NU_NIVEL_AUTORIZACAO as integer,",
+				"          CO_ORIGEM_AUTORIZACAO as string,",
+				"          NO_PROF_SOLICITANTE as string,",
+				"          NU_CRM_PROF_SOLICITANTE_AUT as string,",
+				"          PK_TD_CONSELHO_Prof_Solic as long,",
+				"          PK_TD_CONSELHO_Uf_Prof_Solic as long,",
+				"          HD_PREST_SOLICITANTE_AES as integer,",
+				"          CO_PREST_SOLICITANTE_AES as string,",
+				"          DS_ORIGEM_SOLICITACAO as string,",
+				"          DS_INDICACAO_CLINICA as string,",
+				"          DT_VALIDADE_AUT as timestamp,",
+				"          HD_PREST_EXECUTOR_AES as integer,",
+				"          CO_PREST_EXECUTOR_AES as string,",
+				"          TS_GERACAO_AEG as timestamp,",
+				"          TS_LIBERACAO_AEG as timestamp,",
+				"          HD_USUARIO_GERACAO_AEG as integer,",
+				"          ST_HORARIO_ESPECIAL as string,",
+				"          CO_ST_SOLICIT as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false,",
+				"     format: 'parquet',",
+				"     fileSystem: 'testes',",
+				"     folderPath: 'parquet',",
+				"     fileName: 'QR1_AUTORIZACAO') ~> prqtQR1AUTORIZACAO",
+				"source(output(",
+				"          SK_TD_USUARIO_AEG as decimal(10,0),",
+				"          CO_HD_USUARIO as decimal(10,0)",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'query',",
+				"     store: 'synapseanalytics',",
+				"     query: 'SELECT \\n     SK_TD_USUARIO AS SK_TD_USUARIO_AEG, \\n     CO_HD_USUARIO AS CO_HD_USUARIO \\nFROM PRODIM.TD_USUARIO\\nWHERE ST_REGISTRO_CORRENTE = \\'S\\'',",
+				"     isolationLevel: 'READ_UNCOMMITTED',",
+				"     staged: true) ~> poolTDUSUARIOAEG",
+				"prqtQR1AUTORIZACAO select(mapColumn(",
+				"          HD_AUTORIZACAO,",
+				"          HD_AUTORIZ_EVENTO_SOLICIT,",
+				"          HD_AUTORIZ_EVENTO_GERADO,",
+				"          HD_USUARIO_GERACAO_AEG",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> colQR1AUTORIZACAO",
+				"colQR1AUTORIZACAO derive(HD_USUARIO_GERACAO_AEG = iif(isNull(HD_USUARIO_GERACAO_AEG), -2, toInteger(HD_USUARIO_GERACAO_AEG))) ~> derColQR1AUTORIZACAO",
+				"derColQR1AUTORIZACAO, poolTDUSUARIOAEG lookup(HD_USUARIO_GERACAO_AEG == CO_HD_USUARIO,",
+				"     multiple: false,",
+				"     pickup: 'any',",
+				"     broadcast: 'auto')~> lkpTDUSUARIOAEG",
+				"lkpTDUSUARIOAEG select(mapColumn(",
+				"          HD_AUTORIZACAO,",
+				"          HD_AUTORIZ_EVENTO_SOLICIT,",
+				"          HD_AUTORIZ_EVENTO_GERADO,",
+				"          SK_TD_USUARIO_AEG",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> colAUTTDUSUARIOAEG",
+				"colAUTTDUSUARIOAEG sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'parquet',",
+				"     fileSystem: 'testes',",
+				"     folderPath: 'parquet',",
+				"     partitionFileNames:['AUT_TD_USUARIO_AEG'],",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     partitionBy('hash', 1)) ~> prqtAUTTDUSUARIOAEG"
+			]
+		}
+	}
+}

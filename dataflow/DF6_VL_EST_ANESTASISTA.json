@@ -1,0 +1,72 @@
+{
+	"name": "DF6_VL_EST_ANESTASISTA",
+	"properties": {
+		"folder": {
+			"name": "DESENVOLVIMENTO/FATOS/DIARIAS/AUTORIZACAO"
+		},
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"linkedService": {
+						"referenceName": "lnk_synprod",
+						"type": "LinkedServiceReference"
+					},
+					"name": "poolVLESTAANESTESISTA"
+				}
+			],
+			"sinks": [
+				{
+					"linkedService": {
+						"referenceName": "wrkcassisynapseworkspace001-WorkspaceDefaultStorage",
+						"type": "LinkedServiceReference"
+					},
+					"name": "prqtVLESTANESTESISTA"
+				}
+			],
+			"transformations": [
+				{
+					"name": "ColDerLookup"
+				},
+				{
+					"name": "filter1"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          HD_ESTADO as long,",
+				"          NU_PORTE_ANESTESICO as long,",
+				"          DT_INICIAL as timestamp,",
+				"          DT_FINAL as timestamp,",
+				"          PERCENTUALAUXILIARANESTESISTA as double,",
+				"          QTDUSANESTESISTA as double,",
+				"          PERCENTUALPAGTOUS as double,",
+				"          VALORUSHONORARIO as double,",
+				"          VL_US_ANESTESISTA as double",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'query',",
+				"     store: 'synapseanalytics',",
+				"     query: 'SELECT DISTINCT \\n     ES.HANDLE AS HD_ESTADO\\n    ,DT.PORTEANESTESICO AS NU_PORTE_ANESTESICO \\n    ,DT.DATAINICIAL AS DT_INICIAL\\n    ,DT.DATAFINAL AS DT_FINAL\\n    ,DT.PERCENTUALAUXILIARANESTESISTA AS PERCENTUALAUXILIARANESTESISTA\\n    ,DT.QTDUSANESTESISTA AS QTDUSANESTESISTA\\n    ,DT.PERCENTUALPAGTOUS AS PERCENTUALPAGTOUS\\n    ,VUS.VALORUSHONORARIO AS VALORUSHONORARIO\\n    ,(DT.QTDUSANESTESISTA*DT.PERCENTUALPAGTOUS*VUS.VALORUSHONORARIO)/100  AS VL_US_ANESTESISTA\\n\\nFROM PROSTG.ESTADOS                ES\\n   JOIN PROSTG.SAM_PRECOESTADO_AN  DT     ON ES.HANDLE  = DT.ESTADO\\n   LEFT JOIN PROSTG.SAM_TABUS      US     ON US.HANDLE  = DT.TABELAUS\\n   LEFT JOIN PROSTG.SAM_TABUS_VLR  VUS    ON US.HANDLE  = VUS.TABELAUS\\n\\nWHERE VUS.DATAFINAL IS NULL',",
+				"     isolationLevel: 'READ_UNCOMMITTED',",
+				"     staged: true) ~> poolVLESTAANESTESISTA",
+				"filter1 derive(ST_LOOKUP = toBoolean('1')) ~> ColDerLookup",
+				"poolVLESTAANESTESISTA filter(!isNull(HD_ESTADO) && !isNull(NU_PORTE_ANESTESICO)) ~> filter1",
+				"ColDerLookup sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'parquet',",
+				"     fileSystem: 'testes',",
+				"     folderPath: 'parquet',",
+				"     partitionFileNames:['QRY6_VL_EST_ANESTESISTA'],",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     saveOrder: 1,",
+				"     partitionBy('hash', 1)) ~> prqtVLESTANESTESISTA"
+			]
+		}
+	}
+}

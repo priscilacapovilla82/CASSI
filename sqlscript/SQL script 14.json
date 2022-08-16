@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 14",
+	"properties": {
+		"content": {
+			"query": "SELECT TOP (100) [HANDLE]\n,[Z_GRUPO]\n,[CLINICA]\n,[EQUIPE]\n,[DATAINCLUSAOESF]\n,[DATACANCELAMENTOESF]\n,[MOTIVOCANCELAMENTOESF]\n,[NOMEFAMILIA]\n,[CODIGOFAMILIA]\n,[LOTEMIGRACAO]\n,[IDMIGRACAO]\n,[USUARIOINCLUSAO]\n,[DATAHORAINCLUSAO]\n,[USUARIOALTERACAO]\n,[DATAHORAALTERACAO]\n,[Z_NOMEFAMILIA]\n FROM [PROSTG].[CLI_FAMILIA_ESF]",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "synsqlstage",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

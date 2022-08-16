@@ -1,0 +1,17 @@
+{
+	"name": "view tb_outlier_Seanny",
+	"properties": {
+		"content": {
+			"query": "create view PROVIW.TB_OUTLIER\nAS\nselect\nfav.SK_TD_EVENTO,\navg(fav.QT_AUTORIZADA_ORI)as media_qtd_Aut_Orig, \n--median(fav.QT_AUTORIZADA_ORI) mediana_qtd_Aut_Orig,\nPERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY fav.qt_autorizada_ori) OVER () as qrt1_qtd_aut_Orig,\nPERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY fav.qt_autorizada_ori) OVER () as qrt3_qtd_aut_Orig,\nPERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY fav.qt_autorizada_ori) OVER () - PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY fav.qt_autorizada_ori) OVER () as amp_IntQtr,\nPERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY fav.qt_autorizada_ori) OVER () +1.5 * PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY fav.qt_autorizada_ori) OVER () - PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY fav.qt_autorizada_ori) OVER () as limite_superior_moderado,\nPERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY fav.qt_autorizada_ori) OVER () -1.5 * PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY fav.qt_autorizada_ori) OVER () - PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY fav.qt_autorizada_ori) OVER () as limite_inferior_moderado,\nPERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY fav.qt_autorizada_ori) OVER () +3 * PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY fav.qt_autorizada_ori) OVER () - PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY fav.qt_autorizada_ori) OVER () as limite_superior_extremo,\nPERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY fav.qt_autorizada_ori) OVER () -3 * PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY fav.qt_autorizada_ori) OVER () - PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY fav.qt_autorizada_ori) OVER () as limite_inferior_extremo\n\n\nfrom PRODIM.TF_AUTORIZACAO as fav\nleft join PRODIM.TD_PRESTADOR as pr \non pr.sk_td_prestador = fav.SK_TD_PRESTADOR_EXECUTANTE\n\ngroup by fav.SK_TD_EVENTO, fav.QT_AUTORIZADA_ORI\n\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "synsqlprod",
+				"poolName": "synsqlprod"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

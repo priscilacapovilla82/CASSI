@@ -1,0 +1,20 @@
+{
+	"name": "PRQ1_AUTORIZACAO",
+	"properties": {
+		"folder": {
+			"name": "FATOS/DIARIAS/AUTORIZACAO"
+		},
+		"content": {
+			"query": "SELECT distinct REGIMEATENDIMENTO\n,CONDICAOATENDIMENTO\n,LOCALATENDIMENTO\n,FINALIDADEATENDIMENTO\n,TIPOAUTORIZACAO\n,TIPOTRATAMENTO\n,OBJETIVOTRATAMENTO\n,ACOMODACAO\nMOTIVOALTA\nFROM\n    OPENROWSET(\n        BULK 'https://stgcassidatalake001.blob.core.windows.net/testes/parquet/AUT_TD_CARAC_AUTORIZACAO',\n        FORMAT = 'PARQUET'\n    ) AS VALIDA_AUTORIZACAO\nWHERE VALIDA_AUTORIZACAO.SK_TD_CARACTERISTICA_AUTORIZ is null\n\n/*\n\nVALIDA_AUTORIZACAO\n\n*/",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "master",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

@@ -1,0 +1,10 @@
+{
+	"name": "synapse-ws-custstgacct--wrkcassisynapseworkspace001-stgcassidatalake001",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/b117ec79-27e8-4aea-a6e3-782ae30883bd/resourceGroups/rg-data-plataform/providers/Microsoft.Storage/storageAccounts/stgcassidatalake001",
+		"groupId": "dfs",
+		"fqdns": [
+			"stgcassidatalake001.dfs.core.windows.net"
+		]
+	}
+}

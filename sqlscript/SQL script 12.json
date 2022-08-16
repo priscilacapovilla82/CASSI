@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 12",
+	"properties": {
+		"content": {
+			"query": "-- This is auto-generated code\n\ncreate external table teste02 as \nSELECT \n     cast(SK_TD_CARACTERISTICA_AUTORIZ as bigint) as SK_TD_CARACTERISTICA_AUTORIZ,  \n\t cast(CO_HD_REGIME_ATENDIMENTO as bigint) as CO_HD_REGIME_ATENDIMENTO,\n\t cast(CO_REGIME_ATENDIMENTO as bigint) as CO_REGIME_ATENDIMENTO,\n\t cast(DS_REGIME_ATENDIMENTO as nvarchar(4000)) as DS_REGIME_ATENDIMENTO,\n\t cast(CO_HD_CONDICAO_ATENDIMENTO as bigint) as CO_HD_CONDICAO_ATENDIMENTO,\n\t cast(CO_CONDICAO_ATENDIMENTO as bigint) as CO_CONDICAO_ATENDIMENTO,\n\t cast(DS_CONDICAO_ATENDIMENTO as nvarchar(4000)) as DS_CONDICAO_ATENDIMENTO,\n\t cast(CO_HD_LOCAL_ATENDIMENTO as bigint) as CO_HD_LOCAL_ATENDIMENTO,\n\t cast(CO_LOCAL_ATENDIMENTO as bigint) as CO_LOCAL_ATENDIMENTO,\n\t cast(DS_LOCAL_ATENDIMENTO as nvarchar(4000)) as DS_LOCAL_ATENDIMENTO,\n\t cast(CO_HD_FINALIDADE_ATENDIMENTO as bigint) as CO_HD_FINALIDADE_ATENDIMENTO,\n\t cast(CO_FINALIDADE_ATENDIMENTO as bigint) as CO_FINALIDADE_ATENDIMENTO,\n\t cast(DS_FINALIDADE_ATENDIMENTO as nvarchar(4000)) as DS_FINALIDADE_ATENDIMENTO,\n\t cast(CO_HD_TIPO_AUTORIZACAO as bigint) as CO_HD_TIPO_AUTORIZACAO,\n\t cast(CO_TIPO_AUTORIZACAO as bigint) as CO_TIPO_AUTORIZACAO,\n\t cast(DS_TIPO_AUTORIZACAO as nvarchar(4000)) as DS_TIPO_AUTORIZACAO,\n\t cast(CO_HD_TIPO_TRATAMENTO as bigint) as CO_HD_TIPO_TRATAMENTO,\n\t cast(CO_TIPO_TRATAMENTO as bigint) as CO_TIPO_TRATAMENTO,\n\t cast(DS_TIPO_TRATAMENTO as nvarchar(4000)) as DS_TIPO_TRATAMENTO,\n\t cast(CO_HD_OBJETIVO_TRATAMENTO as bigint) as CO_HD_OBJETIVO_TRATAMENTO,\n\t cast(CO_OBJETIVO_TRATAMENTO as bigint) as CO_OBJETIVO_TRATAMENTO,\n\t cast(DS_OBJETIVO_TRATAMENTO as nvarchar(4000)) as DS_OBJETIVO_TRATAMENTO,\n\t cast(CO_HD_ACOMODACAO as bigint) as CO_HD_ACOMODACAO,\n\t cast(CO_ACOMODACAO as bigint) as CO_ACOMODACAO,\n\t cast(DS_ACOMODACAO as nvarchar(4000)) as DS_ACOMODACAO,\n\t cast(CO_HD_MOTIVO_ALTA as bigint) as CO_HD_MOTIVO_ALTA,\n\t cast(CO_MOTIVO_ALTA as bigint) as CO_MOTIVO_ALTA,\n\t cast(DS_MOTIVO_ALTA as nvarchar(4000)) as DS_MOTIVO_ALTA,\n\t cast(PK_GRUPO as bigint) as PK_GRUPO,\n\t cast(DT_INICIO_VIGENCIA as datetime2(7)) as DT_INICIO_VIGENCIA,\n\t cast(DT_FIM_VIGENCIA as datetime2(7)) as DT_FIM_VIGENCIA,\n\t cast(DT_INCLUSAO_REGISTRO as datetime2(7)) as DT_INCLUSAO_REGISTRO,\n\t cast(DT_ALTERACAO_REGISTRO as datetime2(7)) as DT_ALTERACAO_REGISTRO,\n\t cast(ST_REGISTRO_CORRENTE as nvarchar(4000)) as ST_REGISTRO_CORRENTE,\n\t cast(PK_GRUPO_HIERARQUIA as nvarchar(4000)) PK_GRUPO_HIERARQUIA\n    \nFROM\n    OPENROWSET(\n        BULK 'https://stgcassidatalake001.dfs.core.windows.net/gold/DIMENSAO/TD_CARACTERISTICA_AUTORIZACAO/**',\n        FORMAT = 'PARQUET'\n    ) as TESTE02\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "synsqlstage",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
