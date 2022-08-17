@@ -85,8 +85,7 @@
 								"coreCount": 32,
 								"computeType": "MemoryOptimized"
 							},
-							"traceLevel": "Fine",
-							"sourceStagingConcurrency": 1
+							"traceLevel": "Fine"
 						}
 					}
 				],
@@ -525,14 +524,14 @@
 						"userProperties": [],
 						"typeProperties": {
 							"dataflow": {
-								"referenceName": "FD_CARACTERISCA_AUTORIZACAO",
+								"referenceName": "FD_TD_PARTICIPANTE",
 								"type": "DataFlowReference",
 								"parameters": {},
 								"datasetParameters": {
 									"prqtQR1AUTORIZACAO": {},
-									"prqtQRY2CARACTAUTORIZACAO": {},
-									"poolTDCARACAUTORIZ": {},
-									"prqtAUTTDCARACAUTORIZACAO": {}
+									"poolTDPARTICIPANTE": {},
+									"poolTFCADASTRADOSESF": {},
+									"prqtAUTTDPARTICIPANTE": {}
 								}
 							},
 							"staging": {
@@ -546,7 +545,8 @@
 								"coreCount": 8,
 								"computeType": "General"
 							},
-							"traceLevel": "Fine"
+							"traceLevel": "Fine",
+							"sourceStagingConcurrency": 1
 						}
 					}
 				],
@@ -561,7 +561,7 @@
 				"lastPublishTime": "2022-08-16T13:03:45Z"
 			},
 			"dependsOn": [
-				"[concat(variables('workspaceId'), '/dataflows/FD_CARACTERISCA_AUTORIZACAO')]",
+				"[concat(variables('workspaceId'), '/dataflows/FD_TD_PARTICIPANTE')]",
 				"[concat(variables('workspaceId'), '/linkedServices/wrkcassisynapseworkspace001-WorkspaceDefaultStorage')]"
 			]
 		},
@@ -605,8 +605,7 @@
 								"coreCount": 8,
 								"computeType": "General"
 							},
-							"traceLevel": "Fine",
-							"sourceStagingConcurrency": 1
+							"traceLevel": "Fine"
 						}
 					}
 				],
