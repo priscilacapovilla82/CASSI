@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "FD_CARACTERISCA_AUTORIZACAO",
+						"referenceName": "FD_TD_PARTICIPANTE",
 						"type": "DataFlowReference"
 					},
 					"staging": {
@@ -30,7 +30,8 @@
 						"coreCount": 8,
 						"computeType": "General"
 					},
-					"traceLevel": "Fine"
+					"traceLevel": "Fine",
+					"sourceStagingConcurrency": 1
 				}
 			}
 		],
