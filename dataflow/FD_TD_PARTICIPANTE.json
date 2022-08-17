@@ -59,6 +59,9 @@
 				},
 				{
 					"name": "lkpTFCADASTRADOSESF"
+				},
+				{
+					"name": "derColTFCADASTRADOSESF"
 				}
 			],
 			"scriptLines": [
@@ -189,10 +192,11 @@
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> colQR1AUTORIZACAO",
-				"derColQR1AUTORIZACAO, poolTFCADASTRADOSESF lookup(HD_BENEF == CO_HD_BENEFICIARIO,",
+				"derColQR1AUTORIZACAO, derColTFCADASTRADOSESF lookup(HD_BENEF == CO_HD_BENEFICIARIO,",
 				"     multiple: false,",
 				"     pickup: 'any',",
 				"     broadcast: 'auto')~> lkpTFCADASTRADOSESF",
+				"poolTFCADASTRADOSESF derive(CO_HD_BENEFICIARIO = toInteger(CO_HD_BENEFICIARIO)) ~> derColTFCADASTRADOSESF",
 				"colAUTTDPARTICIPANTE sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     format: 'parquet',",
