@@ -1,0 +1,20 @@
+{
+	"name": "SQL script 15",
+	"properties": {
+		"folder": {
+			"name": "FATOS/DIARIAS/AUTORIZACAO"
+		},
+		"content": {
+			"query": "SELECT DISTINCT \n   P.CO_HD_BENEFICIARIO AS CO_HD_BENEFICIARIO, \n   TF.SK_TD_ESTRUTURA_ORG_SOC AS SK_TD_ESTRUTURA_ORG_SOC\n\nFROM PRODIM.TF_CADASTRADOS_ESF TF\nINNER JOIN PRODIM.TD_TEMPO TD ON TD.SK_TD_TEMPO = TF.SK_TD_TEMPO_DIA\nINNER JOIN PRODIM.TD_PARTICIPANTE P ON P.SK_TD_PARTICIPANTE = TF.SK_TD_PARTICIPANTE \n\nWHERE TF.ANO_MES_PROCESSAMENTO = '202201'\nORDER BY P.CO_HD_BENEFICIARIO",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "synsqlprod",
+				"poolName": "synsqlprod"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

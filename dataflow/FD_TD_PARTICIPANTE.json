@@ -20,6 +20,13 @@
 						"type": "LinkedServiceReference"
 					},
 					"name": "poolTDPARTICIPANTE"
+				},
+				{
+					"linkedService": {
+						"referenceName": "lnk_synprod",
+						"type": "LinkedServiceReference"
+					},
+					"name": "poolTFCADASTRADOSESF"
 				}
 			],
 			"sinks": [
@@ -49,6 +56,9 @@
 				},
 				{
 					"name": "colQR1AUTORIZACAO"
+				},
+				{
+					"name": "lkpTFCADASTRADOSESF"
 				}
 			],
 			"scriptLines": [
@@ -141,9 +151,20 @@
 				"     query: 'SELECT \\n     SK_TD_PARTICIPANTE AS SK_TD_PARTICIPANTE, \\n     CO_HD_BENEFICIARIO AS CO_HD_BENEFICIARIO,\\n--     CO_TIPO_DEPENDENCIA AS CO_TIPO_DEPENDENCIA,\\n--     NU_MATRICULA_CASSI AS NU_MATRICULA_CASSI,\\n--     NU_CPF_BENEFICIARIO AS NU_CPF_BENEFICIARIO, \\n     DT_NASCIMENTO_BENEFICIARIO AS DT_NASCIMENTO_BENEFICIARIO\\nFROM PRODIM.TD_PARTICIPANTE\\nWHERE ST_REGISTRO_CORRENTE = \\'S\\'',",
 				"     isolationLevel: 'READ_UNCOMMITTED',",
 				"     staged: true) ~> poolTDPARTICIPANTE",
+				"source(output(",
+				"          CO_HD_BENEFICIARIO as decimal(10,0),",
+				"          SK_TD_ESTRUTURA_ORG_SOC as decimal(10,0)",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'query',",
+				"     store: 'synapseanalytics',",
+				"     query: 'SELECT DISTINCT \\n   P.CO_HD_BENEFICIARIO AS CO_HD_BENEFICIARIO, \\n   TF.SK_TD_ESTRUTURA_ORG_SOC AS SK_TD_ESTRUTURA_ORG_SOC\\n\\nFROM PRODIM.TF_CADASTRADOS_ESF TF\\nINNER JOIN PRODIM.TD_TEMPO TD ON TD.SK_TD_TEMPO = TF.SK_TD_TEMPO_DIA\\nINNER JOIN PRODIM.TD_PARTICIPANTE P ON P.SK_TD_PARTICIPANTE = TF.SK_TD_PARTICIPANTE \\n\\nWHERE TF.ANO_MES_PROCESSAMENTO = \\'202201\\'',",
+				"     isolationLevel: 'READ_UNCOMMITTED',",
+				"     staged: true) ~> poolTFCADASTRADOSESF",
 				"colQR1AUTORIZACAO derive(HD_BENEF = iif(isNull(HD_BENEF), -2, HD_BENEF),",
 				"          DT_AUTORIZACAO_AUT = toDate(DT_AUTORIZACAO_AUT)) ~> derColQR1AUTORIZACAO",
-				"derColQR1AUTORIZACAO, poolTDPARTICIPANTE lookup(HD_BENEF == CO_HD_BENEFICIARIO,",
+				"lkpTFCADASTRADOSESF, poolTDPARTICIPANTE lookup(HD_BENEF == poolTDPARTICIPANTE@CO_HD_BENEFICIARIO,",
 				"     multiple: false,",
 				"     pickup: 'any',",
 				"     broadcast: 'auto')~> lkpTDPARTICIPACAO",
@@ -154,6 +175,7 @@
 				"          HD_AUTORIZ_EVENTO_SOLICIT,",
 				"          HD_AUTORIZ_EVENTO_GERADO,",
 				"          SK_TD_PARTICIPANTE,",
+				"          SK_TD_ESTRUTURA_ORG_SOC,",
 				"          NU_IDADE",
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
@@ -167,6 +189,10 @@
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> colQR1AUTORIZACAO",
+				"derColQR1AUTORIZACAO, poolTFCADASTRADOSESF lookup(HD_BENEF == CO_HD_BENEFICIARIO,",
+				"     multiple: false,",
+				"     pickup: 'any',",
+				"     broadcast: 'auto')~> lkpTFCADASTRADOSESF",
 				"colAUTTDPARTICIPANTE sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     format: 'parquet',",
