@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"workspaceName": {
+			"value": "wrkcassisynapseworkspace001"
+		},
+		"linkedParquet_connectionString": {
+			"value": ""
+		},
+		"lnk_synprod_connectionString": {
+			"value": ""
+		},
+		"lnk_synstage_connectionString": {
+			"value": ""
+		},
+		"stage_connectionString": {
+			"value": ""
+		},
+		"wrkcassisynapseworkspace001-WorkspaceDefaultSqlServer_connectionString": {
+			"value": ""
+		},
+		"ADLSPOCDATA_properties_typeProperties_url": {
+			"value": "https://stgcassigsmadatalake02.dfs.core.windows.net/"
+		},
+		"ADLSStage_properties_typeProperties_url": {
+			"value": "https://stgcassidatalake001.dfs.core.windows.net/"
+		},
+		"wrkcassisynapseworkspace001-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://stgcassidatalake001.dfs.core.windows.net"
+		}
+	}
+}
